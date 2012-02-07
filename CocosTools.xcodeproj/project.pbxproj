@@ -369,7 +369,7 @@
 				DSTROOT = /tmp/CocosTools.dst;
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CocosTools/CocosTools-Prefix.pch";
+				GCC_PREFIX_HEADER = "CocosTools-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_UNROLL_LOOPS = YES;
 				LD_NO_PIE = YES;
@@ -397,7 +397,7 @@
 				DSTROOT = /tmp/CocosTools.dst;
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CocosTools/CocosTools-Prefix.pch";
+				GCC_PREFIX_HEADER = "CocosTools-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_UNROLL_LOOPS = YES;
 				LD_NO_PIE = YES;
