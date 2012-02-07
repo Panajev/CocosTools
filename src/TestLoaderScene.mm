@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 IGGS. All rights reserved.
 //
 
-#import "LoaderScene.h"
+#import "TestLoaderScene.h"
 
 // Import the interfaces
 #import "GeneralDefines.h"
@@ -16,12 +16,11 @@
 #include "Box2D/Box2D.h"
 #import "WorldPhysics.h"
 #import "MusicManager.h"
-#import "CCSpriteExtensions.h"
 
 ///////////////////////
 
 // HelloWorld implementation
-@implementation LoaderScene
+@implementation TestLoaderScene
 
 +(id) sceneWithBackground:(NSString*)fileName {
     @throw [NSException exceptionWithName:NSInternalInconsistencyException
@@ -33,9 +32,9 @@
     float MID_SCREEN_Y_  = ([CCDirector sharedDirector].winSize.height/2.0f);
 	
 	// 'layer' is an autorelease object.
-	LoaderScene *layer = [LoaderScene node];
+	TestLoaderScene *layer = [TestLoaderScene node];
     
-    CCSprite * loader = [CCSprite spriteWithSpriteFrameNameOrFile:fileName];
+    CCSprite * loader = [CCSprite spriteWithFile:fileName];
 	[loader setPosition:ccp(MID_SCREEN_X_,MID_SCREEN_Y_)];
     [layer addChild:loader z:1];
     

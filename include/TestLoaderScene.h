@@ -10,10 +10,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "CoreGraphicsExt.h"
-#import "CCSpriteExtensions.h"
 
 
-@interface LoaderScene : CCLayer
+@interface TestLoaderScene : CCLayer
 {
     //id * delegate; //add your own delegate in your subclass
     CCProgressTimer* progressBar;
