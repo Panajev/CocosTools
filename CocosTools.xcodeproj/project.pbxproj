@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E60E6A9914E144B6002902D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E6A9814E144B6002902D2 /* Foundation.framework */; };
+		E60E6AF014E151E7002902D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E6AEF14E151E7002902D2 /* CoreGraphics.framework */; };
+		E60E6AF214E15237002902D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E6AF114E15237002902D2 /* CoreGraphics.framework */; };
+		E61D6B4014E1660800CE9BEA /* CocosTools-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2A14E1660800CE9BEA /* CocosTools-Prefix.pch */; };
+		E61D6B4114E1660800CE9BEA /* CCBlade.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2C14E1660800CE9BEA /* CCBlade.h */; };
+		E61D6B4214E1660800CE9BEA /* CCDraggableSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2D14E1660800CE9BEA /* CCDraggableSprite.h */; };
+		E61D6B4314E1660800CE9BEA /* CCMenuAdvanced.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2E14E1660800CE9BEA /* CCMenuAdvanced.h */; };
+		E61D6B4414E1660800CE9BEA /* CCSpriteExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2F14E1660800CE9BEA /* CCSpriteExtended.h */; };
+		E61D6B4514E1660800CE9BEA /* CCSpriteExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B3014E1660800CE9BEA /* CCSpriteExtensions.h */; };
+		E61D6B4714E1660800CE9BEA /* LoaderScene.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B3214E1660800CE9BEA /* LoaderScene.h */; };
+		E61D6B4814E1660800CE9BEA /* MusicManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B3314E1660800CE9BEA /* MusicManager.h */; };
+		E61D6B4914E1660800CE9BEA /* PhysicsSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B3414E1660800CE9BEA /* PhysicsSystem.h */; };
+		E61D6B4A14E1660800CE9BEA /* WorldPhysics.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B3514E1660800CE9BEA /* WorldPhysics.h */; };
+		E61D6B4B14E1660800CE9BEA /* CCBlade.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3714E1660800CE9BEA /* CCBlade.mm */; };
+		E61D6B4C14E1660800CE9BEA /* CCDraggableSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3814E1660800CE9BEA /* CCDraggableSprite.mm */; };
+		E61D6B4D14E1660800CE9BEA /* CCMenuAdvanced.m in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3914E1660800CE9BEA /* CCMenuAdvanced.m */; };
+		E61D6B4E14E1660800CE9BEA /* CCSpriteExtended.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3A14E1660800CE9BEA /* CCSpriteExtended.mm */; };
+		E61D6B4F14E1660800CE9BEA /* CCSpriteExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3B14E1660800CE9BEA /* CCSpriteExtension.m */; };
+		E61D6B5014E1660800CE9BEA /* LoaderScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3C14E1660800CE9BEA /* LoaderScene.mm */; };
+		E61D6B5114E1660800CE9BEA /* MusicManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3D14E1660800CE9BEA /* MusicManager.mm */; };
+		E61D6B5214E1660800CE9BEA /* PhysicsSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3E14E1660800CE9BEA /* PhysicsSystem.mm */; };
+		E61D6B5314E1660800CE9BEA /* WorldPhysics.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3F14E1660800CE9BEA /* WorldPhysics.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E60E6A9514E144B6002902D2 /* libCocosTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocosTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60E6A9814E144B6002902D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E60E6AAC14E144F8002902D2 /* libCocosTools_script.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocosTools_script.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60E6AEF14E151E7002902D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E60E6AF114E15237002902D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E61D6B2A14E1660800CE9BEA /* CocosTools-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocosTools-Prefix.pch"; sourceTree = "<group>"; };
+		E61D6B2C14E1660800CE9BEA /* CCBlade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBlade.h; sourceTree = "<group>"; };
+		E61D6B2D14E1660800CE9BEA /* CCDraggableSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDraggableSprite.h; sourceTree = "<group>"; };
+		E61D6B2E14E1660800CE9BEA /* CCMenuAdvanced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMenuAdvanced.h; sourceTree = "<group>"; };
+		E61D6B2F14E1660800CE9BEA /* CCSpriteExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpriteExtended.h; sourceTree = "<group>"; };
+		E61D6B3014E1660800CE9BEA /* CCSpriteExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpriteExtensions.h; sourceTree = "<group>"; };
+		E61D6B3214E1660800CE9BEA /* LoaderScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoaderScene.h; sourceTree = "<group>"; };
+		E61D6B3314E1660800CE9BEA /* MusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicManager.h; sourceTree = "<group>"; };
+		E61D6B3414E1660800CE9BEA /* PhysicsSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsSystem.h; sourceTree = "<group>"; };
+		E61D6B3514E1660800CE9BEA /* WorldPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldPhysics.h; sourceTree = "<group>"; };
+		E61D6B3714E1660800CE9BEA /* CCBlade.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCBlade.mm; sourceTree = "<group>"; };
+		E61D6B3814E1660800CE9BEA /* CCDraggableSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCDraggableSprite.mm; sourceTree = "<group>"; };
+		E61D6B3914E1660800CE9BEA /* CCMenuAdvanced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMenuAdvanced.m; sourceTree = "<group>"; };
+		E61D6B3A14E1660800CE9BEA /* CCSpriteExtended.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCSpriteExtended.mm; sourceTree = "<group>"; };
+		E61D6B3B14E1660800CE9BEA /* CCSpriteExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteExtension.m; sourceTree = "<group>"; };
+		E61D6B3C14E1660800CE9BEA /* LoaderScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LoaderScene.mm; sourceTree = "<group>"; };
+		E61D6B3D14E1660800CE9BEA /* MusicManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MusicManager.mm; sourceTree = "<group>"; };
+		E61D6B3E14E1660800CE9BEA /* PhysicsSystem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhysicsSystem.mm; sourceTree = "<group>"; };
+		E61D6B3F14E1660800CE9BEA /* WorldPhysics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WorldPhysics.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E60E6A9214E144B6002902D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E60E6AF014E151E7002902D2 /* CoreGraphics.framework in Frameworks */,
+				E60E6A9914E144B6002902D2 /* Foundation.framework in Frameworks */,
+				E60E6AF214E15237002902D2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E60E6A8A14E144B6002902D2 = {
+			isa = PBXGroup;
+			children = (
+				E61D6B2A14E1660800CE9BEA /* CocosTools-Prefix.pch */,
+				E61D6B2B14E1660800CE9BEA /* include */,
+				E61D6B3614E1660800CE9BEA /* src */,
+				E60E6AEF14E151E7002902D2 /* CoreGraphics.framework */,
+				E60E6A9714E144B6002902D2 /* Frameworks */,
+				E60E6A9614E144B6002902D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E60E6A9614E144B6002902D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E60E6A9514E144B6002902D2 /* libCocosTools.a */,
+				E60E6AAC14E144F8002902D2 /* libCocosTools_script.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E60E6A9714E144B6002902D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E60E6AF114E15237002902D2 /* CoreGraphics.framework */,
+				E60E6A9814E144B6002902D2 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E61D6B2B14E1660800CE9BEA /* include */ = {
+			isa = PBXGroup;
+			children = (
+				E6ACACF814E167D5004C063C /* CCSprite extensions */,
+				E6ACACF714E167C3004C063C /* Loader Manager */,
+				E6ACACF614E167B6004C063C /* Music Manager */,
+				E6ACACF514E167A7004C063C /* Physics Manager */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		E61D6B3614E1660800CE9BEA /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E6ACACF314E1678A004C063C /* CCSprite extensions */,
+				E6ACACF414E16797004C063C /* Loader Manager */,
+				E6ACACF214E16779004C063C /* Music Manager */,
+				E6ACACF014E16769004C063C /* Physics Manager */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		E6ACACF014E16769004C063C /* Physics Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E61D6B3E14E1660800CE9BEA /* PhysicsSystem.mm */,
+				E61D6B3F14E1660800CE9BEA /* WorldPhysics.mm */,
+			);
+			name = "Physics Manager";
+			sourceTree = "<group>";
+		};
+		E6ACACF214E16779004C063C /* Music Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E61D6B3D14E1660800CE9BEA /* MusicManager.mm */,
+			);
+			name = "Music Manager";
+			sourceTree = "<group>";
+		};
+		E6ACACF314E1678A004C063C /* CCSprite extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E61D6B3714E1660800CE9BEA /* CCBlade.mm */,
+				E61D6B3814E1660800CE9BEA /* CCDraggableSprite.mm */,
+				E61D6B3914E1660800CE9BEA /* CCMenuAdvanced.m */,
+				E61D6B3A14E1660800CE9BEA /* CCSpriteExtended.mm */,
+				E61D6B3B14E1660800CE9BEA /* CCSpriteExtension.m */,
+			);
+			name = "CCSprite extensions";
+			sourceTree = "<group>";
+		};
+		E6ACACF414E16797004C063C /* Loader Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E61D6B3C14E1660800CE9BEA /* LoaderScene.mm */,
+			);
+			name = "Loader Manager";
+			sourceTree = "<group>";
+		};
+		E6ACACF514E167A7004C063C /* Physics Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E61D6B3414E1660800CE9BEA /* PhysicsSystem.h */,
+				E61D6B3514E1660800CE9BEA /* WorldPhysics.h */,
+			);
+			name = "Physics Manager";
+			sourceTree = "<group>";
+		};
+		E6ACACF614E167B6004C063C /* Music Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E61D6B3314E1660800CE9BEA /* MusicManager.h */,
+			);
+			name = "Music Manager";
+			sourceTree = "<group>";
+		};
+		E6ACACF714E167C3004C063C /* Loader Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E61D6B3214E1660800CE9BEA /* LoaderScene.h */,
+			);
+			name = "Loader Manager";
+			sourceTree = "<group>";
+		};
+		E6ACACF814E167D5004C063C /* CCSprite extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E61D6B2C14E1660800CE9BEA /* CCBlade.h */,
+				E61D6B2D14E1660800CE9BEA /* CCDraggableSprite.h */,
+				E61D6B2E14E1660800CE9BEA /* CCMenuAdvanced.h */,
+				E61D6B2F14E1660800CE9BEA /* CCSpriteExtended.h */,
+				E61D6B3014E1660800CE9BEA /* CCSpriteExtensions.h */,
+			);
+			name = "CCSprite extensions";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E60E6A9314E144B6002902D2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E61D6B4014E1660800CE9BEA /* CocosTools-Prefix.pch in Headers */,
+				E61D6B4114E1660800CE9BEA /* CCBlade.h in Headers */,
+				E61D6B4214E1660800CE9BEA /* CCDraggableSprite.h in Headers */,
+				E61D6B4314E1660800CE9BEA /* CCMenuAdvanced.h in Headers */,
+				E61D6B4414E1660800CE9BEA /* CCSpriteExtended.h in Headers */,
+				E61D6B4514E1660800CE9BEA /* CCSpriteExtensions.h in Headers */,
+				E61D6B4714E1660800CE9BEA /* LoaderScene.h in Headers */,
+				E61D6B4814E1660800CE9BEA /* MusicManager.h in Headers */,
+				E61D6B4914E1660800CE9BEA /* PhysicsSystem.h in Headers */,
+				E61D6B4A14E1660800CE9BEA /* WorldPhysics.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E60E6A9414E144B6002902D2 /* CocosTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E60E6AA214E144B6002902D2 /* Build configuration list for PBXNativeTarget "CocosTools" */;
+			buildPhases = (
+				E60E6A9114E144B6002902D2 /* Sources */,
+				E60E6A9214E144B6002902D2 /* Frameworks */,
+				E60E6A9314E144B6002902D2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocosTools;
+			productName = CocosTools;
+			productReference = E60E6A9514E144B6002902D2 /* libCocosTools.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E60E6AAB14E144F8002902D2 /* CocosTools_script */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E60E6AB414E144F8002902D2 /* Build configuration list for PBXNativeTarget "CocosTools_script" */;
+			buildPhases = (
+				E60E6AB714E14510002902D2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocosTools_script;
+			productName = CocosTools_script;
+			productReference = E60E6AAC14E144F8002902D2 /* libCocosTools_script.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E60E6A8C14E144B6002902D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = IGGS;
+			};
+			buildConfigurationList = E60E6A8F14E144B6002902D2 /* Build configuration list for PBXProject "CocosTools" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E60E6A8A14E144B6002902D2;
+			productRefGroup = E60E6A9614E144B6002902D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E60E6A9414E144B6002902D2 /* CocosTools */,
+				E60E6AAB14E144F8002902D2 /* CocosTools_script */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E60E6AB714E14510002902D2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nTARGET=\"CocosTools\"\n#undefine the following line if you want to move and properly unpack the .zip files into the destination folder specified with DEST_DIR\nSCRIPT_OPTIONS=\"MOVE_FILE\"\nDEST_DIR=\"${PROJECT_DIR}/../SharedLibs\"\n\n#SVN_REVISION=$(svn info | grep Revision | cut -d ' ' -f 2)\nif [ ! -z $SVN_REVISION ]; then\nLIB_VERSION=\"-rev$SVN_REVISION\"\nelse\nLIB_VERSION=\"-unversioned\"\nfi\n\nLIBRARY_NAME=\"lib$TARGET.a\"\nLIBRARY_OUT_NAME_RELATIVE=\"lib$TARGET${LIB_VERSION}.a\"\nLIBRARY_OUT_NAME=\"lib/$LIBRARY_OUT_NAME_RELATIVE\"\nLATEST_SDK_DEVICE=$(xcodebuild -showsdks | grep iphoneos | awk 'BEGIN{FS=\"\\t\";}{print $3}' | cut -d ' ' -f 2 | tail -n 1)\nLATEST_SDK_SIMULATOR=$(xcodebuild -showsdks | grep iphonesimulator | awk 'BEGIN{FS=\"\\t\";}{print $3}' | cut -d ' ' -f 2 | tail -n 1)\n\nlocal_build_root=\"${PROJECT_DIR}/build\"\nbuild_styles=\"Debug Release\"\n\nfor current_style in $build_styles; do\nLIBRARY_ARCHIVE=\"$TARGET${LIB_VERSION}-${current_style}.zip\"\n\nif [ $current_style = \"Debug\" ]; then\nLIBRARY_ARCHIVE=\"$TARGET-${current_style}.zip\"\nelse\nLIBRARY_ARCHIVE=\"$TARGET.zip\"\nfi\n\n# remove existing output file\nrm -rf ${PROJECT_DIR}/lib\nmkdir -p ${PROJECT_DIR}/lib\n\n# Build library for simulator\nxcodebuild clean -target $TARGET -configuration $current_style -sdk $LATEST_SDK_SIMULATOR\nxcodebuild -target $TARGET -configuration $current_style -sdk $LATEST_SDK_SIMULATOR build\n\n# Build library for device\nxcodebuild clean -target $TARGET -configuration $current_style -sdk $LATEST_SDK_DEVICE\nxcodebuild -target $TARGET -configuration $current_style -sdk $LATEST_SDK_DEVICE build\n\n# Glue together libraries\nlipo \"${local_build_root}/${current_style}-iphoneos/$LIBRARY_NAME\" -arch i386 \"${local_build_root}/${current_style}-iphonesimulator/$LIBRARY_NAME\" -create -output \"${PROJECT_DIR}/$LIBRARY_OUT_NAME\"\n\n# Create symlink\ncd lib\nln -s \"$LIBRARY_OUT_NAME_RELATIVE\" \"$LIBRARY_NAME\"\ncd ..\n\nif [ $? -eq 0 ]; then\nzip -R -y \"${PROJECT_DIR}/$LIBRARY_ARCHIVE\" \"lib/*.a\"\nzip -r -y \"${PROJECT_DIR}/$LIBRARY_ARCHIVE\" \"resources\" \"include\" -x@zip_exclude.lst\n#zip \"${PROJECT_DIR}/$LIBRARY_ARCHIVE\" .packageid\nfi\n\nif [ $SCRIPT_OPTIONS = \"MOVE_FILE\" ]; then\nBUILT_ZIP=\"${PROJECT_DIR}/$LIBRARY_ARCHIVE\"\nNEW_ZIP=\"$DEST_DIR/$LIBRARY_ARCHIVE\"\n\nif [ $current_style = \"Debug\" ]; then\nOLD_FOLDER=\"$DEST_DIR/$TARGET-${current_style}\"\nelse  \nOLD_FOLDER=\"$DEST_DIR/$TARGET\"\nfi\nrm -rf $OLD_FOLDER\nmv $BUILT_ZIP $DEST_DIR/\nunzip -o $NEW_ZIP -d $OLD_FOLDER/\nrm -f $NEW_ZIP\nfi\n\ndone";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E60E6A9114E144B6002902D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E61D6B4B14E1660800CE9BEA /* CCBlade.mm in Sources */,
+				E61D6B4C14E1660800CE9BEA /* CCDraggableSprite.mm in Sources */,
+				E61D6B4D14E1660800CE9BEA /* CCMenuAdvanced.m in Sources */,
+				E61D6B4E14E1660800CE9BEA /* CCSpriteExtended.mm in Sources */,
+				E61D6B4F14E1660800CE9BEA /* CCSpriteExtension.m in Sources */,
+				E61D6B5014E1660800CE9BEA /* LoaderScene.mm in Sources */,
+				E61D6B5114E1660800CE9BEA /* MusicManager.mm in Sources */,
+				E61D6B5214E1660800CE9BEA /* PhysicsSystem.mm in Sources */,
+				E61D6B5314E1660800CE9BEA /* WorldPhysics.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E60E6AA014E144B6002902D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E60E6AA114E144B6002902D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E60E6AA314E144B6002902D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
+				DSTROOT = /tmp/CocosTools.dst;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocosTools/CocosTools-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_UNROLL_LOOPS = YES;
+				LD_NO_PIE = YES;
+				LLVM_LTO = NO;
+				OTHER_CFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../SharedLibs/Utilities-Debug/include/** ../SharedLibs/Cocos-Debug/include/** ../SharedLibs/Facebook-Debug/include";
+			};
+			name = Debug;
+		};
+		E60E6AA414E144B6002902D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
+				DSTROOT = /tmp/CocosTools.dst;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocosTools/CocosTools-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_UNROLL_LOOPS = YES;
+				LD_NO_PIE = YES;
+				LLVM_LTO = YES;
+				OTHER_CFLAGS = "";
+				"OTHER_CFLAGS[arch=armv7]" = (
+					"-ObjC",
+					"-all_load",
+					"-mthumb",
+					"-mfpu=neon",
+					"-ffast-math",
+					"-ftree-vectorize",
+					"-mfloat-abi=softfp",
+					"-fsingle-precision-constant",
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-DRELEASE_VERSION",
+				);
+				"OTHER_CPLUSPLUSFLAGS[arch=armv7]" = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../SharedLibs/Utilities/include/** ../SharedLibs/Cocos/include/** ../SharedLibs/Facebook/include";
+			};
+			name = Release;
+		};
+		E60E6AB514E144F8002902D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/CocosTools_script.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocosTools_script/CocosTools_script-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E60E6AB614E144F8002902D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/CocosTools_script.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocosTools_script/CocosTools_script-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E60E6A8F14E144B6002902D2 /* Build configuration list for PBXProject "CocosTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E60E6AA014E144B6002902D2 /* Debug */,
+				E60E6AA114E144B6002902D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E60E6AA214E144B6002902D2 /* Build configuration list for PBXNativeTarget "CocosTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E60E6AA314E144B6002902D2 /* Debug */,
+				E60E6AA414E144B6002902D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E60E6AB414E144F8002902D2 /* Build configuration list for PBXNativeTarget "CocosTools_script" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E60E6AB514E144F8002902D2 /* Debug */,
+				E60E6AB614E144F8002902D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E60E6A8C14E144B6002902D2 /* Project object */;
+}
