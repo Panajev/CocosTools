@@ -85,10 +85,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
     isBackgroundMusicPlaying_ = NO;
 }
 
--(void) playSFX:(NSString*) filename {
-    [sAudioEngine playEffect:filename];
-}
-
 -(void) setVolume:(CGFloat)volume {
     [sAudioEngine setBackgroundMusicVolume:volume];
     volumeLevel = volume;
