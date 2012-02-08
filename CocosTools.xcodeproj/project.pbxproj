@@ -29,6 +29,8 @@
 		E61D6B5114E1660800CE9BEA /* MusicManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3D14E1660800CE9BEA /* MusicManager.mm */; };
 		E61D6B5214E1660800CE9BEA /* PhysicsSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3E14E1660800CE9BEA /* PhysicsSystem.mm */; };
 		E61D6B5314E1660800CE9BEA /* WorldPhysics.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3F14E1660800CE9BEA /* WorldPhysics.mm */; };
+		E6384AB514E2BAA000CE31A5 /* TargetedAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E6384AB314E2BAA000CE31A5 /* TargetedAction.m */; };
+		E6384AB814E2BACE00CE31A5 /* TargetedAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E6384AB714E2BACE00CE31A5 /* TargetedAction.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		E61D6B3D14E1660800CE9BEA /* MusicManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MusicManager.mm; sourceTree = "<group>"; };
 		E61D6B3E14E1660800CE9BEA /* PhysicsSystem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhysicsSystem.mm; sourceTree = "<group>"; };
 		E61D6B3F14E1660800CE9BEA /* WorldPhysics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WorldPhysics.mm; sourceTree = "<group>"; };
+		E6384AB314E2BAA000CE31A5 /* TargetedAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetedAction.m; sourceTree = "<group>"; };
+		E6384AB714E2BACE00CE31A5 /* TargetedAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetedAction.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				E61D6B3714E1660800CE9BEA /* CCBlade.mm */,
+				E6384AB314E2BAA000CE31A5 /* TargetedAction.m */,
 				E61D6B3814E1660800CE9BEA /* CCDraggableSprite.mm */,
 				E61D6B3914E1660800CE9BEA /* CCMenuAdvanced.m */,
 				E61D6B3A14E1660800CE9BEA /* CCSpriteExtended.mm */,
@@ -189,6 +194,7 @@
 		E6ACACF814E167D5004C063C /* CCSprite extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E6384AB714E2BACE00CE31A5 /* TargetedAction.h */,
 				E61D6B2C14E1660800CE9BEA /* CCBlade.h */,
 				E61D6B2D14E1660800CE9BEA /* CCDraggableSprite.h */,
 				E61D6B2E14E1660800CE9BEA /* CCMenuAdvanced.h */,
@@ -215,6 +221,7 @@
 				E61D6B4814E1660800CE9BEA /* MusicManager.h in Headers */,
 				E61D6B4914E1660800CE9BEA /* PhysicsSystem.h in Headers */,
 				E61D6B4A14E1660800CE9BEA /* WorldPhysics.h in Headers */,
+				E6384AB814E2BACE00CE31A5 /* TargetedAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +317,7 @@
 				E61D6B5114E1660800CE9BEA /* MusicManager.mm in Sources */,
 				E61D6B5214E1660800CE9BEA /* PhysicsSystem.mm in Sources */,
 				E61D6B5314E1660800CE9BEA /* WorldPhysics.mm in Sources */,
+				E6384AB514E2BAA000CE31A5 /* TargetedAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
