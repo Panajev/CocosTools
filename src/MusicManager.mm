@@ -97,6 +97,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
     [sAudioEngine preloadEffect:filename];
 }
 -(void) playSFX:(NSString*) filename {
+    sAudioEngine.effectsVolume=1.0f;
     [sAudioEngine playEffect:filename];
 }
 
