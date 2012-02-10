@@ -49,6 +49,11 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
     mute_ = NO;
     isBackgroundMusicPlaying_ = NO;
     
+    if (soundFX) {
+        SAFE_RELEASE(soundFX);
+    }
+    soundFX = [[NSMutableDictionary alloc] initWithCapacity:MAX_SOUND_FX];
+    
     [self setUpAudioManager];
 }
 
@@ -99,10 +104,30 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
 -(void) playSFX:(NSString*) filename {
     sAudioEngine.effectsVolume=1.0f;
     [sAudioEngine playEffect:filename];
+    
+    [soundFX setObject:[NSNumber numberWithFloat:0.0f] forKey:filename];
+}
+
+-(void) playSFX:(NSString*) filename length:(CGFLoat)time {
+    if(![soundFX objectForKey:filename]) {
+        sAudioEngine.effectsVolume=1.0f;
+        [sAudioEngine playEffect:filename];
+        [soundFX setObject:[NSNumber numberWithFloat:time] forKey:filename];
+        [self performSelector:@selector(removeSound:) withObject:filename afterDelay:time];
+    }
+}
+
+- (void) removeSound:(NSString*) filename {
+    [soundFX removeObjectForKey:filename];
 }
 
 -(void) removePreloadedData {
-    
+    for (NSString s in [soundFX allKeys]) {
+        if (s != nil) { 
+            [sAudioEngine unloadEffect:s];
+        }
+    }
+    [soundFX removeAllObjects];   
 }
 
 -(void) fadeOutMusic {

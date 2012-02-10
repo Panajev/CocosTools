@@ -21,6 +21,8 @@ typedef enum {
 	kGSFailed
 } tGameSoundState;
 
+#define MAX_SOUND_FX (16)
+
 @interface MusicManager : NSObject {
     tGameSoundState state_;
     SimpleAudioEngine *sAudioEngine;
@@ -30,6 +32,8 @@ typedef enum {
     CGFloat volumeLevel;
     BOOL mute_;
     NSString * musicTrackEnqueued;
+    
+    NSMutableDictionary * soundFX;
 }
 
 SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(MusicManager);
@@ -45,6 +49,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(MusicManager);
 -(void) playMusic:(NSString*) filename;
 -(void) stopMusic;
 -(void) playSFX:(NSString*) filename;
+-(void) playSFX:(NSString*) filename length:(CGFLoat)time;
 -(void) setVolume:(CGFloat)volume;
 -(CGFloat) volume;
 -(void) removePreloadedData;
