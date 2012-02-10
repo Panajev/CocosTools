@@ -108,7 +108,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
     [soundFX setObject:[NSNumber numberWithFloat:0.0f] forKey:filename];
 }
 
--(void) playSFX:(NSString*) filename length:(CGFLoat)time {
+-(void) playSFX:(NSString*) filename length:(CGFloat)time {
     if(![soundFX objectForKey:filename]) {
         sAudioEngine.effectsVolume=1.0f;
         [sAudioEngine playEffect:filename];
@@ -122,7 +122,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
 }
 
 -(void) removePreloadedData {
-    for (NSString s in [soundFX allKeys]) {
+    for (NSString * s in [soundFX allKeys]) {
         if (s != nil) { 
             [sAudioEngine unloadEffect:s];
         }

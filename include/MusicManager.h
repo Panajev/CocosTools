@@ -49,7 +49,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(MusicManager);
 -(void) playMusic:(NSString*) filename;
 -(void) stopMusic;
 -(void) playSFX:(NSString*) filename;
--(void) playSFX:(NSString*) filename length:(CGFLoat)time;
+-(void) playSFX:(NSString*) filename length:(CGFloat)time;
 -(void) setVolume:(CGFloat)volume;
 -(CGFloat) volume;
 -(void) removePreloadedData;
