@@ -157,9 +157,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
 }
 
 -(void) stopSFX {
+    NSLog(@"Stop SFX...");
     for (NSString * s in [soundFX_ID allKeys]) {
         if (s != nil) { 
-            [sAudioEngine unloadEffect:[soundFX_ID objectForKey:s]];
+            [sAudioEngine stopEffect:[[soundFX_ID objectForKey:s] unsignedIntValue]];
         }
     }
     
