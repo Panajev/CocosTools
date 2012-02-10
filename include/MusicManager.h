@@ -32,8 +32,10 @@ typedef enum {
     CGFloat volumeLevel;
     BOOL mute_;
     NSString * musicTrackEnqueued;
+    NSString * soundFXEnqueued;
     
     NSMutableDictionary * soundFX;
+    NSMutableDictionary * soundFX_ID;
 }
 
 SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(MusicManager);
@@ -50,6 +52,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(MusicManager);
 -(void) stopMusic;
 -(void) playSFX:(NSString*) filename;
 -(void) playSFX:(NSString*) filename length:(CGFloat)time;
+-(void) playSFX:(NSString*) filename length:(CGFloat)time gain:(CGFloat)g;
+-(void) stopSFX:(NSString*)filename;
+-(void) stopSFX;
+-(void) stopLastSFX;
 -(void) setVolume:(CGFloat)volume;
 -(CGFloat) volume;
 -(void) removePreloadedData;
