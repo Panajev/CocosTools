@@ -10,7 +10,7 @@
 #include <CoreGraphics/CoreGraphics.h>
 #import "SynthesizeSingleton.h"
 
-@class SimpleAudioEngine, CDAudioManager;
+@class SimpleAudioEngine, CDAudioManager, CDSoundSource;
 
 typedef enum {
 	kGSUninitialised,
@@ -51,12 +51,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(MusicManager);
 -(void) pauseMusic;
 -(void) playMusic:(NSString*) filename;
 -(void) stopMusic;
--(void) playSFX:(NSString*) filename;
--(void) playSFX:(NSString*) filename length:(CGFloat)time;
--(void) playSFX:(NSString*) filename length:(CGFloat)time gain:(CGFloat)g;
+-(CDSoundSource*) playSFX:(NSString*) filename;
+-(void) playSFX:(NSString*) filename gain:(CGFloat)g;
 -(void) stopSFX:(NSString*)filename;
 -(void) stopSFX;
--(void) stopLastSFX;
 -(void) setVolume:(CGFloat)volume;
 -(CGFloat) volume;
 -(void) removePreloadedData;

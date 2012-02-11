@@ -112,81 +112,49 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
     [sAudioEngine preloadEffect:filename];
     [soundSources setObject:[sAudioEngine soundSourceForFile:filename] forKey:filename];
 }
--(void) playSFX:(NSString*) filename {
+-(CDSoundSource*) playSFX:(NSString*) filename {
     sAudioEngine.effectsVolume=1.0f;
-    ALuint sid =  [sAudioEngine playEffect:filename];
-    [soundFX setObject:[NSNumber numberWithFloat:0.0f] forKey:filename];
-    [soundFX_ID setObject:[NSNumber numberWithUnsignedInt:sid] forKey:filename];
-    soundFXEnqueued = filename;
-}
-
--(void) playSFX:(NSString*) filename length:(CGFloat)time {
-    if(![soundFX objectForKey:filename]) {
-        sAudioEngine.effectsVolume=1.0f;
-        ALuint sid = [sAudioEngine playEffect:filename];
-        [soundFX setObject:[NSNumber numberWithFloat:time] forKey:filename];
-        [soundFX_ID setObject:[NSNumber numberWithUnsignedInt:sid] forKey:filename];
-        [self performSelector:@selector(removeSound:) withObject:filename afterDelay:time];
-        soundFXEnqueued = filename;
-    }
-}
-
--(void) playSFX:(NSString*) filename length:(CGFloat)time gain:(CGFloat)g {
-    if(![soundFX objectForKey:filename]) {
-        sAudioEngine.effectsVolume=1.0f;
-        ALuint sid = [sAudioEngine playEffect:filename pitch:1.0f pan:0.0f gain:g];
-        [soundFX setObject:[NSNumber numberWithFloat:time] forKey:filename];
-        [soundFX_ID setObject:[NSNumber numberWithUnsignedInt:sid] forKey:filename];
-        [self performSelector:@selector(removeSound:) withObject:filename afterDelay:time];
-        soundFXEnqueued = filename;
-    }
-}
-
--(void) stopLastSFX {
-    NSNumber * sid = nil;
-    sid = [soundFX_ID objectForKey:soundFXEnqueued];
-    if(sid) {
-        [sAudioEngine stopEffect:[sid unsignedIntValue]];
+    CDSoundSource * soundSource = [sAudioEngine soundSourceForFile:filename];
+    if(!soundSource.isPlaying) {
+        [[soundSources objectForKey:filename] stop];
+        [soundSource rewind];
+        [soundSource play];
+        [soundSources setObject:soundSource forKey:filename];
     }
     
-    [self removeSound:soundFXEnqueued];
+    return soundSource;
+}
+
+-(void) playSFX:(NSString*) filename gain:(CGFloat)g {
+    [self playSFX:filename].gain=g;
 }
 
 -(void) stopSFX:(NSString*)filename {
-    NSNumber * sid = nil;
-    sid = [soundFX_ID objectForKey:filename];
-    if(sid) {
-        [sAudioEngine stopEffect:[sid unsignedIntValue]];
-    }
-    
-    [self removeSound:filename];
+    CDSoundSource * soundSource = [soundSources objectForKey:filename];
+    [soundSource stop];
+    [soundSources removeObjectForKey:filename];
 }
 
 -(void) stopSFX {
-    NSLog(@"Stop SFX...");
-    for (NSNumber * s in [soundFX_ID objectEnumerator]) {
+    for (NSString * s in soundSources) {
         if (s != nil) { 
-            [sAudioEngine stopEffect:[s unsignedIntValue]];
+            NSLog(@"Stop SFX...");
+            CDSoundSource * soundSource = (CDSoundSource*)[soundSources objectForKey:s];
+            [soundSource stop];
         }
     }
     
-    [soundFX removeAllObjects];
-    [soundFX_ID removeAllObjects];
-}
-
-- (void) removeSound:(NSString*) filename {
-    [soundFX removeObjectForKey:filename];
-    [soundFX_ID removeObjectForKey:filename];
+    [soundSources removeAllObjects];
 }
 
 -(void) removePreloadedData {
-    for (NSString * s in [soundFX allKeys]) {
+    for (NSString * s in soundSources) {
         if (s != nil) { 
-            [sAudioEngine unloadEffect:s];
+            NSLog(@"Stop SFX...");
+            CDSoundSource * soundSource = (CDSoundSource*)[soundSources objectForKey:s];
+            [soundSource stop];
         }
     }
-    [soundFX removeAllObjects];
-    [soundFX_ID removeAllObjects];
     [soundSources removeAllObjects];
 }
 
