@@ -36,6 +36,7 @@ typedef enum {
     
     NSMutableDictionary * soundFX;
     NSMutableDictionary * soundFX_ID;
+    NSMutableDictionary * soundSources;
 }
 
 SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(MusicManager);
