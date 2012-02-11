@@ -20,13 +20,13 @@
 		E61D6B4814E1660800CE9BEA /* MusicManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B3314E1660800CE9BEA /* MusicManager.h */; };
 		E61D6B4914E1660800CE9BEA /* PhysicsSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B3414E1660800CE9BEA /* PhysicsSystem.h */; };
 		E61D6B4A14E1660800CE9BEA /* WorldPhysics.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B3514E1660800CE9BEA /* WorldPhysics.h */; };
-		E61D6B4B14E1660800CE9BEA /* CCBlade.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3714E1660800CE9BEA /* CCBlade.mm */; };
+		E61D6B4B14E1660800CE9BEA /* CCBlade.m in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3714E1660800CE9BEA /* CCBlade.m */; };
 		E61D6B4C14E1660800CE9BEA /* CCDraggableSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3814E1660800CE9BEA /* CCDraggableSprite.mm */; };
 		E61D6B4D14E1660800CE9BEA /* CCMenuAdvanced.m in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3914E1660800CE9BEA /* CCMenuAdvanced.m */; };
 		E61D6B4E14E1660800CE9BEA /* CCSpriteExtended.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3A14E1660800CE9BEA /* CCSpriteExtended.mm */; };
 		E61D6B4F14E1660800CE9BEA /* CCSpriteExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3B14E1660800CE9BEA /* CCSpriteExtension.m */; };
 		E61D6B5014E1660800CE9BEA /* TestLoaderScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3C14E1660800CE9BEA /* TestLoaderScene.mm */; };
-		E61D6B5114E1660800CE9BEA /* MusicManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3D14E1660800CE9BEA /* MusicManager.mm */; };
+		E61D6B5114E1660800CE9BEA /* MusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3D14E1660800CE9BEA /* MusicManager.m */; };
 		E61D6B5214E1660800CE9BEA /* PhysicsSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3E14E1660800CE9BEA /* PhysicsSystem.mm */; };
 		E61D6B5314E1660800CE9BEA /* WorldPhysics.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3F14E1660800CE9BEA /* WorldPhysics.mm */; };
 /* End PBXBuildFile section */
@@ -47,13 +47,13 @@
 		E61D6B3314E1660800CE9BEA /* MusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicManager.h; sourceTree = "<group>"; };
 		E61D6B3414E1660800CE9BEA /* PhysicsSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsSystem.h; sourceTree = "<group>"; };
 		E61D6B3514E1660800CE9BEA /* WorldPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldPhysics.h; sourceTree = "<group>"; };
-		E61D6B3714E1660800CE9BEA /* CCBlade.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCBlade.mm; sourceTree = "<group>"; };
+		E61D6B3714E1660800CE9BEA /* CCBlade.m */ = {isa = PBXFileReference; fileEncoding = 4; path = CCBlade.m; sourceTree = "<group>"; };
 		E61D6B3814E1660800CE9BEA /* CCDraggableSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCDraggableSprite.mm; sourceTree = "<group>"; };
 		E61D6B3914E1660800CE9BEA /* CCMenuAdvanced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMenuAdvanced.m; sourceTree = "<group>"; };
 		E61D6B3A14E1660800CE9BEA /* CCSpriteExtended.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCSpriteExtended.mm; sourceTree = "<group>"; };
 		E61D6B3B14E1660800CE9BEA /* CCSpriteExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteExtension.m; sourceTree = "<group>"; };
 		E61D6B3C14E1660800CE9BEA /* TestLoaderScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TestLoaderScene.mm; sourceTree = "<group>"; };
-		E61D6B3D14E1660800CE9BEA /* MusicManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MusicManager.mm; sourceTree = "<group>"; };
+		E61D6B3D14E1660800CE9BEA /* MusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicManager.m; sourceTree = "<group>"; };
 		E61D6B3E14E1660800CE9BEA /* PhysicsSystem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhysicsSystem.mm; sourceTree = "<group>"; };
 		E61D6B3F14E1660800CE9BEA /* WorldPhysics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WorldPhysics.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,7 +136,7 @@
 		E6ACACF214E16779004C063C /* Music Manager */ = {
 			isa = PBXGroup;
 			children = (
-				E61D6B3D14E1660800CE9BEA /* MusicManager.mm */,
+				E61D6B3D14E1660800CE9BEA /* MusicManager.m */,
 			);
 			name = "Music Manager";
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 		E6ACACF314E1678A004C063C /* CCSprite extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E61D6B3714E1660800CE9BEA /* CCBlade.mm */,
+				E61D6B3714E1660800CE9BEA /* CCBlade.m */,
 				E61D6B3814E1660800CE9BEA /* CCDraggableSprite.mm */,
 				E61D6B3914E1660800CE9BEA /* CCMenuAdvanced.m */,
 				E61D6B3A14E1660800CE9BEA /* CCSpriteExtended.mm */,
@@ -301,13 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E61D6B4B14E1660800CE9BEA /* CCBlade.mm in Sources */,
+				E61D6B4B14E1660800CE9BEA /* CCBlade.m in Sources */,
 				E61D6B4C14E1660800CE9BEA /* CCDraggableSprite.mm in Sources */,
 				E61D6B4D14E1660800CE9BEA /* CCMenuAdvanced.m in Sources */,
 				E61D6B4E14E1660800CE9BEA /* CCSpriteExtended.mm in Sources */,
 				E61D6B4F14E1660800CE9BEA /* CCSpriteExtension.m in Sources */,
 				E61D6B5014E1660800CE9BEA /* TestLoaderScene.mm in Sources */,
-				E61D6B5114E1660800CE9BEA /* MusicManager.mm in Sources */,
+				E61D6B5114E1660800CE9BEA /* MusicManager.m in Sources */,
 				E61D6B5214E1660800CE9BEA /* PhysicsSystem.mm in Sources */,
 				E61D6B5314E1660800CE9BEA /* WorldPhysics.mm in Sources */,
 			);
