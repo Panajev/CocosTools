@@ -116,7 +116,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
     sAudioEngine.effectsVolume=1.0f;
     CDSoundSource * soundSource = [sAudioEngine soundSourceForFile:filename];
     if(!soundSource.isPlaying) {
-        [[soundSources objectForKey:filename] stop];
+        CDSoundSource * oldSource = [soundSources objectForKey:filename];
+        [oldSource stop];
+        
         [soundSource rewind];
         [soundSource play];
         [soundSources setObject:soundSource forKey:filename];
