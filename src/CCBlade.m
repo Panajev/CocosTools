@@ -25,39 +25,41 @@
 
 #import "CCBlade.h"
 
+
 inline float fangle(CGPoint vect){
-	if (vect.x == 0.0 && vect.y == 0.0) {
-		return 0;
-	}
-	
-	if (vect.x == 0.0) {
-		return vect.y > 0 ? M_PI/2 : -M_PI/2;
-	}
-	
-	if (vect.y == 0.0 && vect.x < 0) {
-		return -M_PI;
-	}
-	
-	float angle = atan(vect.y / vect.x);
+    if (vect.x == 0.0 && vect.y == 0.0) {
+        return 0;
+    }
     
-	return vect.x < 0 ? angle + M_PI : angle;
+    if (vect.x == 0.0) {
+        return vect.y > 0 ? M_PI/2 : -M_PI/2;
+    }
+    
+    if (vect.y == 0.0 && vect.x < 0) {
+        return -M_PI;
+    }
+    
+    float angle = atan(vect.y / vect.x);
+    
+    return vect.x < 0 ? angle + M_PI : angle;
 }
 
 inline void f1(CGPoint p1, CGPoint p2, float d, CGPoint *o1, CGPoint *o2){
-	float l = ccpDistance(p1, p2);
-	float angle = fangle(ccpSub(p2, p1));
-	*o1 = ccpRotateByAngle(ccp(p1.x + l,p1.y + d), p1, angle);
-	*o2 = ccpRotateByAngle(ccp(p1.x + l,p1.y - d), p1, angle);
+    float l = ccpDistance(p1, p2);
+    float angle = fangle(ccpSub(p2, p1));
+    *o1 = ccpRotateByAngle(ccp(p1.x + l,p1.y + d), p1, angle);
+    *o2 = ccpRotateByAngle(ccp(p1.x + l,p1.y - d), p1, angle);
 }
 
 inline float lagrange1(CGPoint p1, CGPoint p2, float x){
-	return (x-p1.x)/(p2.x - p1.x)*p2.y + (x-p2.x)/(p1.x - p2.x)*p1.y ;
+    return (x-p1.x)/(p2.x - p1.x)*p2.y + (x-p2.x)/(p1.x - p2.x)*p1.y ;
 }
 
 inline void CGPointSet(CGPoint *v, float x, float y){
-	v->x = x;
-	v->y = y;
+    v->x = x;
+    v->y = y;
 }
+
 
 @implementation CCBlade
 @synthesize texture = _texture;
@@ -74,7 +76,7 @@ inline void CGPointSet(CGPoint *v, float x, float y){
     dimSpeed = 1;
     shaderProgram_ = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionTexture];
     [shaderProgram_ retain];
-        
+    
     pointLimit = limit;
 	self.width = 5;
 	
@@ -85,7 +87,7 @@ inline void CGPointSet(CGPoint *v, float x, float y){
     reset = NO;
     
     path = [[NSMutableArray alloc] init];
-
+    
     return self;
 }
 
@@ -144,9 +146,9 @@ inline void CGPointSet(CGPoint *v, float x, float y){
     if (CC_CONTENT_SCALE_FACTOR() != 1.0f) {
         v = ccpMult(v, CC_CONTENT_SCALE_FACTOR());
     }
-
+    
 #if USE_LAGRANGE
-
+    
     if ([path count] == 0) {
         [path insertObject:[NSValue valueWithCGPoint:v] atIndex:0];
         return;
@@ -174,7 +176,7 @@ inline void CGPointSet(CGPoint *v, float x, float y){
 		path.pop_back();
 	}
 #endif // !USE_LAGRANGE
-
+    
 	
 	[self populateVertices];
 }

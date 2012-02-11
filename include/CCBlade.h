@@ -29,11 +29,11 @@
 #define USE_LAGRANGE    1
 #define USE_STL_LIST    0
 
-inline float fangle(CGPoint vect);
-inline float lagrange1(CGPoint p1, CGPoint p2, float x);
+CG_EXTERN inline float fangle(CGPoint vect);
+CG_EXTERN inline float lagrange1(CGPoint p1, CGPoint p2, float x);
 
-inline void CGPointSet(CGPoint *v, float x, float y);
-inline void f1(CGPoint p1, CGPoint p2, float d, CGPoint *o1, CGPoint *o2);
+CG_EXTERN inline void CGPointSet(CGPoint *v, float x, float y);
+CG_EXTERN inline void f1(CGPoint p1, CGPoint p2, float d, CGPoint *o1, CGPoint *o2);
 
 @interface CCBlade : CCNode {
     NSMutableArray *path;
