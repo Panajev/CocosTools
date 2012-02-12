@@ -47,7 +47,7 @@
 		E61D6B3314E1660800CE9BEA /* MusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicManager.h; sourceTree = "<group>"; };
 		E61D6B3414E1660800CE9BEA /* PhysicsSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsSystem.h; sourceTree = "<group>"; };
 		E61D6B3514E1660800CE9BEA /* WorldPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldPhysics.h; sourceTree = "<group>"; };
-		E61D6B3714E1660800CE9BEA /* CCBlade.m */ = {isa = PBXFileReference; fileEncoding = 4; path = CCBlade.m; sourceTree = "<group>"; };
+		E61D6B3714E1660800CE9BEA /* CCBlade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBlade.m; sourceTree = "<group>"; };
 		E61D6B3814E1660800CE9BEA /* CCDraggableSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCDraggableSprite.mm; sourceTree = "<group>"; };
 		E61D6B3914E1660800CE9BEA /* CCMenuAdvanced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMenuAdvanced.m; sourceTree = "<group>"; };
 		E61D6B3A14E1660800CE9BEA /* CCSpriteExtended.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCSpriteExtended.mm; sourceTree = "<group>"; };
@@ -361,7 +361,7 @@
 		E60E6AA314E144B6002902D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
 					"$(ARCHS_STANDARD_32_BIT)",
 					armv6,
@@ -370,8 +370,14 @@
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocosTools-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"IPHONE_SDK_PROJECT=1",
+				);
 				GCC_THUMB_SUPPORT = NO;
 				GCC_UNROLL_LOOPS = YES;
+				HEADER_SEARCH_PATHS = "../SharedLibs/Cocos-Debug/include/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				LD_NO_PIE = YES;
 				OTHER_CFLAGS = (
@@ -382,14 +388,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "../SharedLibs/Utilities-Debug/include/** ../SharedLibs/Cocos-Debug/include/** ../SharedLibs/Facebook-Debug/include";
+				USER_HEADER_SEARCH_PATHS = "../SharedLibs/Utilities-Debug/include/** ../SharedLibs/Facebook-Debug/include";
 			};
 			name = Debug;
 		};
 		E60E6AA414E144B6002902D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
 					"$(ARCHS_STANDARD_32_BIT)",
 					armv6,
@@ -398,8 +404,10 @@
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocosTools-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "IPHONE_SDK_PROJECT=1";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_UNROLL_LOOPS = YES;
+				HEADER_SEARCH_PATHS = "../SharedLibs/Cocos/include/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				LD_NO_PIE = YES;
 				OTHER_CFLAGS = "";
@@ -421,7 +429,7 @@
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "../SharedLibs/Utilities/include/** ../SharedLibs/Cocos/include/** ../SharedLibs/Facebook/include";
+				USER_HEADER_SEARCH_PATHS = "../SharedLibs/Utilities/include/** ../SharedLibs/Facebook/include";
 			};
 			name = Release;
 		};

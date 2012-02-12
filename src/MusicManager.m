@@ -11,6 +11,7 @@
 #import "CDXPropertyModifierAction.h"
 #import "CCActionManager.h"
 #import "OSDefines.h"
+#import "SysTools.h"
 
 @implementation MusicManager
 SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
@@ -112,29 +113,50 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
     [sAudioEngine preloadEffect:filename];
     [soundSources setObject:[sAudioEngine soundSourceForFile:filename] forKey:filename];
 }
--(CDSoundSource*) playSFX:(NSString*) filename {
-    sAudioEngine.effectsVolume=1.0f;
-    CDSoundSource * soundSource = [sAudioEngine soundSourceForFile:filename];
-    if(!soundSource.isPlaying) {
-        CDSoundSource * oldSource = [soundSources objectForKey:filename];
-        [oldSource stop];
-        
-        [soundSource rewind];
-        [soundSource play];
-        [soundSources setObject:soundSource forKey:filename];
-    }
-    
-    return soundSource;
+-(void) playSFX:(NSString*)filename {
+    [self playSFX:filename gain:1 overlap:YES];
+}
+-(void) playSFX:(NSString*) filename overlap:(BOOL)flag{
+    [self playSFX:filename gain:1 overlap:flag];
 }
 
 -(void) playSFX:(NSString*) filename gain:(CGFloat)g {
-    [self playSFX:filename].gain=g;
+    [self playSFX:filename gain:1 overlap:YES].gain=g;
+}
+
+-(CDSoundSource*) playSFX:(NSString*) filename gain:(CGFloat)g  overlap:(BOOL)flag {
+    sAudioEngine.effectsVolume=1.0f;
+    
+    CDSoundSource * soundSource = [sAudioEngine soundSourceForFile:filename];
+    CDSoundSource * oldSource = [soundSources objectForKey:filename];
+    
+    if(oldSource != nil && flag == NO) {
+        if(!oldSource.isPlaying) {
+            //[soundSource stop];
+            [soundSources removeObjectForKey:filename];
+        }
+        else {
+            return oldSource;
+        }
+    }
+    else if (oldSource) {
+        NSLog(@"Play new sound source, overlap = YES.");
+        [oldSource play];
+        return oldSource;
+    }
+    
+    [soundSource play];
+    NSLog(@"Play new sound source.");
+    [soundSources setObject:soundSource forKey:filename];
+    
+    return soundSource;
 }
 
 -(void) stopSFX:(NSString*)filename {
     CDSoundSource * soundSource = [soundSources objectForKey:filename];
     [soundSource stop];
     [soundSources removeObjectForKey:filename];
+    NSLog(@"Stop SFX:...");
 }
 
 -(void) stopSFX {
@@ -173,6 +195,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
         [self playMusic:musicTrackEnqueued];
         SAFE_RELEASE(musicTrackEnqueued);
     }
+}
+
+-(void) registerLayer:(CCLayer*)layer {
+    cocosLayer = layer;
 }
 
 @end

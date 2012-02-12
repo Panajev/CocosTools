@@ -10,7 +10,7 @@
 #include <CoreGraphics/CoreGraphics.h>
 #import "SynthesizeSingleton.h"
 
-@class SimpleAudioEngine, CDAudioManager, CDSoundSource;
+@class SimpleAudioEngine, CDAudioManager, CDSoundSource, CCLayer;
 
 typedef enum {
 	kGSUninitialised,
@@ -37,6 +37,7 @@ typedef enum {
     NSMutableDictionary * soundFX;
     NSMutableDictionary * soundFX_ID;
     NSMutableDictionary * soundSources;
+    CCLayer* cocosLayer;
 }
 
 SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(MusicManager);
@@ -51,8 +52,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(MusicManager);
 -(void) pauseMusic;
 -(void) playMusic:(NSString*) filename;
 -(void) stopMusic;
--(CDSoundSource*) playSFX:(NSString*) filename;
+-(void) playSFX:(NSString*) filename;
 -(void) playSFX:(NSString*) filename gain:(CGFloat)g;
+-(CDSoundSource*) playSFX:(NSString*) filename gain:(CGFloat)g overlap:(BOOL)flag;
 -(void) stopSFX:(NSString*)filename;
 -(void) stopSFX;
 -(void) setVolume:(CGFloat)volume;
@@ -60,6 +62,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(MusicManager);
 -(void) removePreloadedData;
 -(void) fadeOutMusic;
 -(void) toggleMute;
-
+-(void) registerLayer:(CCLayer*)layer;
 
 @end
