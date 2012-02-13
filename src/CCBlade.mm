@@ -78,7 +78,7 @@ inline void CGPointSet(CGPoint *v, float x, float y){
     [shaderProgram_ retain];
     
     pointLimit = limit;
-	self.width = 5;
+	self.width = [SysTools iPadUI]?5.0f:2.5f;
 	
     vertices = (CGPoint *)calloc(2*limit+5, sizeof(vertices[0]));
     coordinates = (CGPoint *)calloc(2*limit+5, sizeof(coordinates[0]));
@@ -133,18 +133,16 @@ inline void CGPointSet(CGPoint *v, float x, float y){
 	}
 }
 
+
 - (void) setWidth:(float)width_{
-    width = width_ * CC_CONTENT_SCALE_FACTOR();
+    width = width_;
 }
 
 #define DISTANCE_TO_INTERPOLATE 10
 
 - (void) push:(CGPoint) v{
-	if (reset) {
-		return;
-	}
-    if (CC_CONTENT_SCALE_FACTOR() != 1.0f) {
-        v = ccpMult(v, CC_CONTENT_SCALE_FACTOR());
+    if (reset) {
+        return;
     }
     
 #if USE_LAGRANGE
@@ -163,22 +161,22 @@ inline void CGPointSet(CGPoint *v, float x, float y){
     }else{
         int num = ccpDistance(v, first) / DISTANCE_TO_INTERPOLATE;
         CGPoint iv = ccpMult(ccpSub(v, first), (float)1./(num + 1));
-		for (int i = 1; i <= num + 1; i++) {
+        for (int i = 1; i <= num + 1; i++) {
             [path insertObject:[NSValue valueWithCGPoint:ccpAdd(first, ccpMult(iv, i))] atIndex:0];
-		}
-		while ([path count] > pointLimit) {
-			[path removeLastObject];
-		}
+        }
+        while ([path count] > pointLimit) {
+            [path removeLastObject];
+        }
     }
 #else // !USE_LAGRANGE
-	path.push_front(v);
-	if (path.size() > pointLimit) {
-		path.pop_back();
-	}
+    path.push_front(v);
+    if (path.size() > pointLimit) {
+        path.pop_back();
+    }
 #endif // !USE_LAGRANGE
     
-	
-	[self populateVertices];
+    
+    [self populateVertices];
 }
 
 - (void) pop:(int) n{
@@ -191,6 +189,8 @@ inline void CGPointSet(CGPoint *v, float x, float y){
         [self populateVertices];
     }
 }
+
+
 
 - (void) clear{
     [path removeAllObjects];

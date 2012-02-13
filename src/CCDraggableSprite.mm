@@ -18,7 +18,7 @@
     float maxX = texture_.contentSize.width/self.scale;
     float maxY = texture_.contentSize.height/self.scale;
     
-    NSLog(@"maxX = %.2f, pos.x = %.2f", maxX, pos.x);
+    //NSLog(@"maxX = %.2f, pos.x = %.2f", maxX, pos.x);
     
     if(pos.x < 0 || pos.y < 0 || 
        pos.x > maxX || pos.y > maxY) {

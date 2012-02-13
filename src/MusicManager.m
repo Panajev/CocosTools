@@ -140,13 +140,13 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
         }
     }
     else if (oldSource) {
-        NSLog(@"Play new sound source, overlap = YES.");
+        //NSLog(@"Play new sound source, overlap = YES.");
         [oldSource play];
         return oldSource;
     }
     
     [soundSource play];
-    NSLog(@"Play new sound source.");
+    //NSLog(@"Play new sound source.");
     [soundSources setObject:soundSource forKey:filename];
     
     return soundSource;
@@ -156,13 +156,13 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
     CDSoundSource * soundSource = [soundSources objectForKey:filename];
     [soundSource stop];
     [soundSources removeObjectForKey:filename];
-    NSLog(@"Stop SFX:...");
+    //NSLog(@"Stop SFX:...");
 }
 
 -(void) stopSFX {
     for (NSString * s in soundSources) {
         if (s != nil) { 
-            NSLog(@"Stop SFX...");
+            //NSLog(@"Stop SFX...");
             CDSoundSource * soundSource = (CDSoundSource*)[soundSources objectForKey:s];
             [soundSource stop];
         }
@@ -179,7 +179,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
 -(void) removePreloadedData {
     for (NSString * s in soundSources) {
         if (s != nil) { 
-            NSLog(@"Stop SFX...");
+            //NSLog(@"Stop SFX...");
             CDSoundSource * soundSource = (CDSoundSource*)[soundSources objectForKey:s];
             [soundSource stop];
         }
