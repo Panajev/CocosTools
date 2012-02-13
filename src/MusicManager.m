@@ -171,6 +171,11 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
     [soundSources removeAllObjects];
 }
 
+-(void) pauseSFX:(NSString*)filename {
+    CDSoundSource * soundSource = [soundSources objectForKey:filename];
+    [soundSource pause];
+}
+
 -(void) removePreloadedData {
     for (NSString * s in soundSources) {
         if (s != nil) { 

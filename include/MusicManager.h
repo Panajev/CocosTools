@@ -57,6 +57,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(MusicManager);
 -(CDSoundSource*) playSFX:(NSString*) filename gain:(CGFloat)g overlap:(BOOL)flag;
 -(void) stopSFX:(NSString*)filename;
 -(void) stopSFX;
+-(void) pauseSFX:(NSString*)filename;
 -(void) setVolume:(CGFloat)volume;
 -(CGFloat) volume;
 -(void) removePreloadedData;
