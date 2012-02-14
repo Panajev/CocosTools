@@ -133,7 +133,6 @@ inline void CGPointSet(CGPoint *v, float x, float y){
 	}
 }
 
-
 - (void) setWidth:(float)width_{
     width = width_;
 }
@@ -189,8 +188,6 @@ inline void CGPointSet(CGPoint *v, float x, float y){
         [self populateVertices];
     }
 }
-
-
 
 - (void) clear{
     [path removeAllObjects];
