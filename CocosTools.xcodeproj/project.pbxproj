@@ -27,6 +27,8 @@
 		E61D6B5114E1660800CE9BEA /* MusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3D14E1660800CE9BEA /* MusicManager.m */; };
 		E61D6B5214E1660800CE9BEA /* PhysicsSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3E14E1660800CE9BEA /* PhysicsSystem.mm */; };
 		E61D6B5314E1660800CE9BEA /* WorldPhysics.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3F14E1660800CE9BEA /* WorldPhysics.mm */; };
+		E63D247B14ECFB3C0051E34E /* UISprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = E63D247914ECFB3C0051E34E /* UISprite.mm */; };
+		E63D247E14ECFBBB0051E34E /* UISprite.h in Headers */ = {isa = PBXBuildFile; fileRef = E63D247D14ECFBBB0051E34E /* UISprite.h */; };
 		E656ED6F14E9403F0022A75F /* CCBlade.h in Headers */ = {isa = PBXBuildFile; fileRef = E656ED6D14E9403F0022A75F /* CCBlade.h */; };
 		E656ED7214E940E10022A75F /* CCBlade.mm in Sources */ = {isa = PBXBuildFile; fileRef = E656ED7114E940E10022A75F /* CCBlade.mm */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		E61D6B3D14E1660800CE9BEA /* MusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicManager.m; sourceTree = "<group>"; };
 		E61D6B3E14E1660800CE9BEA /* PhysicsSystem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhysicsSystem.mm; sourceTree = "<group>"; };
 		E61D6B3F14E1660800CE9BEA /* WorldPhysics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WorldPhysics.mm; sourceTree = "<group>"; };
+		E63D247914ECFB3C0051E34E /* UISprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UISprite.mm; sourceTree = "<group>"; };
+		E63D247D14ECFBBB0051E34E /* UISprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISprite.h; sourceTree = "<group>"; };
 		E656ED6D14E9403F0022A75F /* CCBlade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBlade.h; sourceTree = "<group>"; };
 		E656ED7114E940E10022A75F /* CCBlade.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCBlade.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +153,7 @@
 				E61D6B3914E1660800CE9BEA /* CCMenuAdvanced.m */,
 				E61D6B3A14E1660800CE9BEA /* CCSpriteExtended.mm */,
 				E61D6B3B14E1660800CE9BEA /* CCSpriteExtension.m */,
+				E63D247914ECFB3C0051E34E /* UISprite.mm */,
 			);
 			name = "CCSprite extensions";
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 		E6ACACF814E167D5004C063C /* CCSprite extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E63D247D14ECFBBB0051E34E /* UISprite.h */,
 				E61D6B2D14E1660800CE9BEA /* CCDraggableSprite.h */,
 				E61D6B2E14E1660800CE9BEA /* CCMenuAdvanced.h */,
 				E61D6B2F14E1660800CE9BEA /* CCSpriteExtended.h */,
@@ -215,6 +221,7 @@
 				E61D6B4914E1660800CE9BEA /* PhysicsSystem.h in Headers */,
 				E61D6B4A14E1660800CE9BEA /* WorldPhysics.h in Headers */,
 				E656ED6F14E9403F0022A75F /* CCBlade.h in Headers */,
+				E63D247E14ECFBBB0051E34E /* UISprite.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +317,7 @@
 				E61D6B5214E1660800CE9BEA /* PhysicsSystem.mm in Sources */,
 				E61D6B5314E1660800CE9BEA /* WorldPhysics.mm in Sources */,
 				E656ED7214E940E10022A75F /* CCBlade.mm in Sources */,
+				E63D247B14ECFB3C0051E34E /* UISprite.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +369,6 @@
 		E60E6AA314E144B6002902D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/CocosTools.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -373,7 +380,10 @@
 				);
 				GCC_THUMB_SUPPORT = NO;
 				GCC_UNROLL_LOOPS = NO;
-				HEADER_SEARCH_PATHS = "../SharedLibs/Cocos-Debug/include/**";
+				HEADER_SEARCH_PATHS = (
+					"../SharedLibs/Cocos-Debug/include/**",
+					"../SharedLibs/Utilities-Debug/include/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_CFLAGS = (
 					"-ObjC",
@@ -383,14 +393,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "../SharedLibs/Utilities-Debug/include/** ../SharedLibs/Facebook-Debug/include";
+				USER_HEADER_SEARCH_PATHS = " ../SharedLibs/Facebook-Debug/include";
 			};
 			name = Debug;
 		};
 		E60E6AA414E144B6002902D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/CocosTools.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -398,7 +407,10 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "IPHONE_SDK_PROJECT=1";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_UNROLL_LOOPS = YES;
-				HEADER_SEARCH_PATHS = "../SharedLibs/Cocos/include/**";
+				HEADER_SEARCH_PATHS = (
+					"../SharedLibs/Cocos/include/**",
+					"../SharedLibs/Utilities/include/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_CFLAGS = "";
 				"OTHER_CFLAGS[arch=armv7]" = (
@@ -419,7 +431,7 @@
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "../SharedLibs/Utilities/include/** ../SharedLibs/Facebook/include";
+				USER_HEADER_SEARCH_PATHS = ../SharedLibs/Facebook/include;
 			};
 			name = Release;
 		};
