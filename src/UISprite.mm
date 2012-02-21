@@ -10,7 +10,7 @@
 #import "MathHelper.h"
 
 @implementation UISprite
-@synthesize pressed, touchHash;
+@synthesize pressed, touchHash, collisionRadiusExtended;
 
 -(id)init {
     self = [super init];
@@ -60,7 +60,8 @@
     CGPoint point = [touch locationInView: [touch view]];
 	point = [[CCDirector sharedDirector] convertToGL: point];
 	
-	if(CGCircleContainsPoint(self.rect.size.width/2,self.position, point)){
+	if(CGCircleContainsPoint(self.rect.size.width/2,self.position, point) || 
+       collisionRadiusExtended){
 		if(touchHash == [touch hash]){		//If we moved on this sprite
 			[self processTouch:point];
 		}else if(!pressed){					//If a new touch moves onto this sprite

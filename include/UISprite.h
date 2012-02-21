@@ -15,8 +15,10 @@
 @public
     bool pressed;			//Is this sprite pressed
     NSUInteger touchHash;	//Used to identify individual touches
+    bool collisionRadiusExtended;
 }
 
+@property (readwrite, assign) bool collisionRadiusExtended;
 @property (readwrite, assign) bool pressed;
 @property (readwrite, assign) NSUInteger touchHash;
 

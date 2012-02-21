@@ -148,11 +148,11 @@
 		E6ACACF314E1678A004C063C /* CCSprite extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E656ED7114E940E10022A75F /* CCBlade.mm */,
 				E61D6B3814E1660800CE9BEA /* CCDraggableSprite.mm */,
 				E61D6B3914E1660800CE9BEA /* CCMenuAdvanced.m */,
 				E61D6B3A14E1660800CE9BEA /* CCSpriteExtended.mm */,
 				E61D6B3B14E1660800CE9BEA /* CCSpriteExtension.m */,
+				E656ED7114E940E10022A75F /* CCBlade.mm */,
 				E63D247914ECFB3C0051E34E /* UISprite.mm */,
 			);
 			name = "CCSprite extensions";
@@ -194,12 +194,12 @@
 		E6ACACF814E167D5004C063C /* CCSprite extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E63D247D14ECFBBB0051E34E /* UISprite.h */,
 				E61D6B2D14E1660800CE9BEA /* CCDraggableSprite.h */,
 				E61D6B2E14E1660800CE9BEA /* CCMenuAdvanced.h */,
 				E61D6B2F14E1660800CE9BEA /* CCSpriteExtended.h */,
 				E61D6B3014E1660800CE9BEA /* CCSpriteExtensions.h */,
 				E656ED6D14E9403F0022A75F /* CCBlade.h */,
+				E63D247D14ECFBBB0051E34E /* UISprite.h */,
 			);
 			name = "CCSprite extensions";
 			sourceTree = "<group>";
