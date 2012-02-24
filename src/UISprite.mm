@@ -50,12 +50,19 @@
     
 	//We use circle collision for our buttons
 	if(CGCircleContainsPoint(self.rect.size.width/2,self.position, point)){		
+        touchStarted = YES;
 		touchHash = [touch hash];
 		[self processTouch:point];
 	}
 }
 
 - (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (collisionRadiusExtended) {
+        if (!touchStarted) {
+            return;
+        }
+    }
+    
 	UITouch *touch = [touches anyObject];
     CGPoint point = [touch locationInView: [touch view]];
 	point = [[CCDirector sharedDirector] convertToGL: point];
@@ -74,14 +81,20 @@
 }
 
 - (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-	UITouch *touch = [touches anyObject];	
+    [self ccTouchesCancelled:touches withEvent:event];
+}
+
+- (void)ccTouchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [touches anyObject];	
 	CGPoint point = [touch locationInView: [touch view]];
 	point = [[CCDirector sharedDirector] convertToGL: point];
 	
 	if(touchHash == [touch hash]){	//If the touch which pressed this sprite ended we release
 		[self processRelease];
+        touchStarted = NO;
 	}
-}
+} 
 
 - (void)processTouch:(CGPoint)point {
 	pressed = YES;

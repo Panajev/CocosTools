@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E60E6A9914E144B6002902D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E6A9814E144B6002902D2 /* Foundation.framework */; };
 		E60E6AF014E151E7002902D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E6AEF14E151E7002902D2 /* CoreGraphics.framework */; };
-		E60E6AF214E15237002902D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E6AF114E15237002902D2 /* CoreGraphics.framework */; };
 		E61D6B4014E1660800CE9BEA /* CocosTools-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2A14E1660800CE9BEA /* CocosTools-Prefix.pch */; };
 		E61D6B4214E1660800CE9BEA /* CCDraggableSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2D14E1660800CE9BEA /* CCDraggableSprite.h */; };
 		E61D6B4314E1660800CE9BEA /* CCMenuAdvanced.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2E14E1660800CE9BEA /* CCMenuAdvanced.h */; };
@@ -69,7 +68,6 @@
 			files = (
 				E60E6AF014E151E7002902D2 /* CoreGraphics.framework in Frameworks */,
 				E60E6A9914E144B6002902D2 /* Foundation.framework in Frameworks */,
-				E60E6AF214E15237002902D2 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,9 @@
 #import "cocos2d.h"
 #import "CCDraggableSprite.h"
 
-const static float FIXED_TIME_STEP = 1.f/60.f;
+#ifndef FIXED_TIMESTEP
+#define FIXED_TIMESTEP (1.0f/60.0f)
+#endif
 
 class PhysicsSystem
 {
@@ -22,6 +24,10 @@ public:
 	void singleStep_ (float dt);
 	void smoothStates_ ();
 	void resetSmoothStates_ ();
+    void registerAnimationCallBack (id target, SEL selector);
+    
+    id targetLayer;
+    SEL selectorLayer;
     
 	//PhysicsSystem(float theInitialFixedTimeStepAccumulator, float theInitialFixedTimeStepAccumulatorRatio);
 	PhysicsSystem(void);

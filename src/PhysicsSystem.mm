@@ -1,7 +1,5 @@
 #import "PhysicsSystem.h"
 
-const float FIXED_TIMESTEP = 1.0f / 60.f;
-
 PhysicsSystem::PhysicsSystem (): fixedTimestepAccumulator_ (0), fixedTimestepAccumulatorRatio_ (0),velocityIterations_(8), positionIterations_(1)
 {
 	// ...
@@ -13,6 +11,8 @@ b2World* PhysicsSystem::getWorld(void) {
 
 void PhysicsSystem::setWorld(b2World* world) {
 	world_ = world;
+    targetLayer = nil;
+    selectorLayer = nil;
 }
 
 PhysicsSystem::~PhysicsSystem (void) {
@@ -67,10 +67,21 @@ void PhysicsSystem::singleStep_ (float dt)
 	// ...
     
 	//updateControllers_ (dt);
+    if ([targetLayer respondsToSelector:selectorLayer]) {
+        [targetLayer performSelector:selectorLayer withObject:[NSNumber numberWithFloat:dt]];
+    }
+    
 	world_->Step (dt, velocityIterations_, positionIterations_);
 	//consumeContacts_ ();
     
 	// ...
+}
+
+void PhysicsSystem::registerAnimationCallBack (id target, SEL selector) {
+    if (targetLayer != target && selector && target) {
+        targetLayer = target;
+        selectorLayer = selector;
+    }
 }
 
 void PhysicsSystem::smoothStates_ ()

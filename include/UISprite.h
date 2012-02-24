@@ -16,6 +16,7 @@
     bool pressed;			//Is this sprite pressed
     NSUInteger touchHash;	//Used to identify individual touches
     bool collisionRadiusExtended;
+    bool touchStarted;
 }
 
 @property (readwrite, assign) bool collisionRadiusExtended;
