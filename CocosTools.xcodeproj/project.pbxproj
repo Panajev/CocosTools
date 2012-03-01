@@ -26,8 +26,35 @@
 		E61D6B5114E1660800CE9BEA /* MusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3D14E1660800CE9BEA /* MusicManager.m */; };
 		E61D6B5214E1660800CE9BEA /* PhysicsSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3E14E1660800CE9BEA /* PhysicsSystem.mm */; };
 		E61D6B5314E1660800CE9BEA /* WorldPhysics.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3F14E1660800CE9BEA /* WorldPhysics.mm */; };
+		E63AC75314FE26010011B466 /* ColoredCircleSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = E63AC74F14FE26010011B466 /* ColoredCircleSprite.h */; };
+		E63AC75414FE26010011B466 /* ColoredSquareSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = E63AC75014FE26010011B466 /* ColoredSquareSprite.h */; };
+		E63AC75514FE26010011B466 /* SneakyButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E63AC75114FE26010011B466 /* SneakyButton.h */; };
+		E63AC75614FE26010011B466 /* SneakyButtonSkinnedBase.h in Headers */ = {isa = PBXBuildFile; fileRef = E63AC75214FE26010011B466 /* SneakyButtonSkinnedBase.h */; };
+		E63AC75C14FE261E0011B466 /* ColoredCircleSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = E63AC75814FE261E0011B466 /* ColoredCircleSprite.m */; };
+		E63AC75D14FE261E0011B466 /* ColoredSquareSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = E63AC75914FE261E0011B466 /* ColoredSquareSprite.m */; };
+		E63AC75E14FE261E0011B466 /* SneakyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E63AC75A14FE261E0011B466 /* SneakyButton.m */; };
+		E63AC75F14FE261E0011B466 /* SneakyButtonSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E63AC75B14FE261E0011B466 /* SneakyButtonSkinnedBase.m */; };
 		E63D247B14ECFB3C0051E34E /* UISprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = E63D247914ECFB3C0051E34E /* UISprite.mm */; };
 		E63D247E14ECFBBB0051E34E /* UISprite.h in Headers */ = {isa = PBXBuildFile; fileRef = E63D247D14ECFBBB0051E34E /* UISprite.h */; };
+		E648234714FB92D600F5B719 /* CCControlExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = E648234614FB92D600F5B719 /* CCControlExtension.h */; };
+		E648235414FB92E700F5B719 /* CCControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E648234A14FB92E700F5B719 /* CCControl.h */; };
+		E648235514FB92E700F5B719 /* CCControlButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E648234B14FB92E700F5B719 /* CCControlButton.h */; };
+		E648235614FB92E700F5B719 /* CCControlColourPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = E648234C14FB92E700F5B719 /* CCControlColourPicker.h */; };
+		E648235714FB92E700F5B719 /* CCControlHuePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = E648234D14FB92E700F5B719 /* CCControlHuePicker.h */; };
+		E648235814FB92E700F5B719 /* CCControlSaturationBrightnessPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = E648234E14FB92E700F5B719 /* CCControlSaturationBrightnessPicker.h */; };
+		E648235914FB92E700F5B719 /* CCControlSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = E648234F14FB92E700F5B719 /* CCControlSlider.h */; };
+		E648235A14FB92E700F5B719 /* CCColourUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E648235114FB92E700F5B719 /* CCColourUtils.h */; };
+		E648235B14FB92E700F5B719 /* CCScale9Sprite.h in Headers */ = {isa = PBXBuildFile; fileRef = E648235214FB92E700F5B719 /* CCScale9Sprite.h */; };
+		E648235C14FB92E700F5B719 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = E648235314FB92E700F5B719 /* Utils.h */; };
+		E648236A14FB936700F5B719 /* CCControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E648236014FB936700F5B719 /* CCControl.m */; };
+		E648236B14FB936700F5B719 /* CCControlButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E648236114FB936700F5B719 /* CCControlButton.m */; };
+		E648236C14FB936700F5B719 /* CCControlColourPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E648236214FB936700F5B719 /* CCControlColourPicker.m */; };
+		E648236D14FB936700F5B719 /* CCControlHuePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E648236314FB936700F5B719 /* CCControlHuePicker.m */; };
+		E648236E14FB936700F5B719 /* CCControlSaturationBrightnessPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E648236414FB936700F5B719 /* CCControlSaturationBrightnessPicker.m */; };
+		E648236F14FB936700F5B719 /* CCControlSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = E648236514FB936700F5B719 /* CCControlSlider.m */; };
+		E648237014FB936700F5B719 /* CCColourUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E648236714FB936700F5B719 /* CCColourUtils.m */; };
+		E648237114FB936700F5B719 /* CCScale9Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = E648236814FB936700F5B719 /* CCScale9Sprite.m */; };
+		E648237214FB936700F5B719 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E648236914FB936700F5B719 /* Utils.m */; };
 		E656ED6F14E9403F0022A75F /* CCBlade.h in Headers */ = {isa = PBXBuildFile; fileRef = E656ED6D14E9403F0022A75F /* CCBlade.h */; };
 		E656ED7214E940E10022A75F /* CCBlade.mm in Sources */ = {isa = PBXBuildFile; fileRef = E656ED7114E940E10022A75F /* CCBlade.mm */; };
 /* End PBXBuildFile section */
@@ -55,8 +82,35 @@
 		E61D6B3D14E1660800CE9BEA /* MusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicManager.m; sourceTree = "<group>"; };
 		E61D6B3E14E1660800CE9BEA /* PhysicsSystem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PhysicsSystem.mm; sourceTree = "<group>"; };
 		E61D6B3F14E1660800CE9BEA /* WorldPhysics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WorldPhysics.mm; sourceTree = "<group>"; };
+		E63AC74F14FE26010011B466 /* ColoredCircleSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredCircleSprite.h; sourceTree = "<group>"; };
+		E63AC75014FE26010011B466 /* ColoredSquareSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredSquareSprite.h; sourceTree = "<group>"; };
+		E63AC75114FE26010011B466 /* SneakyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyButton.h; sourceTree = "<group>"; };
+		E63AC75214FE26010011B466 /* SneakyButtonSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyButtonSkinnedBase.h; sourceTree = "<group>"; };
+		E63AC75814FE261E0011B466 /* ColoredCircleSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoredCircleSprite.m; sourceTree = "<group>"; };
+		E63AC75914FE261E0011B466 /* ColoredSquareSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoredSquareSprite.m; sourceTree = "<group>"; };
+		E63AC75A14FE261E0011B466 /* SneakyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyButton.m; sourceTree = "<group>"; };
+		E63AC75B14FE261E0011B466 /* SneakyButtonSkinnedBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyButtonSkinnedBase.m; sourceTree = "<group>"; };
 		E63D247914ECFB3C0051E34E /* UISprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UISprite.mm; sourceTree = "<group>"; };
 		E63D247D14ECFBBB0051E34E /* UISprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISprite.h; sourceTree = "<group>"; };
+		E648234614FB92D600F5B719 /* CCControlExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControlExtension.h; sourceTree = "<group>"; };
+		E648234A14FB92E700F5B719 /* CCControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControl.h; sourceTree = "<group>"; };
+		E648234B14FB92E700F5B719 /* CCControlButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControlButton.h; sourceTree = "<group>"; };
+		E648234C14FB92E700F5B719 /* CCControlColourPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControlColourPicker.h; sourceTree = "<group>"; };
+		E648234D14FB92E700F5B719 /* CCControlHuePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControlHuePicker.h; sourceTree = "<group>"; };
+		E648234E14FB92E700F5B719 /* CCControlSaturationBrightnessPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControlSaturationBrightnessPicker.h; sourceTree = "<group>"; };
+		E648234F14FB92E700F5B719 /* CCControlSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControlSlider.h; sourceTree = "<group>"; };
+		E648235114FB92E700F5B719 /* CCColourUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCColourUtils.h; sourceTree = "<group>"; };
+		E648235214FB92E700F5B719 /* CCScale9Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScale9Sprite.h; sourceTree = "<group>"; };
+		E648235314FB92E700F5B719 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		E648236014FB936700F5B719 /* CCControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCControl.m; sourceTree = "<group>"; };
+		E648236114FB936700F5B719 /* CCControlButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCControlButton.m; sourceTree = "<group>"; };
+		E648236214FB936700F5B719 /* CCControlColourPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCControlColourPicker.m; sourceTree = "<group>"; };
+		E648236314FB936700F5B719 /* CCControlHuePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCControlHuePicker.m; sourceTree = "<group>"; };
+		E648236414FB936700F5B719 /* CCControlSaturationBrightnessPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCControlSaturationBrightnessPicker.m; sourceTree = "<group>"; };
+		E648236514FB936700F5B719 /* CCControlSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCControlSlider.m; sourceTree = "<group>"; };
+		E648236714FB936700F5B719 /* CCColourUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCColourUtils.m; sourceTree = "<group>"; };
+		E648236814FB936700F5B719 /* CCScale9Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCScale9Sprite.m; sourceTree = "<group>"; };
+		E648236914FB936700F5B719 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		E656ED6D14E9403F0022A75F /* CCBlade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBlade.h; sourceTree = "<group>"; };
 		E656ED7114E940E10022A75F /* CCBlade.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCBlade.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +161,7 @@
 		E61D6B2B14E1660800CE9BEA /* include */ = {
 			isa = PBXGroup;
 			children = (
+				E648235D14FB931400F5B719 /* CCControl extension */,
 				E6ACACF814E167D5004C063C /* CCSprite extensions */,
 				E6ACACF714E167C3004C063C /* Loader Manager */,
 				E6ACACF614E167B6004C063C /* Music Manager */,
@@ -118,12 +173,78 @@
 		E61D6B3614E1660800CE9BEA /* src */ = {
 			isa = PBXGroup;
 			children = (
+				E648235E14FB934300F5B719 /* CCControl extension */,
 				E6ACACF314E1678A004C063C /* CCSprite extensions */,
 				E6ACACF414E16797004C063C /* Loader Manager */,
 				E6ACACF214E16779004C063C /* Music Manager */,
 				E6ACACF014E16769004C063C /* Physics Manager */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		E648234914FB92E700F5B719 /* CCControl */ = {
+			isa = PBXGroup;
+			children = (
+				E648234A14FB92E700F5B719 /* CCControl.h */,
+				E648234B14FB92E700F5B719 /* CCControlButton.h */,
+				E648234C14FB92E700F5B719 /* CCControlColourPicker.h */,
+				E648234D14FB92E700F5B719 /* CCControlHuePicker.h */,
+				E648234E14FB92E700F5B719 /* CCControlSaturationBrightnessPicker.h */,
+				E648234F14FB92E700F5B719 /* CCControlSlider.h */,
+				E648235014FB92E700F5B719 /* Utils */,
+			);
+			path = CCControl;
+			sourceTree = "<group>";
+		};
+		E648235014FB92E700F5B719 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E648235114FB92E700F5B719 /* CCColourUtils.h */,
+				E648235214FB92E700F5B719 /* CCScale9Sprite.h */,
+				E648235314FB92E700F5B719 /* Utils.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E648235D14FB931400F5B719 /* CCControl extension */ = {
+			isa = PBXGroup;
+			children = (
+				E648234614FB92D600F5B719 /* CCControlExtension.h */,
+				E648234914FB92E700F5B719 /* CCControl */,
+			);
+			name = "CCControl extension";
+			sourceTree = "<group>";
+		};
+		E648235E14FB934300F5B719 /* CCControl extension */ = {
+			isa = PBXGroup;
+			children = (
+				E648235F14FB936700F5B719 /* CCControl */,
+			);
+			name = "CCControl extension";
+			sourceTree = "<group>";
+		};
+		E648235F14FB936700F5B719 /* CCControl */ = {
+			isa = PBXGroup;
+			children = (
+				E648236014FB936700F5B719 /* CCControl.m */,
+				E648236114FB936700F5B719 /* CCControlButton.m */,
+				E648236214FB936700F5B719 /* CCControlColourPicker.m */,
+				E648236314FB936700F5B719 /* CCControlHuePicker.m */,
+				E648236414FB936700F5B719 /* CCControlSaturationBrightnessPicker.m */,
+				E648236514FB936700F5B719 /* CCControlSlider.m */,
+				E648236614FB936700F5B719 /* Utils */,
+			);
+			path = CCControl;
+			sourceTree = "<group>";
+		};
+		E648236614FB936700F5B719 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E648236714FB936700F5B719 /* CCColourUtils.m */,
+				E648236814FB936700F5B719 /* CCScale9Sprite.m */,
+				E648236914FB936700F5B719 /* Utils.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		E6ACACF014E16769004C063C /* Physics Manager */ = {
@@ -146,6 +267,10 @@
 		E6ACACF314E1678A004C063C /* CCSprite extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E63AC75814FE261E0011B466 /* ColoredCircleSprite.m */,
+				E63AC75914FE261E0011B466 /* ColoredSquareSprite.m */,
+				E63AC75A14FE261E0011B466 /* SneakyButton.m */,
+				E63AC75B14FE261E0011B466 /* SneakyButtonSkinnedBase.m */,
 				E61D6B3814E1660800CE9BEA /* CCDraggableSprite.mm */,
 				E61D6B3914E1660800CE9BEA /* CCMenuAdvanced.m */,
 				E61D6B3A14E1660800CE9BEA /* CCSpriteExtended.mm */,
@@ -192,6 +317,10 @@
 		E6ACACF814E167D5004C063C /* CCSprite extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E63AC74F14FE26010011B466 /* ColoredCircleSprite.h */,
+				E63AC75014FE26010011B466 /* ColoredSquareSprite.h */,
+				E63AC75114FE26010011B466 /* SneakyButton.h */,
+				E63AC75214FE26010011B466 /* SneakyButtonSkinnedBase.h */,
 				E61D6B2D14E1660800CE9BEA /* CCDraggableSprite.h */,
 				E61D6B2E14E1660800CE9BEA /* CCMenuAdvanced.h */,
 				E61D6B2F14E1660800CE9BEA /* CCSpriteExtended.h */,
@@ -220,6 +349,20 @@
 				E61D6B4A14E1660800CE9BEA /* WorldPhysics.h in Headers */,
 				E656ED6F14E9403F0022A75F /* CCBlade.h in Headers */,
 				E63D247E14ECFBBB0051E34E /* UISprite.h in Headers */,
+				E648234714FB92D600F5B719 /* CCControlExtension.h in Headers */,
+				E648235414FB92E700F5B719 /* CCControl.h in Headers */,
+				E648235514FB92E700F5B719 /* CCControlButton.h in Headers */,
+				E648235614FB92E700F5B719 /* CCControlColourPicker.h in Headers */,
+				E648235714FB92E700F5B719 /* CCControlHuePicker.h in Headers */,
+				E648235814FB92E700F5B719 /* CCControlSaturationBrightnessPicker.h in Headers */,
+				E648235914FB92E700F5B719 /* CCControlSlider.h in Headers */,
+				E648235A14FB92E700F5B719 /* CCColourUtils.h in Headers */,
+				E648235B14FB92E700F5B719 /* CCScale9Sprite.h in Headers */,
+				E648235C14FB92E700F5B719 /* Utils.h in Headers */,
+				E63AC75314FE26010011B466 /* ColoredCircleSprite.h in Headers */,
+				E63AC75414FE26010011B466 /* ColoredSquareSprite.h in Headers */,
+				E63AC75514FE26010011B466 /* SneakyButton.h in Headers */,
+				E63AC75614FE26010011B466 /* SneakyButtonSkinnedBase.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +459,19 @@
 				E61D6B5314E1660800CE9BEA /* WorldPhysics.mm in Sources */,
 				E656ED7214E940E10022A75F /* CCBlade.mm in Sources */,
 				E63D247B14ECFB3C0051E34E /* UISprite.mm in Sources */,
+				E648236A14FB936700F5B719 /* CCControl.m in Sources */,
+				E648236B14FB936700F5B719 /* CCControlButton.m in Sources */,
+				E648236C14FB936700F5B719 /* CCControlColourPicker.m in Sources */,
+				E648236D14FB936700F5B719 /* CCControlHuePicker.m in Sources */,
+				E648236E14FB936700F5B719 /* CCControlSaturationBrightnessPicker.m in Sources */,
+				E648236F14FB936700F5B719 /* CCControlSlider.m in Sources */,
+				E648237014FB936700F5B719 /* CCColourUtils.m in Sources */,
+				E648237114FB936700F5B719 /* CCScale9Sprite.m in Sources */,
+				E648237214FB936700F5B719 /* Utils.m in Sources */,
+				E63AC75C14FE261E0011B466 /* ColoredCircleSprite.m in Sources */,
+				E63AC75D14FE261E0011B466 /* ColoredSquareSprite.m in Sources */,
+				E63AC75E14FE261E0011B466 /* SneakyButton.m in Sources */,
+				E63AC75F14FE261E0011B466 /* SneakyButtonSkinnedBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

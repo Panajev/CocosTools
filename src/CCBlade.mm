@@ -74,8 +74,7 @@ inline void CGPointSet(CGPoint *v, float x, float y){
     self = [super init];
     
     dimSpeed = 1;
-    shaderProgram_ = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionTexture];
-    [shaderProgram_ retain];
+    self.shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionTexture];
     
     pointLimit = limit;
 	self.width = [SysTools iPadUI]?5.0f:2.5f;
@@ -95,8 +94,8 @@ inline void CGPointSet(CGPoint *v, float x, float y){
     [_texture release];
     free(vertices);
     free(coordinates);
-    
-    [path release];	
+    [path release];
+    	
 	[super dealloc];
 }
 
