@@ -56,6 +56,7 @@
 	CGFloat curTouchLength_;
 	
 	BOOL isDisabled_;
+    BOOL isTouchable_;
 
 #ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
 	// menu item that can be fast activated byt pressing Esc
@@ -70,6 +71,8 @@
 #endif
 	
 }
+
+@property (readwrite, assign) BOOL isTouchable;
 
 /** Rectangle in parent's coordinate system, which menu must fill with it's boundingBox.
  *

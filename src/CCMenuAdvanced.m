@@ -65,6 +65,7 @@
 @synthesize minimumTouchLengthToSlide = minimumTouchLengthToSlide_;
 @synthesize priority = priority_;
 @synthesize isDisabled = isDisabled_;
+@synthesize isTouchable = isTouchable_;
 
 #ifdef DEBUG
 @synthesize debugDraw = debugDraw_;
@@ -573,7 +574,8 @@
 -(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {	
     CMLog(@"CCMenuAdvanced ccTouchBegan");
-	if( state_ != kCCMenuStateWaiting || !visible_ || self.isDisabled ) {
+	if( state_ != kCCMenuStateWaiting || !visible_ || self.isDisabled ||
+       !isTouchable_) {
         CMLog(@"CCMenuAdvanced ccTouchBegan exited early");
 		return NO;
     }
@@ -628,6 +630,10 @@
 {
 	NSAssert(state_ == kCCMenuStateTrackingTouch, @"[Menu ccTouchMoved] -- invalid state");
     CMLog(@"CCMenuAdvanced ccTouchMoved");
+    
+    if (!isTouchable_) {
+        return;
+    }
 	
 	CCMenuItem *currentItem = [self itemForTouch:touch];
 	
