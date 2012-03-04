@@ -66,7 +66,7 @@ void PhysicsSystem::singleStep_ (float dt)
     
 	//updateControllers_ (dt);
     if ([targetLayer respondsToSelector:selectorLayer]) {
-        [targetLayer performSelector:selectorLayer withObject:[NSNumber numberWithFloat:dt]];
+        [targetLayer performSelector:selectorLayer];
     }
     
     if (world_ != NULL) {

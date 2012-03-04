@@ -125,6 +125,7 @@
 	{
 		self.isRelativeAnchorPoint = YES;
 		selectedItemNumber_ = -1;
+        isTouchable_ = YES;
 		self.boundaryRect = CGRectNull;
 		self.minimumTouchLengthToSlide = 30.0f;
 #ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
@@ -134,6 +135,8 @@
 		if (item)
 			[self alignItemsVertically];
 	}
+    
+    isTouchable_ = YES;
 	return self;
 }
 
@@ -403,7 +406,7 @@
 
 -(BOOL) ccMouseUp:(NSEvent *)event
 {
-    if (self.isDisabled)
+    if (self.isDisabled || !isTouchable_)
         return NO;
     
     return [super ccMouseUp: event];
@@ -411,7 +414,7 @@
 
 -(BOOL) ccMouseDragged:(NSEvent *)event
 {
-	if (self.isDisabled)
+	if (self.isDisabled || !isTouchable_)
 		return NO;
 	
 	return [super ccMouseDragged: event];
@@ -419,7 +422,7 @@
 
 -(BOOL) ccMouseDown:(NSEvent *)event
 {
-	if( ! visible_ || self.isDisabled)
+	if( ! visible_ || self.isDisabled || !isTouchable_)
 		return NO;
 	
 	selectedItem_ = [self itemForMouseEvent:event];
