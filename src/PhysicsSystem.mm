@@ -55,9 +55,7 @@ void PhysicsSystem::update (float dt)
 		singleStep_ (FIXED_TIMESTEP);
 	}
     
-	world_->ClearForces ();
-    
-	// We "smooth" positions and orientations using
+	// We reset the world's forces and "smooth" positions and orientations using
 	// fixedTimestepAccumulatorRatio_ (alpha).
 	smoothStates_ ();
 }
@@ -71,13 +69,16 @@ void PhysicsSystem::singleStep_ (float dt)
         [targetLayer performSelector:selectorLayer withObject:[NSNumber numberWithFloat:dt]];
     }
     
-	world_->Step (dt, velocityIterations_, positionIterations_);
+    if (world_ != NULL) {
+        world_->Step (dt, velocityIterations_, positionIterations_);
+    }
 	//consumeContacts_ ();
     
 	// ...
 }
 
-void PhysicsSystem::registerAnimationCallBack (id target, SEL selector) {
+void PhysicsSystem::registerAnimationCallBack (id target, SEL selector) 
+{
     if (targetLayer != target && selector && target) {
         targetLayer = target;
         selectorLayer = selector;
@@ -86,8 +87,13 @@ void PhysicsSystem::registerAnimationCallBack (id target, SEL selector) {
 
 void PhysicsSystem::smoothStates_ ()
 {
-	b2Vec2 newSmoothedPosition;
+    if (world_ == NULL) {
+        return;
+    }
     
+    world_->ClearForces ();
+    
+	b2Vec2 newSmoothedPosition;
 	const float oneMinusRatio = 1.f - fixedTimestepAccumulatorRatio_;
     
 	for (b2Body * b = world_->GetBodyList (); b != NULL; b = b->GetNext ())
@@ -96,21 +102,23 @@ void PhysicsSystem::smoothStates_ ()
 		{
 			continue;
 		}
-        
 		CCDraggableSprite *c   = (CCDraggableSprite*) b->GetUserData();
-		newSmoothedPosition = fixedTimestepAccumulatorRatio_ * b->GetPosition () + oneMinusRatio * c.previousPosition;
         
-		c.smoothedPosition = newSmoothedPosition;
-        
-		c.smoothedAngle =
-		fixedTimestepAccumulatorRatio_ * b->GetAngle () +
-		oneMinusRatio * c.previousAngle;
-        
+        //Coarse grained safety check...
+        if([c respondsToSelector:@selector(setSmoothedPosition:)]) {
+            newSmoothedPosition = fixedTimestepAccumulatorRatio_ * b->GetPosition () + oneMinusRatio * c.previousPosition;
+            c.smoothedPosition = newSmoothedPosition;
+            c.smoothedAngle = fixedTimestepAccumulatorRatio_ * b->GetAngle () + oneMinusRatio * c.previousAngle;
+        }
 	}
 }
 
 void PhysicsSystem::resetSmoothStates_ ()
 {
+    if (world_ == NULL) {
+        return;
+    }
+    
 	b2Vec2 newSmoothedPosition;
     
 	for (b2Body * b = world_->GetBodyList (); b != NULL; b = b->GetNext ())
@@ -124,9 +132,12 @@ void PhysicsSystem::resetSmoothStates_ ()
         
 		newSmoothedPosition = b->GetPosition ();
         
-		c.smoothedPosition = newSmoothedPosition;
-		c.previousPosition = newSmoothedPosition;
-		c.smoothedAngle = b->GetAngle ();
-		c.previousAngle = b->GetAngle();
+        //Coarse grained safety check...
+        if([c respondsToSelector:@selector(setSmoothedPosition:)]) {
+            c.smoothedPosition = newSmoothedPosition;
+            c.previousPosition = newSmoothedPosition;
+            c.smoothedAngle = b->GetAngle ();
+            c.previousAngle = b->GetAngle();
+        }
 	}
 }
