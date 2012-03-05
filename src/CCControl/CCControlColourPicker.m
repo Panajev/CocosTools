@@ -85,10 +85,10 @@
 #endif
         
         // MIPMAP
-        ccTexParams params              = {GL_LINEAR_MIPMAP_LINEAR, GL_LINEAR, GL_REPEAT, GL_REPEAT};
+        //ccTexParams params              = {GL_LINEAR_MIPMAP_LINEAR, GL_LINEAR, GL_REPEAT, GL_REPEAT};
         [spriteSheet.texture setAliasTexParameters];
-        [spriteSheet.texture setTexParameters:&params];
-        [spriteSheet.texture generateMipmap];
+        //[spriteSheet.texture setTexParameters:&params];
+        //[spriteSheet.texture generateMipmap];
         
         // Init default color
         hsv_.h                          = 0;
