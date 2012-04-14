@@ -123,7 +123,9 @@
 {
 	if ( (self = [super initWithItems:item vaList:args]) )
 	{
-		self.isRelativeAnchorPoint = YES;
+		//self.isRelativeAnchorPoint = YES;
+        [self setIgnoreAnchorPointForPosition:NO];
+        
 		selectedItemNumber_ = -1;
         isTouchable_ = YES;
 		self.boundaryRect = CGRectNull;

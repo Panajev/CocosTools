@@ -97,7 +97,9 @@ enum
         self.adjustBackgroundImage = YES;
         
         // Set the default anchor point
-        self.isRelativeAnchorPoint = YES;
+        //self.isRelativeAnchorPoint = YES;
+        [self setIgnoreAnchorPointForPosition:NO];
+        
         self.anchorPoint = ccp (0.5f, 0.5f);
         
         // Set the nodes
