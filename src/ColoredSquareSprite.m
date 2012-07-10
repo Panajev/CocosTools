@@ -88,7 +88,7 @@
 
 - (void)draw
 {		
-    ccDrawFilledPoly(squareVertices_, 4, ccc4f(color_.r/255.0f, color_.g/255.0f, color_.b/255.0f, opacity_/255.0f));
+    ccDrawSolidPoly(squareVertices_, 4, ccc4f(color_.r/255.0f, color_.g/255.0f, color_.b/255.0f, opacity_/255.0f));
 }
 
 #pragma mark Protocols

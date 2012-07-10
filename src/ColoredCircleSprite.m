@@ -103,7 +103,7 @@
 
 - (void)draw
 {		
-	ccDrawFilledPoly(circleVertices_, numberOfSegments, ccc4f(color_.r/255.0f, color_.g/255.0f, color_.b/255.0f, opacity_/255.0f));
+	ccDrawSolidPoly(circleVertices_, numberOfSegments, ccc4f(color_.r/255.0f, color_.g/255.0f, color_.b/255.0f, opacity_/255.0f));
 }
 
 #pragma mark Protocols
