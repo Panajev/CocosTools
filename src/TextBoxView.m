@@ -28,7 +28,7 @@
 
 @synthesize delegate;
 
-- (id) initWithColor:(UIColor *)color width:(CGFloat)w height:(CGFloat)h padding:(CGFloat)padding speed:(CGFloat)ts text:(NSString *)txt {
+- (id) initWithColor:(UIColor *)color width:(CGFloat)w height:(CGFloat)h padding:(CGFloat)padding speed:(CGFloat)ts text:(NSString *)txt useTTF:(BOOL)ttfFlag {
     
     if ((self = [super initWithFrame:CGRectMake(0, 0, w + (padding * 2), h + (padding * 2))])) {
         self.backgroundColor = color;

@@ -23,6 +23,7 @@
 
 #import <Foundation/Foundation.h>
 
+#define TEXT_SPEED_TTF 10
 #define TEXT_SPEED 60
 #define TEXT_FONT_FILE @"arial16.fnt"
 
@@ -33,7 +34,8 @@
 			  height:(CGFloat)h 
 			 padding:(CGFloat)padding
                speed:(CGFloat)ts
-				text:(NSString *)txt;
+				text:(NSString *)txt
+                useTTF:(BOOL)ttfFlag;
 
 - (void)update:(float)dt;
 

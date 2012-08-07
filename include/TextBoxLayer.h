@@ -28,6 +28,7 @@
 @interface TextBoxLayer : CCLayerColor <TextBox> {
 	
 	CCLabelBMFont *textLabel;
+    CCLabelTTF *textLabelTTF;
 	
 	NSString *text;
 	NSMutableArray *lines;
@@ -45,6 +46,7 @@
 	id<TextBoxDelegate> __weak delegate;
 	
 	BOOL ended;
+    BOOL ttfMode;
 }
 
 @property (readwrite,weak) id<TextBoxDelegate> delegate;
