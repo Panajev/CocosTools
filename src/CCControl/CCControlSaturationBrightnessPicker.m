@@ -50,7 +50,6 @@
     shadow      = nil;
     slider      = nil;
     
-	[super dealloc];
 }
 
 - (id)initWithTarget:(id)target withPos:(CGPoint)pos

@@ -1,9 +1,8 @@
 //
-//  UISprite.h
-//  CocosTools
+//  TextBox.h
+//  TextBoxLayerSample
 //
-//  Created by Goffredo Marocchi on 2/16/12.
-//  Copyright (c) 2012 AddictiveColors. All rights reserved.
+//  Created by Fabio Rodella on 04/10/11.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 //  following conditions are met:
@@ -22,31 +21,29 @@
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import <UIKit/UIKit.h>
-#import "cocos2d.h"
-#import "CoreGraphicsExt.h"
+#import <Foundation/Foundation.h>
 
-@interface UISprite : CCSprite
-{
-@public
-    bool pressed;			//Is this sprite pressed
-    NSUInteger touchHash;	//Used to identify individual touches
-    bool collisionRadiusExtended;
-    bool touchStarted;
-}
+#define TEXT_SPEED 60
+#define TEXT_FONT_FILE @"arial16.fnt"
 
-@property (readwrite, assign) bool collisionRadiusExtended;
-@property (readwrite, assign) bool pressed;
-@property (readwrite, assign) NSUInteger touchHash;
+@protocol TextBox <NSObject>
 
-- (id)init;
-- (bool)checkTouchWithPoint:(CGPoint)point;
-- (CGRect)rect;
-- (void)processTouch:(CGPoint)point;
-- (void)processRelease;
-- (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
-- (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
-- (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
+- (id) initWithColor:(UIColor *)color 
+			   width:(CGFloat)w 
+			  height:(CGFloat)h 
+			 padding:(CGFloat)padding
+               speed:(CGFloat)ts
+				text:(NSString *)txt;
+
+- (void)update:(float)dt;
 
 @end
 
+@protocol TextBoxDelegate <NSObject>
+
+- (void)textBox:(id<TextBox>)tbox didFinishAllTextWithPageCount:(int)pc;
+
+@optional
+- (void)textBox:(id<TextBox>)tbox didMoveToPage:(int)p;
+- (void)textBox:(id<TextBox>)tbox didFinishAllTextOnPage:(int)p;
+@end

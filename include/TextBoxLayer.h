@@ -1,9 +1,8 @@
 //
-//  UISprite.h
-//  CocosTools
+//  TextBoxLayer.h
+//  TextBoxLayerSample
 //
-//  Created by Goffredo Marocchi on 2/16/12.
-//  Copyright (c) 2012 AddictiveColors. All rights reserved.
+//  Created by Fabio Rodella on 1/19/11.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 //  following conditions are met:
@@ -22,31 +21,36 @@
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "CoreGraphicsExt.h"
+#import "TextBox.h"
 
-@interface UISprite : CCSprite
-{
-@public
-    bool pressed;			//Is this sprite pressed
-    NSUInteger touchHash;	//Used to identify individual touches
-    bool collisionRadiusExtended;
-    bool touchStarted;
+@interface TextBoxLayer : CCLayerColor <TextBox> {
+	
+	CCLabelBMFont *textLabel;
+	
+	NSString *text;
+	NSMutableArray *lines;
+	
+	float progress;
+	int linesPerPage;
+	int currentPageIndex;
+	NSMutableString *currentPage;
+	int currentPageCharCount;
+	CGFloat textSpeed;
+    ccTime countDownTimer;
+    
+	int totalPages;
+	
+	id<TextBoxDelegate> __weak delegate;
+	
+	BOOL ended;
 }
 
-@property (readwrite, assign) bool collisionRadiusExtended;
-@property (readwrite, assign) bool pressed;
-@property (readwrite, assign) NSUInteger touchHash;
+@property (readwrite,weak) id<TextBoxDelegate> delegate;
 
-- (id)init;
-- (bool)checkTouchWithPoint:(CGPoint)point;
-- (CGRect)rect;
-- (void)processTouch:(CGPoint)point;
-- (void)processRelease;
-- (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
-- (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
-- (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
+- (NSString *)nextPage;
+
+- (int)calculateStringSize:(NSString *)txt;
 
 @end
-

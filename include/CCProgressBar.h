@@ -1,9 +1,8 @@
 //
-//  UISprite.h
-//  CocosTools
+//  CCProgressBar.h
+//  iMoonlightsHD
 //
-//  Created by Goffredo Marocchi on 2/16/12.
-//  Copyright (c) 2012 AddictiveColors. All rights reserved.
+//  Created by macbook on 10/08/11.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 //  following conditions are met:
@@ -22,31 +21,22 @@
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "CoreGraphicsExt.h"
 
-@interface UISprite : CCSprite
-{
-@public
-    bool pressed;			//Is this sprite pressed
-    NSUInteger touchHash;	//Used to identify individual touches
-    bool collisionRadiusExtended;
-    bool touchStarted;
+
+@class CCSpriteScale9;
+
+@interface CCProgressBar : CCNode {
+	CCSpriteScale9 *bg,*fg;
+	CGSize margin;
+	float progress;
+	float animAngle;
 }
-
-@property (readwrite, assign) bool collisionRadiusExtended;
-@property (readwrite, assign) bool pressed;
-@property (readwrite, assign) NSUInteger touchHash;
-
-- (id)init;
-- (bool)checkTouchWithPoint:(CGPoint)point;
-- (CGRect)rect;
-- (void)processTouch:(CGPoint)point;
-- (void)processRelease;
-- (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
-- (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
-- (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
-
++(id)progressBarWithBgSprite:(CCSpriteScale9*)b andFgSprite:(CCSpriteScale9*)f andSize:(CGSize)s andMargin:(CGSize)m;
+-(id)initWithBgSprite:(CCSpriteScale9*)b andFgSprite:(CCSpriteScale9*)f andSize:(CGSize)s andMargin:(CGSize)m;
+-(void)setProgress:(float)p;
+-(void)startAnimation;
+-(void)stopAnimation;
+-(void)setOpacity:(GLubyte)opacity;
 @end
-

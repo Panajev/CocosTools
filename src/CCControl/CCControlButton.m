@@ -37,13 +37,13 @@ enum
 /** Flag to know if the button is currently pushed.  */
 @property (nonatomic, getter = isPushed) BOOL pushed;
 /** Table of correspondence between the state and its title. */
-@property (nonatomic, retain) NSMutableDictionary *titleDispatchTable;
+@property (nonatomic, strong) NSMutableDictionary *titleDispatchTable;
 /** Table of correspondence between the state and its title color. */
-@property (nonatomic, retain) NSMutableDictionary *titleColorDispatchTable;
+@property (nonatomic, strong) NSMutableDictionary *titleColorDispatchTable;
 /** Table of correspondence between the state and its title label. */
-@property (nonatomic, retain) NSMutableDictionary *titleLabelDispatchTable;
+@property (nonatomic, strong) NSMutableDictionary *titleLabelDispatchTable;
 /** Table of correspondence between the state and the background sprite. */
-@property (nonatomic, retain) NSMutableDictionary *backgroundSpriteDispatchTable;
+@property (nonatomic, strong) NSMutableDictionary *backgroundSpriteDispatchTable;
 
 /**
  * Updates the layout using the current state value.
@@ -69,15 +69,14 @@ enum
 
 - (void)dealloc
 {
-    [backgroundSpriteDispatchTable_ release], backgroundSpriteDispatchTable_ = nil;
-    [titleLabelDispatchTable_ release], titleLabelDispatchTable_ = nil;
-    [titleColorDispatchTable_ release], titleColorDispatchTable_ = nil;
-    [titleDispatchTable_ release], titleDispatchTable_ = nil;
-    [backgroundSprite_ release], backgroundSprite_ = nil;
-    [titleLabel_ release], titleLabel_ = nil;
-    [currentTitle_ release], currentTitle_ = nil;
+    backgroundSpriteDispatchTable_ = nil;
+    titleLabelDispatchTable_ = nil;
+    titleColorDispatchTable_ = nil;
+    titleDispatchTable_ = nil;
+    backgroundSprite_ = nil;
+    titleLabel_ = nil;
+    currentTitle_ = nil;
     
-    [super dealloc];
 }
 
 #pragma mark -
@@ -131,7 +130,7 @@ enum
 
 + (id)buttonWithLabel:(CCNode<CCLabelProtocol,CCRGBAProtocol> *)label backgroundSprite:(CCScale9Sprite *)backgroundsprite
 {
-    return [[[self alloc] initWithLabel:label backgroundSprite:backgroundsprite] autorelease];
+    return [[self alloc] initWithLabel:label backgroundSprite:backgroundsprite];
 }
 
 - (id)initWithTitle:(NSString *)title fontName:(NSString *)fontName fontSize:(NSUInteger)fontsize
@@ -143,7 +142,7 @@ enum
 
 + (id)buttonWithTitle:(NSString *)title fontName:(NSString *)fontName fontSize:(NSUInteger)fontsize
 {
-    return [[[self alloc] initWithTitle:title fontName:fontName fontSize:fontsize] autorelease];
+    return [[self alloc] initWithTitle:title fontName:fontName fontSize:fontsize];
 }
 
 /** Initializes a button with a sprite in background. */
@@ -156,7 +155,7 @@ enum
 
 + (id)buttonWithBackgroundSprite:(CCScale9Sprite *)sprite
 {
-    return [[[self alloc] initWithBackgroundSprite:sprite] autorelease];
+    return [[self alloc] initWithBackgroundSprite:sprite];
 }
 
 #pragma mark Properties
@@ -385,9 +384,9 @@ enum
     // Update the label to match with the current state
     if (currentTitle_)
     {
-        [currentTitle_ release], currentTitle_ = nil;
+        currentTitle_ = nil;
     }
-    currentTitle_ = [[self titleForState:state_] retain];
+    currentTitle_ = [self titleForState:state_];
     currentTitleColor_ = [self titleColorForState:state_];
     
     self.titleLabel = [self titleLabelForState:state_];

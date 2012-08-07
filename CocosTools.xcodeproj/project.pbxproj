@@ -57,6 +57,21 @@
 		E648237214FB936700F5B719 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E648236914FB936700F5B719 /* Utils.m */; };
 		E656ED6F14E9403F0022A75F /* CCBlade.h in Headers */ = {isa = PBXBuildFile; fileRef = E656ED6D14E9403F0022A75F /* CCBlade.h */; };
 		E656ED7214E940E10022A75F /* CCBlade.mm in Sources */ = {isa = PBXBuildFile; fileRef = E656ED7114E940E10022A75F /* CCBlade.mm */; };
+		E6A7C86B15CFB6AB00ACC440 /* CameraLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A7C86A15CFB6AB00ACC440 /* CameraLayer.h */; };
+		E6A7C8A315CFBB9200ACC440 /* CCSpriteScale9.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C8A215CFBB9200ACC440 /* CCSpriteScale9.m */; };
+		E6A7C8DA15CFC11F00ACC440 /* TextBoxLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C8D815CFC11F00ACC440 /* TextBoxLayer.m */; };
+		E6A7C8DB15CFC11F00ACC440 /* TextBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C8D915CFC11F00ACC440 /* TextBoxView.m */; };
+		E6A7C8DF15CFC13000ACC440 /* TextBox.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A7C8DC15CFC13000ACC440 /* TextBox.h */; };
+		E6A7C8E015CFC13000ACC440 /* TextBoxLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A7C8DD15CFC13000ACC440 /* TextBoxLayer.h */; };
+		E6A7C8E115CFC13000ACC440 /* TextBoxView.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A7C8DE15CFC13000ACC440 /* TextBoxView.h */; };
+		E6A7C8E315CFC2FB00ACC440 /* CameraLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C8E215CFC2FB00ACC440 /* CameraLayer.m */; };
+		E6A7C8EC15CFC3EC00ACC440 /* CCProgressBar.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A7C8E715CFC3EC00ACC440 /* CCProgressBar.h */; };
+		E6A7C8ED15CFC3EC00ACC440 /* CCSpriteHole.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A7C8E815CFC3EC00ACC440 /* CCSpriteHole.h */; };
+		E6A7C8EE15CFC3EC00ACC440 /* CCSpriteScale9.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A7C8E915CFC3EC00ACC440 /* CCSpriteScale9.h */; };
+		E6A7C8EF15CFC3EC00ACC440 /* Handy.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A7C8EA15CFC3EC00ACC440 /* Handy.h */; };
+		E6A7C8F415CFC40E00ACC440 /* CCProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C8F115CFC40E00ACC440 /* CCProgressBar.m */; };
+		E6A7C8F515CFC40E00ACC440 /* CCSpriteHole.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C8F215CFC40E00ACC440 /* CCSpriteHole.m */; };
+		E6A7C8F715CFC53200ACC440 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A7C8F615CFC53200ACC440 /* OpenGLES.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +128,21 @@
 		E648236914FB936700F5B719 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		E656ED6D14E9403F0022A75F /* CCBlade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBlade.h; sourceTree = "<group>"; };
 		E656ED7114E940E10022A75F /* CCBlade.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCBlade.mm; sourceTree = "<group>"; };
+		E6A7C86A15CFB6AB00ACC440 /* CameraLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraLayer.h; sourceTree = "<group>"; };
+		E6A7C8A215CFBB9200ACC440 /* CCSpriteScale9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteScale9.m; sourceTree = "<group>"; };
+		E6A7C8D815CFC11F00ACC440 /* TextBoxLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextBoxLayer.m; sourceTree = "<group>"; };
+		E6A7C8D915CFC11F00ACC440 /* TextBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextBoxView.m; sourceTree = "<group>"; };
+		E6A7C8DC15CFC13000ACC440 /* TextBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextBox.h; sourceTree = "<group>"; };
+		E6A7C8DD15CFC13000ACC440 /* TextBoxLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextBoxLayer.h; sourceTree = "<group>"; };
+		E6A7C8DE15CFC13000ACC440 /* TextBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextBoxView.h; sourceTree = "<group>"; };
+		E6A7C8E215CFC2FB00ACC440 /* CameraLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraLayer.m; sourceTree = "<group>"; };
+		E6A7C8E715CFC3EC00ACC440 /* CCProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCProgressBar.h; sourceTree = "<group>"; };
+		E6A7C8E815CFC3EC00ACC440 /* CCSpriteHole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpriteHole.h; sourceTree = "<group>"; };
+		E6A7C8E915CFC3EC00ACC440 /* CCSpriteScale9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpriteScale9.h; sourceTree = "<group>"; };
+		E6A7C8EA15CFC3EC00ACC440 /* Handy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Handy.h; sourceTree = "<group>"; };
+		E6A7C8F115CFC40E00ACC440 /* CCProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCProgressBar.m; sourceTree = "<group>"; };
+		E6A7C8F215CFC40E00ACC440 /* CCSpriteHole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteHole.m; sourceTree = "<group>"; };
+		E6A7C8F615CFC53200ACC440 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6A7C8F715CFC53200ACC440 /* OpenGLES.framework in Frameworks */,
 				E60E6AF014E151E7002902D2 /* CoreGraphics.framework in Frameworks */,
 				E60E6A9914E144B6002902D2 /* Foundation.framework in Frameworks */,
 			);
@@ -131,6 +162,7 @@
 		E60E6A8A14E144B6002902D2 = {
 			isa = PBXGroup;
 			children = (
+				E6A7C8F615CFC53200ACC440 /* OpenGLES.framework */,
 				E61D6B2A14E1660800CE9BEA /* CocosTools-Prefix.pch */,
 				E61D6B2B14E1660800CE9BEA /* include */,
 				E61D6B3614E1660800CE9BEA /* src */,
@@ -161,6 +193,9 @@
 		E61D6B2B14E1660800CE9BEA /* include */ = {
 			isa = PBXGroup;
 			children = (
+				E6A7C8E515CFC3D600ACC440 /* jpsarda extensions */,
+				E6A7C8A015CFBB5200ACC440 /* TextBox */,
+				E6A7C86115CFB59D00ACC440 /* CameraControl */,
 				E648235D14FB931400F5B719 /* CCControl extension */,
 				E6ACACF814E167D5004C063C /* CCSprite extensions */,
 				E6ACACF714E167C3004C063C /* Loader Manager */,
@@ -173,6 +208,9 @@
 		E61D6B3614E1660800CE9BEA /* src */ = {
 			isa = PBXGroup;
 			children = (
+				E6A7C8E415CFC3B700ACC440 /* jpsarda extensions */,
+				E6A7C8A115CFBB6500ACC440 /* TextBox */,
+				E6A7C86715CFB5E300ACC440 /* CameraControl */,
 				E648235E14FB934300F5B719 /* CCControl extension */,
 				E6ACACF314E1678A004C063C /* CCSprite extensions */,
 				E6ACACF414E16797004C063C /* Loader Manager */,
@@ -245,6 +283,62 @@
 				E648236914FB936700F5B719 /* Utils.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E6A7C86115CFB59D00ACC440 /* CameraControl */ = {
+			isa = PBXGroup;
+			children = (
+				E6A7C86A15CFB6AB00ACC440 /* CameraLayer.h */,
+			);
+			name = CameraControl;
+			sourceTree = "<group>";
+		};
+		E6A7C86715CFB5E300ACC440 /* CameraControl */ = {
+			isa = PBXGroup;
+			children = (
+				E6A7C8E215CFC2FB00ACC440 /* CameraLayer.m */,
+			);
+			name = CameraControl;
+			sourceTree = "<group>";
+		};
+		E6A7C8A015CFBB5200ACC440 /* TextBox */ = {
+			isa = PBXGroup;
+			children = (
+				E6A7C8DC15CFC13000ACC440 /* TextBox.h */,
+				E6A7C8DD15CFC13000ACC440 /* TextBoxLayer.h */,
+				E6A7C8DE15CFC13000ACC440 /* TextBoxView.h */,
+			);
+			name = TextBox;
+			sourceTree = "<group>";
+		};
+		E6A7C8A115CFBB6500ACC440 /* TextBox */ = {
+			isa = PBXGroup;
+			children = (
+				E6A7C8D815CFC11F00ACC440 /* TextBoxLayer.m */,
+				E6A7C8D915CFC11F00ACC440 /* TextBoxView.m */,
+			);
+			name = TextBox;
+			sourceTree = "<group>";
+		};
+		E6A7C8E415CFC3B700ACC440 /* jpsarda extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E6A7C8F115CFC40E00ACC440 /* CCProgressBar.m */,
+				E6A7C8F215CFC40E00ACC440 /* CCSpriteHole.m */,
+				E6A7C8A215CFBB9200ACC440 /* CCSpriteScale9.m */,
+			);
+			name = "jpsarda extensions";
+			sourceTree = "<group>";
+		};
+		E6A7C8E515CFC3D600ACC440 /* jpsarda extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E6A7C8E715CFC3EC00ACC440 /* CCProgressBar.h */,
+				E6A7C8E815CFC3EC00ACC440 /* CCSpriteHole.h */,
+				E6A7C8E915CFC3EC00ACC440 /* CCSpriteScale9.h */,
+				E6A7C8EA15CFC3EC00ACC440 /* Handy.h */,
+			);
+			name = "jpsarda extensions";
 			sourceTree = "<group>";
 		};
 		E6ACACF014E16769004C063C /* Physics Manager */ = {
@@ -363,6 +457,14 @@
 				E63AC75414FE26010011B466 /* ColoredSquareSprite.h in Headers */,
 				E63AC75514FE26010011B466 /* SneakyButton.h in Headers */,
 				E63AC75614FE26010011B466 /* SneakyButtonSkinnedBase.h in Headers */,
+				E6A7C86B15CFB6AB00ACC440 /* CameraLayer.h in Headers */,
+				E6A7C8DF15CFC13000ACC440 /* TextBox.h in Headers */,
+				E6A7C8E015CFC13000ACC440 /* TextBoxLayer.h in Headers */,
+				E6A7C8E115CFC13000ACC440 /* TextBoxView.h in Headers */,
+				E6A7C8EC15CFC3EC00ACC440 /* CCProgressBar.h in Headers */,
+				E6A7C8ED15CFC3EC00ACC440 /* CCSpriteHole.h in Headers */,
+				E6A7C8EE15CFC3EC00ACC440 /* CCSpriteScale9.h in Headers */,
+				E6A7C8EF15CFC3EC00ACC440 /* Handy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +574,12 @@
 				E63AC75D14FE261E0011B466 /* ColoredSquareSprite.m in Sources */,
 				E63AC75E14FE261E0011B466 /* SneakyButton.m in Sources */,
 				E63AC75F14FE261E0011B466 /* SneakyButtonSkinnedBase.m in Sources */,
+				E6A7C8A315CFBB9200ACC440 /* CCSpriteScale9.m in Sources */,
+				E6A7C8DA15CFC11F00ACC440 /* TextBoxLayer.m in Sources */,
+				E6A7C8DB15CFC11F00ACC440 /* TextBoxView.m in Sources */,
+				E6A7C8E315CFC2FB00ACC440 /* CameraLayer.m in Sources */,
+				E6A7C8F415CFC40E00ACC440 /* CCProgressBar.m in Sources */,
+				E6A7C8F515CFC40E00ACC440 /* CCSpriteHole.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +632,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = NO;
 				DSTROOT = /tmp/CocosTools.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocosTools-Prefix.pch";
@@ -538,7 +648,7 @@
 					"../SharedLibs/Cocos-Debug/include/**",
 					"../SharedLibs/Utilities-Debug/include/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -555,6 +665,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = NO;
 				DSTROOT = /tmp/CocosTools.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocosTools-Prefix.pch";
@@ -565,7 +677,7 @@
 					"../SharedLibs/Cocos/include/**",
 					"../SharedLibs/Utilities/include/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "";
 				"OTHER_CFLAGS[arch=armv7]" = (
 					"-ObjC",
@@ -598,7 +710,7 @@
 				GCC_PREFIX_HEADER = "CocosTools_script/CocosTools_script-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -614,7 +726,7 @@
 				GCC_PREFIX_HEADER = "CocosTools_script/CocosTools_script-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

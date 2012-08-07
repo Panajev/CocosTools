@@ -27,9 +27,9 @@
 #import "CCControlSlider.h"
 
 @interface CCControlSlider () 
-@property (nonatomic, retain) CCMenuItem *thumbSprite;
-@property (nonatomic, retain) CCSprite *progressSprite;
-@property (nonatomic, retain) CCSprite *backgroundSprite;
+@property (nonatomic, strong) CCMenuItem *thumbSprite;
+@property (nonatomic, strong) CCSprite *progressSprite;
+@property (nonatomic, strong) CCSprite *backgroundSprite;
 
 /** Factorize the event dispath into these methods. */
 - (void)sliderBegan:(CGPoint)location;
@@ -51,11 +51,10 @@
 
 - (void)dealloc
 {
-    [thumbSprite_ release], thumbSprite_ = nil;
-    [progressSprite_ release], progressSprite_ = nil;
-    [backgroundSprite_ release], backgroundSprite_ = nil;
+    thumbSprite_ = nil;
+    progressSprite_ = nil;
+    backgroundSprite_ = nil;
     
-    [super dealloc];
 }
 
 + (id)sliderWithBackgroundFile:(NSString *)backgroundname progressFile:(NSString *)progressname thumbFile:(NSString *)thumbname
@@ -80,9 +79,9 @@
 
 + (id)sliderWithBackgroundSprite:(CCSprite *)backgroundSprite progressSprite:(CCSprite *)pogressSprite thumbMenuItem:(CCMenuItem *)thumbItem
 {
-	return [[[self alloc] initWithBackgroundSprite:backgroundSprite
+	return [[self alloc] initWithBackgroundSprite:backgroundSprite
                                     progressSprite:pogressSprite
-                                     thumbMenuItem:thumbItem] autorelease];
+                                     thumbMenuItem:thumbItem];
 }
 
 // Designated init

@@ -102,10 +102,10 @@ void PhysicsSystem::smoothStates_ ()
 		{
 			continue;
 		}
-		CCDraggableSprite *c   = (CCDraggableSprite*) b->GetUserData();
+		CCDraggableSprite *c   = (__bridge CCDraggableSprite*) b->GetUserData();
         
         //Coarse grained safety check...
-        if([c respondsToSelector:@selector(setSmoothedPosition:)]) {
+        if(c != nil && [c respondsToSelector:@selector(setSmoothedPosition:)]) {
             newSmoothedPosition = fixedTimestepAccumulatorRatio_ * b->GetPosition () + oneMinusRatio * c.previousPosition;
             c.smoothedPosition = newSmoothedPosition;
             c.smoothedAngle = fixedTimestepAccumulatorRatio_ * b->GetAngle () + oneMinusRatio * c.previousAngle;
@@ -128,7 +128,7 @@ void PhysicsSystem::resetSmoothStates_ ()
 			continue;
 		}
         
-		CCDraggableSprite *c   = (CCDraggableSprite*) b->GetUserData();
+		CCDraggableSprite *c   = (__bridge CCDraggableSprite*) b->GetUserData();
         
 		newSmoothedPosition = b->GetPosition ();
         

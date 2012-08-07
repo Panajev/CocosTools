@@ -70,13 +70,13 @@
 
 #pragma mark Getting the Current State
 /** The current title that is displayed on the button. */
-@property(nonatomic, readonly, retain) NSString *currentTitle;
+@property(nonatomic, readonly, strong) NSString *currentTitle;
 /** The current color used to display the title. */
 @property(nonatomic, readonly, assign) ccColor3B currentTitleColor;
 /** The current title label. */
-@property (nonatomic, retain) CCNode<CCLabelProtocol,CCRGBAProtocol> *titleLabel;
+@property (nonatomic, strong) CCNode<CCLabelProtocol,CCRGBAProtocol> *titleLabel;
 /** The current background sprite. */
-@property (nonatomic, retain) CCScale9Sprite *backgroundSprite;
+@property (nonatomic, strong) CCScale9Sprite *backgroundSprite;
 
 #pragma mark Constructors - Initializers
 

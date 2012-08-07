@@ -1,9 +1,8 @@
 //
-//  UISprite.h
-//  CocosTools
+//  CCSpriteHole.h
+//  RunArena
 //
-//  Created by Goffredo Marocchi on 2/16/12.
-//  Copyright (c) 2012 AddictiveColors. All rights reserved.
+//  Created by macbook on 05/08/11.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 //  following conditions are met:
@@ -22,31 +21,44 @@
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "CoreGraphicsExt.h"
 
-@interface UISprite : CCSprite
-{
-@public
-    bool pressed;			//Is this sprite pressed
-    NSUInteger touchHash;	//Used to identify individual touches
-    bool collisionRadiusExtended;
-    bool touchStarted;
+
+@interface CCSpriteHole : CCNode <CCRGBAProtocol, CCTextureProtocol> {
+    CGSize capSize,capSizeInPixels;
+    
+    CGRect holeRect;
+    
+	int vertexDataCount;
+	ccV2F_C4F_T2F *vertexData;
+
+	//
+	// Data used when the sprite is self-rendered
+	//
+	ccBlendFunc				blendFunc_;				// Needed for the texture protocol
+	CCTexture2D				*texture_;				// Texture used to render the sprite
+	
+	// Texture rects
+	CGRect	rect_;
+	CGRect	rectInPixels_;
+	
+	// opacity and RGB protocol
+	GLubyte		opacity_;
+	ccColor3B	color_;
+	ccColor3B	colorUnmodified_;
+	BOOL		opacityModifyRGB_;
 }
++(id)spriteWithFile:(NSString*)f;
 
-@property (readwrite, assign) bool collisionRadiusExtended;
-@property (readwrite, assign) bool pressed;
-@property (readwrite, assign) NSUInteger touchHash;
+/** conforms to CCTextureProtocol protocol */
+@property (nonatomic,readwrite) ccBlendFunc blendFunc;
 
-- (id)init;
-- (bool)checkTouchWithPoint:(CGPoint)point;
-- (CGRect)rect;
-- (void)processTouch:(CGPoint)point;
-- (void)processRelease;
-- (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
-- (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
-- (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
+-(void) setTextureRect:(CGRect) rect;
 
+//Set hole and surface (and anchorPoint in the middle of the hole)
+-(void) setHole:(CGRect)holeRect inRect:(CGRect)totalSurface;
 @end
+
+
 

@@ -16,7 +16,7 @@
 
 + (id) circleWithColor: (ccColor4B)color radius:(GLfloat)r
 {
-	return [[[self alloc] initWithColor:color radius:r] autorelease];
+	return [[self alloc] initWithColor:color radius:r];
 }
 
 - (id) initWithColor:(ccColor4B)color radius:(GLfloat)r
@@ -35,7 +35,6 @@
 - (void) dealloc
 {
 	free(circleVertices_);
-	[super dealloc];
 }
 
 - (id) init
@@ -57,7 +56,6 @@
 		circleVertices_ = (CGPoint*) malloc(sizeof(CGPoint)*(numberOfSegments));
 		if(!circleVertices_){
 			NSLog(@"Ack!! malloc in colored circle failed");
-			[self release];
 			return nil;
 		}
 		memset(circleVertices_, 0, sizeof(CGPoint)*(numberOfSegments));

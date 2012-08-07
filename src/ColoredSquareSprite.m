@@ -16,7 +16,7 @@
 
 + (id) squareWithColor: (ccColor4B)color size:(CGSize)sz
 {
-	return [[[self alloc] initWithColor:color size:sz] autorelease];
+	return [[self alloc] initWithColor:color size:sz];
 }
 
 - (id) initWithColor:(ccColor4B)color size:(CGSize)sz
@@ -35,7 +35,6 @@
 - (void) dealloc
 {
 	free(squareVertices_);
-	[super dealloc];
 }
 
 - (id) init
@@ -54,7 +53,6 @@
 		squareVertices_ = (CGPoint*) malloc(sizeof(CGPoint)*(4));
 		if(!squareVertices_){
 			NSLog(@"Ack!! malloc in colored square failed");
-			[self release];
 			return nil;
 		}
 		memset(squareVertices_, 0, sizeof(CGPoint)*(4));

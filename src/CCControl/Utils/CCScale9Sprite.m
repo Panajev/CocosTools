@@ -33,21 +33,6 @@ enum positions
 @synthesize color = color_;
 @synthesize opacityModifyRGB = opacityModifyRGB_;
 
-- (void)dealloc
-{
-    [topLeft release];
-    [top release];
-    [topRight release];
-    [left release];
-    [centre release];
-    [right release];
-    [bottomLeft release];
-    [bottom release];
-    [bottomRight release];
-    [scale9Image release];
-    
-    [super dealloc];
-}
 
 #pragma mark Constructor - Initializers
 
@@ -57,7 +42,7 @@ enum positions
     {
         NSAssert(batchnode, @"The batchnode must be not nil.");
         
-        scale9Image = [batchnode retain];
+        scale9Image = batchnode;
         
         // If there is no given rect
         if (CGRectEqualToRect(rect, CGRectZero))
@@ -196,7 +181,7 @@ enum positions
 
 + (id)spriteWithFile:(NSString *)file rect:(CGRect)rect capInsets:(CGRect)capInsets
 {
-    return [[[self alloc] initWithFile:file rect:rect capInsets:capInsets] autorelease];
+    return [[self alloc] initWithFile:file rect:rect capInsets:capInsets];
 }
 
 - (id)initWithFile:(NSString *)file rect:(CGRect)rect
@@ -208,7 +193,7 @@ enum positions
 
 + (id)spriteWithFile:(NSString *)file rect:(CGRect)rect
 {
-    return [[[self alloc] initWithFile:file rect:rect] autorelease];
+    return [[self alloc] initWithFile:file rect:rect];
 }
 
 - (id)initWithFile:(NSString *)file capInsets:(CGRect)capInsets
@@ -220,7 +205,7 @@ enum positions
 
 + (id)spriteWithFile:(NSString *)file capInsets:(CGRect)capInsets
 {
-    return [[[self alloc] initWithFile:file capInsets:capInsets] autorelease];
+    return [[self alloc] initWithFile:file capInsets:capInsets];
 }
 
 - (id)initWithFile:(NSString *)file
@@ -232,7 +217,7 @@ enum positions
 
 + (id)spriteWithFile:(NSString *)file
 {
-    return [[[self alloc] initWithFile:file] autorelease];
+    return [[self alloc] initWithFile:file];
 }
 
 - (id)initWithSpriteFrame:(CCSpriteFrame *)spriteFrame capInsets:(CGRect)capInsets
@@ -246,7 +231,7 @@ enum positions
 
 + (id)spriteWithSpriteFrame:(CCSpriteFrame *)spriteFrame capInsets:(CGRect)capInsets
 {
-    return [[[self alloc] initWithSpriteFrame:spriteFrame capInsets:capInsets] autorelease];
+    return [[self alloc] initWithSpriteFrame:spriteFrame capInsets:capInsets];
 }
 
 - (id)initWithSpriteFrame:(CCSpriteFrame *)spriteFrame
@@ -258,7 +243,7 @@ enum positions
 
 + (id)spriteWithSpriteFrame:(CCSpriteFrame *)spriteFrame
 {
-    return [[[self alloc] initWithSpriteFrame:spriteFrame] autorelease];
+    return [[self alloc] initWithSpriteFrame:spriteFrame];
 }
 
 - (id)initWithSpriteFrameName:(NSString *)spriteFrameName capInsets:(CGRect)capInsets
@@ -272,7 +257,7 @@ enum positions
 
 + (id)spriteWithSpriteFrameName:(NSString *)spriteFrameName capInsets:(CGRect)capInsets
 {
-    return [[[self alloc] initWithSpriteFrameName:spriteFrameName capInsets:capInsets] autorelease];
+    return [[self alloc] initWithSpriteFrameName:spriteFrameName capInsets:capInsets];
 }
 
 - (id)initWithSpriteFrameName:(NSString *)spriteFrameName
@@ -284,7 +269,7 @@ enum positions
 
 + (id)spriteWithSpriteFrameName:(NSString *)spriteFrameName
 {
-    return [[[self alloc] initWithSpriteFrameName:spriteFrameName] autorelease];
+    return [[self alloc] initWithSpriteFrameName:spriteFrameName];
 }
 
 #pragma mark Properties
@@ -369,7 +354,7 @@ enum positions
 
 - (CCScale9Sprite *)resizableSpriteWithCapInsets:(CGRect)capInsets
 {
-    return [[[CCScale9Sprite alloc] initWithBatchNode:scale9Image rect:spriteRect capInsets:capInsets] autorelease];
+    return [[CCScale9Sprite alloc] initWithBatchNode:scale9Image rect:spriteRect capInsets:capInsets];
 }
 
 @end

@@ -32,12 +32,12 @@
  * target-actions pairs. For each CCButtonEvents a list of NSInvocation
  * (which contains the target-action pair) is linked.
  */
-@property (nonatomic, retain) NSMutableDictionary *dispatchTable;
+@property (nonatomic, strong) NSMutableDictionary *dispatchTable;
 /** 
  * Table of connection between the CCControlEvents and their associated
  * blocks. For each CCButtonEvents a list of blocks is linked.
  */
-@property (nonatomic, retain) NSMutableDictionary *dispatchBlockTable;
+@property (nonatomic, strong) NSMutableDictionary *dispatchBlockTable;
 
 /**
  * Adds a target and action for a particular event to an internal dispatch 
@@ -120,10 +120,9 @@
 
 - (void)dealloc
 {
-    [dispatchBlockTable_ release], dispatchBlockTable_ = nil;
-    [dispatchTable_ release], dispatchTable_ = nil;
+    dispatchBlockTable_ = nil;
+    dispatchTable_ = nil;
     
-    [super dealloc];
 }
 
 - (id)init
@@ -360,10 +359,12 @@
     [invocation setTarget:target];
     [invocation setSelector:action];
     
+    __unsafe_unretained id obj = self;
+    
     // If the selector accept the sender as third argument
     if ([sig numberOfArguments] >= 3)
     {
-        [invocation setArgument:&self atIndex:2];
+        [invocation setArgument:&obj atIndex:2];
     }
     
     // If the selector accept the CCControlEvent as fourth argument
@@ -424,7 +425,6 @@
         // Think to copy and release the block
         CCControlBlock currentBlock = [block copy];
         [dispatchBlockTable_ setObject:currentBlock forKey:controlEventKey];
-        [currentBlock release];
     } else
     {
         [dispatchBlockTable_ removeObjectForKey:controlEventKey];

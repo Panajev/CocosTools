@@ -3,7 +3,7 @@
 //  SneakyInput
 //
 //  Created by Nick Pannuto on 2/19/10.
-//  Copyright 2010 Sneakyness, llc.. All rights reserved.
+//  Copyright (c) 2012 Sneakyness, llc.. All rights reserved.
 //
 
 #import "cocos2d.h"
@@ -18,11 +18,11 @@
 	SneakyButton *button;
 }
 
-@property (nonatomic, retain) CCSprite *defaultSprite;
-@property (nonatomic, retain) CCSprite *activatedSprite;
-@property (nonatomic, retain) CCSprite *disabledSprite;
-@property (nonatomic, retain) CCSprite *pressSprite;
+@property (nonatomic, strong) CCSprite *defaultSprite;
+@property (nonatomic, strong) CCSprite *activatedSprite;
+@property (nonatomic, strong) CCSprite *disabledSprite;
+@property (nonatomic, strong) CCSprite *pressSprite;
 
-@property (nonatomic, retain) SneakyButton *button;
+@property (nonatomic, strong) SneakyButton *button;
 
 @end

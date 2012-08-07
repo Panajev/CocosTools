@@ -34,7 +34,7 @@
 
 + (NSString *) stringWithUnichar: (unichar) anUnichar
 {
-	return [[[NSString alloc] initWithCharacters:&anUnichar length:1] autorelease];
+	return [[NSString alloc] initWithCharacters:&anUnichar length:1];
 }
 
 - (unichar) unicharFromFirstCharacter: (NSString *) aString
@@ -134,21 +134,16 @@
 		[self setIsKeyboardEnabled:YES];
 #endif
 		
-		if (item)
+		if (item) {
 			[self alignItemsVertically];
+        }
+        
+        isTouchable_ = YES;
 	}
     
-    isTouchable_ = YES;
 	return self;
 }
 
-- (void) dealloc
-{
-#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
-	self.escapeDelegate = nil;
-#endif
-	[super dealloc];
-}
 
 #pragma mark Advanced Menu - Priority
 -(NSInteger) mouseDelegatePriority

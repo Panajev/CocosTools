@@ -35,9 +35,9 @@
 
 @interface CCControlColourPicker ()
 @property (nonatomic, assign) HSV                   hsv;
-@property (nonatomic, retain) CCSprite              *background;
-@property (nonatomic, retain) CCControlSaturationBrightnessPicker       *colourPicker;
-@property (nonatomic, retain) CCControlHuePicker    *huePicker;
+@property (nonatomic, strong) CCSprite              *background;
+@property (nonatomic, strong) CCControlSaturationBrightnessPicker       *colourPicker;
+@property (nonatomic, strong) CCControlHuePicker    *huePicker;
 
 - (void)updateControlPicker;
 - (void)updateHueAndControlPicker;
@@ -57,11 +57,7 @@
     [huePicker_ removeFromParentAndCleanup:YES];
     [colourPicker_ removeFromParentAndCleanup:YES];
 
-    background_     = nil;
-    huePicker_      = nil;
-    colourPicker_   = nil;
     
-    [super dealloc];
 }
 
 - (id)init
@@ -140,7 +136,7 @@
 
 + (id)colorPicker
 {
-    return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
 - (void)setColor:(ccColor3B)color

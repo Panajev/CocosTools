@@ -31,8 +31,8 @@
 #import "Utils.h"
 
 @interface CCControlHuePicker ()
-@property (nonatomic, retain) CCSprite    *background;
-@property (nonatomic, retain) CCSprite    *slider;
+@property (nonatomic, strong) CCSprite    *background;
+@property (nonatomic, strong) CCSprite    *slider;
 @property (nonatomic, assign) CGPoint     startPos;
 
 - (void)updateSliderPosition:(CGPoint)location;
@@ -51,10 +51,7 @@
 {
     [self removeAllChildrenWithCleanup:YES];
     
-    [background_ release];
-    [slider_ release];
     
-	[super dealloc];
 }
 
 - (id)initWithTarget:(id)target withPos:(CGPoint)pos
