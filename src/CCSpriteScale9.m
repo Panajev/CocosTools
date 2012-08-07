@@ -81,7 +81,6 @@
 
 - (void) dealloc {
 	if (vertexData) free(vertexData);
-    
 }
 
 -(void) updateColor {
@@ -246,7 +245,7 @@
 	
     ccGLBindTexture2D([texture_ name]);
     ccGLEnableVertexAttribs(kCCVertexAttribFlag_PosColorTex);
-
+    
 	glVertexAttribPointer(kCCVertexAttrib_Position, 2, GL_FLOAT, GL_FALSE, sizeof(ccV2F_C4F_T2F), &vertexData[0].vertices);
     glVertexAttribPointer(kCCVertexAttrib_TexCoords, 2, GL_FLOAT, GL_FALSE, sizeof(ccV2F_C4F_T2F), &vertexData[0].texCoords);
     glVertexAttribPointer(kCCVertexAttrib_Color, 4, GL_FLOAT, GL_FALSE, sizeof(ccV2F_C4F_T2F), &vertexData[0].colors);
@@ -271,7 +270,7 @@
 	rect_ = CC_RECT_PIXELS_TO_POINTS( rect );
 	
 	//[self setContentSizeInPixels:untrimmedSize];
-	[self updateTextureCoords:rectInPixels_];	
+	[self updateTextureCoords:rectInPixels_];
 }
 
 -(void)setTextureRect:(CGRect)rect {
@@ -339,7 +338,7 @@
 	}
 }
 
--(void) setTexture:(CCTexture2D*)texture {	
+-(void) setTexture:(CCTexture2D*)texture {
 	// accept texture==nil as argument
 	NSAssert( !texture || [texture isKindOfClass:[CCTexture2D class]], @"setTexture expects a CCTexture2D. Invalid argument");
     
