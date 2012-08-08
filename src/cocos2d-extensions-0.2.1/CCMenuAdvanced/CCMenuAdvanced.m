@@ -1,10 +1,10 @@
 /*
  * CCMenuAdvanced
  *
- * cocos2d-extensions
+ * Cocos2D-iPhone-Extensions v0.2.1
  * https://github.com/cocos2d/cocos2d-iphone-extensions
  *
- * Copyright (c) 2011 Stepan Generalov
+ * Copyright (c) 2011-2012 Stepan Generalov
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,6 @@
  */
 
 #import "CCMenuAdvanced.h"
-#import "LogDefines.h"
 
 
 @implementation NSString (UnicharExtensions)
@@ -65,57 +64,10 @@
 @synthesize minimumTouchLengthToSlide = minimumTouchLengthToSlide_;
 @synthesize priority = priority_;
 @synthesize isDisabled = isDisabled_;
-@synthesize isTouchable = isTouchable_;
 
 #ifdef DEBUG
 @synthesize debugDraw = debugDraw_;
 #endif
-
-- (CGPoint) hPosItemAtIndex:(NSInteger)index {
-    NSAssert(index < children_.count, @"index out of CCMenu bounds");
-    CCMenuItem *item = [children_ objectAtIndex:index];
-    return ccp([self convertToWorldSpace:item.position].x, item.position.y);
-}
-
-- (CGPoint) vPosItemAtIndex:(NSInteger)index {
-    NSAssert(index < children_.count, @"index out of CCMenu bounds");
-    CCMenuItem *item = [children_ objectAtIndex:index];
-    return ccp(item.position.x, [self convertToWorldSpace:item.position].y);
-}
-
-- (CGPoint) posItemAtIndex:(NSInteger)index hMenuPadding:(NSInteger)padding {
-    NSAssert(index < children_.count, @"index out of CCMenu bounds");
-    CCMenuItem *item = [children_ objectAtIndex:index];
-    return [self convertToWorldSpace:item.position];
-    
-    /*
-     float offsetX = 0;
-     float offsetY = 0;
-     float totalPadding = 0.0f;
-     
-     id delegate = [[UIApplication sharedApplication] delegate];
-     
-     CCMenuItem * item0 = nil;
-     CCARRAY_FOREACH(children_, item0) {
-     totalPadding += padding;
-     }
-     
-     if([delegate respondsToSelector:@selector(iPadMode)]) {
-        BOOL iPadMode = (BOOL)[delegate performSelector:@selector(iPadMode)];
-        if(iPadMode) {
-            offsetX = self.position.x-item.contentSize.width*2 - (totalPadding);
-        }
-        else {
-            offsetX = self.position.x-item.contentSize.width*2.62;
-        }
-    }
-    
-    offsetX = self.position.x-item.contentSize.width - (totalPadding);
-    
-    return ccpAdd( ccp(offsetX,offsetY), item.position);
-     */
-}
-
 
 #pragma mark Init/DeInit
 
@@ -123,24 +75,21 @@
 {
 	if ( (self = [super initWithItems:item vaList:args]) )
 	{
-		//self.isRelativeAnchorPoint = YES;
-        [self setIgnoreAnchorPointForPosition:NO];
-        
+#if COCOS2D_VERSION >= 0x00020000
+        self.ignoreAnchorPointForPosition = NO;
+#else
+		self.isRelativeAnchorPoint = YES;
+#endif
 		selectedItemNumber_ = -1;
-        isTouchable_ = YES;
 		self.boundaryRect = CGRectNull;
 		self.minimumTouchLengthToSlide = 30.0f;
 #ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
 		[self setIsKeyboardEnabled:YES];
 #endif
 		
-		if (item) {
+		if (item)
 			[self alignItemsVertically];
-        }
-        
-        isTouchable_ = YES;
 	}
-    
 	return self;
 }
 
@@ -159,9 +108,15 @@
 #ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
 -(void) registerWithTouchDispatcher
 {
-    CCDirectorIOS *director =  (CCDirectorIOS*)[CCDirector sharedDirector];
-	[[director touchDispatcher] addTargetedDelegate:self priority:[self mouseDelegatePriority]  swallowsTouches:YES];
-    CMLog(@"registerWithTouchDispatcher");
+#if COCOS2D_VERSION >= 0x00020000
+    CCTouchDispatcher *dispatcher = [[CCDirector sharedDirector] touchDispatcher];
+#else
+    CCTouchDispatcher *dispatcher = [CCTouchDispatcher sharedDispatcher];
+#endif
+    
+	[dispatcher addTargetedDelegate: self 
+                           priority: [self mouseDelegatePriority] 
+                    swallowsTouches: YES ];
 }
 #endif
 
@@ -258,7 +213,7 @@
 	}
 	
 	selectedItemNumber_ = -1;
-    
+
 	state_ = kCCMenuStateWaiting;
 }
 
@@ -403,7 +358,7 @@
 
 -(BOOL) ccMouseUp:(NSEvent *)event
 {
-    if (self.isDisabled || !isTouchable_)
+    if (self.isDisabled)
         return NO;
     
     return [super ccMouseUp: event];
@@ -411,15 +366,15 @@
 
 -(BOOL) ccMouseDragged:(NSEvent *)event
 {
-	if (self.isDisabled || !isTouchable_)
+	if (self.isDisabled)
 		return NO;
 	
 	return [super ccMouseDragged: event];
 }
-
+ 
 -(BOOL) ccMouseDown:(NSEvent *)event
 {
-	if( ! visible_ || self.isDisabled || !isTouchable_)
+	if( ! visible_ || self.isDisabled)
 		return NO;
 	
 	selectedItem_ = [self itemForMouseEvent:event];
@@ -541,7 +496,7 @@
 	CGFloat rightBoundary = boundaryRect_.origin.x + MAX(s.width, boundaryRect_.size.width);
 	CGFloat bottomBoundary = boundaryRect_.origin.y + boundaryRect_.size.height;
 	CGFloat topBoundary = boundaryRect_.origin.y + MAX(s.height,boundaryRect_.size.height);
-    
+
 	rightTopCorner = ccp( CLAMP(rightTopCorner.x,leftBoundary,rightBoundary), 
 						 CLAMP(rightTopCorner.y,bottomBoundary,topBoundary));
 	
@@ -564,21 +519,16 @@
 	
 	CGRect rect = CGRectMake(0, 0, self.contentSize.width, self.contentSize.height);
 	
-    if ( CGRectContainsPoint(rect, point) || CGRectContainsPoint(rect, prevPoint) ) {
+    if ( CGRectContainsPoint(rect, point) || CGRectContainsPoint(rect, prevPoint) )
 		return YES;
-    }
 	
 	return NO;
 }
 
 -(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {	
-    CMLog(@"CCMenuAdvanced ccTouchBegan");
-	if( state_ != kCCMenuStateWaiting || !visible_ || self.isDisabled ||
-       !isTouchable_) {
-        CMLog(@"CCMenuAdvanced ccTouchBegan exited early");
+	if( state_ != kCCMenuStateWaiting || !visible_ || self.isDisabled )
 		return NO;
-    }
 	
 	curTouchLength_ = 0; //< every new touch should reset previous touch length
 	
@@ -586,7 +536,6 @@
 	[selectedItem_ selected];
 	
 	if( selectedItem_ ) {
-        CMLog(@"CCMenuAdvanced ccTouchBegan, selectedItem_ != nil");
 		state_ = kCCMenuStateTrackingTouch;
 		return YES;
 	}
@@ -604,13 +553,8 @@
 {
 	NSAssert(state_ == kCCMenuStateTrackingTouch, @"[Menu ccTouchEnded] -- invalid state");
 	
-    CMLog(@"CCMenuAdvanced ccTouchEnded");
 	[selectedItem_ unselected];
 	[selectedItem_ activate];
-    
-    if(selectedItem_ == nil) {
-        CMLog(@"CCMenuAdvanced ccTouchEnded, selectedItem_ == nil");
-    }
 	
 	state_ = kCCMenuStateWaiting;
 }
@@ -618,8 +562,6 @@
 -(void) ccTouchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
 {
 	NSAssert(state_ == kCCMenuStateTrackingTouch, @"[Menu ccTouchCancelled] -- invalid state");
-    CMLog(@"CCMenuAdvanced ccTouchCancelled");
-    
 	
 	[selectedItem_ unselected];
 	
@@ -629,11 +571,6 @@
 -(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
 	NSAssert(state_ == kCCMenuStateTrackingTouch, @"[Menu ccTouchMoved] -- invalid state");
-    CMLog(@"CCMenuAdvanced ccTouchMoved");
-    
-    if (!isTouchable_) {
-        return;
-    }
 	
 	CCMenuItem *currentItem = [self itemForTouch:touch];
 	

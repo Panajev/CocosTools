@@ -49,13 +49,6 @@
 @synthesize minimumValue        = minimumValue_;
 @synthesize maximumValue        = maximumValue_;
 
-- (void)dealloc
-{
-    thumbSprite_ = nil;
-    progressSprite_ = nil;
-    backgroundSprite_ = nil;
-    
-}
 
 + (id)sliderWithBackgroundFile:(NSString *)backgroundname progressFile:(NSString *)progressname thumbFile:(NSString *)thumbname
 {

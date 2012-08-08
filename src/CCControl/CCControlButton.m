@@ -67,17 +67,6 @@ enum
 @synthesize currentTitle                    = currentTitle_;
 @synthesize currentTitleColor               = currentTitleColor_;
 
-- (void)dealloc
-{
-    backgroundSpriteDispatchTable_ = nil;
-    titleLabelDispatchTable_ = nil;
-    titleColorDispatchTable_ = nil;
-    titleDispatchTable_ = nil;
-    backgroundSprite_ = nil;
-    titleLabel_ = nil;
-    currentTitle_ = nil;
-    
-}
 
 #pragma mark -
 #pragma mark CCButton - Initializers

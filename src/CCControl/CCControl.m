@@ -118,12 +118,6 @@
 @synthesize selected = selected_;
 @synthesize highlighted = highlighted_;
 
-- (void)dealloc
-{
-    dispatchBlockTable_ = nil;
-    dispatchTable_ = nil;
-    
-}
 
 - (id)init
 {

@@ -7,11 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E60DBBE915D2EDCD00441AFD /* CCBigImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBC215D2EDCD00441AFD /* CCBigImage.h */; };
+		E60DBBEA15D2EDCD00441AFD /* CCTextureCache+CCBigImageExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBC315D2EDCD00441AFD /* CCTextureCache+CCBigImageExtensions.h */; };
+		E60DBBEB15D2EDCD00441AFD /* CCLayerPanZoom.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBC615D2EDCD00441AFD /* CCLayerPanZoom.h */; };
+		E60DBBEC15D2EDCD00441AFD /* CCMenuAdvanced.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBC915D2EDCD00441AFD /* CCMenuAdvanced.h */; };
+		E60DBBED15D2EDCD00441AFD /* CCMenuItemSpriteIndependent.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBCC15D2EDCD00441AFD /* CCMenuItemSpriteIndependent.h */; };
+		E60DBBEE15D2EDCD00441AFD /* CCScrollLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBCF15D2EDCD00441AFD /* CCScrollLayer.h */; };
+		E60DBBEF15D2EDCD00441AFD /* CCSendMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBD215D2EDCD00441AFD /* CCSendMessages.h */; };
+		E60DBBF015D2EDCD00441AFD /* CCSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBD515D2EDCD00441AFD /* CCSlider.h */; };
+		E60DBBF115D2EDCD00441AFD /* CCVideoPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBD815D2EDCD00441AFD /* CCVideoPlayer.h */; };
+		E60DBBF215D2EDCD00441AFD /* CCVideoPlayerImpliOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBDA15D2EDCD00441AFD /* CCVideoPlayerImpliOS.h */; };
+		E60DBBF315D2EDCD00441AFD /* videoOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBDB15D2EDCD00441AFD /* videoOverlayView.h */; };
+		E60DBBF415D2EDCD00441AFD /* CCVideoPlayerImplMac.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBDD15D2EDCD00441AFD /* CCVideoPlayerImplMac.h */; };
+		E60DBBF515D2EDCD00441AFD /* MyMovieView.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBDE15D2EDCD00441AFD /* MyMovieView.h */; };
+		E60DBBF615D2EDCD00441AFD /* FilesDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBE115D2EDCD00441AFD /* FilesDownloader.h */; };
+		E60DBBF715D2EDCD00441AFD /* SingleFileDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBE315D2EDCD00441AFD /* SingleFileDownloader.h */; };
+		E60DBBF815D2EDCD00441AFD /* cencode.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBE515D2EDCD00441AFD /* cencode.h */; };
+		E60DBBF915D2EDCD00441AFD /* LFCGzipUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBE615D2EDCD00441AFD /* LFCGzipUtility.h */; };
+		E60DBBFA15D2EDCD00441AFD /* TMXGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = E60DBBE815D2EDCD00441AFD /* TMXGenerator.h */; };
+		E60DBC1B15D2EDE300441AFD /* CCBigImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBBFD15D2EDE300441AFD /* CCBigImage.m */; };
+		E60DBC1C15D2EDE300441AFD /* CCTextureCache+CCBigImageExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBBFE15D2EDE300441AFD /* CCTextureCache+CCBigImageExtensions.m */; };
+		E60DBC1D15D2EDE300441AFD /* CCLayerPanZoom.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC0015D2EDE300441AFD /* CCLayerPanZoom.m */; };
+		E60DBC1E15D2EDE300441AFD /* CCMenuAdvanced.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC0215D2EDE300441AFD /* CCMenuAdvanced.m */; };
+		E60DBC1F15D2EDE300441AFD /* CCMenuItemSpriteIndependent.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC0415D2EDE300441AFD /* CCMenuItemSpriteIndependent.m */; };
+		E60DBC2015D2EDE300441AFD /* CCScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC0615D2EDE300441AFD /* CCScrollLayer.m */; };
+		E60DBC2115D2EDE300441AFD /* CCSendMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC0815D2EDE300441AFD /* CCSendMessages.m */; };
+		E60DBC2215D2EDE300441AFD /* CCSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC0A15D2EDE300441AFD /* CCSlider.m */; };
+		E60DBC2315D2EDE300441AFD /* CCVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC0C15D2EDE300441AFD /* CCVideoPlayer.m */; };
+		E60DBC2415D2EDE300441AFD /* CCVideoPlayerImpliOS.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC0E15D2EDE300441AFD /* CCVideoPlayerImpliOS.m */; };
+		E60DBC2515D2EDE300441AFD /* videoOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC0F15D2EDE300441AFD /* videoOverlayView.m */; };
+		E60DBC2615D2EDE300441AFD /* CCVideoPlayerImplMac.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC1115D2EDE300441AFD /* CCVideoPlayerImplMac.m */; };
+		E60DBC2715D2EDE300441AFD /* MyMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC1315D2EDE300441AFD /* MyMovieView.m */; };
+		E60DBC2815D2EDE300441AFD /* FilesDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC1515D2EDE300441AFD /* FilesDownloader.m */; };
+		E60DBC2915D2EDE300441AFD /* SingleFileDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC1615D2EDE300441AFD /* SingleFileDownloader.m */; };
+		E60DBC2A15D2EDE300441AFD /* cencode.c in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC1815D2EDE300441AFD /* cencode.c */; };
+		E60DBC2B15D2EDE300441AFD /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC1915D2EDE300441AFD /* LFCGzipUtility.m */; };
+		E60DBC2C15D2EDE300441AFD /* TMXGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC1A15D2EDE300441AFD /* TMXGenerator.m */; };
 		E60E6A9914E144B6002902D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E6A9814E144B6002902D2 /* Foundation.framework */; };
 		E60E6AF014E151E7002902D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E6AEF14E151E7002902D2 /* CoreGraphics.framework */; };
 		E61D6B4014E1660800CE9BEA /* CocosTools-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2A14E1660800CE9BEA /* CocosTools-Prefix.pch */; };
 		E61D6B4214E1660800CE9BEA /* CCDraggableSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2D14E1660800CE9BEA /* CCDraggableSprite.h */; };
-		E61D6B4314E1660800CE9BEA /* CCMenuAdvanced.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2E14E1660800CE9BEA /* CCMenuAdvanced.h */; };
 		E61D6B4414E1660800CE9BEA /* CCSpriteExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2F14E1660800CE9BEA /* CCSpriteExtended.h */; };
 		E61D6B4514E1660800CE9BEA /* CCSpriteExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B3014E1660800CE9BEA /* CCSpriteExtensions.h */; };
 		E61D6B4714E1660800CE9BEA /* TestLoaderScene.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B3214E1660800CE9BEA /* TestLoaderScene.h */; };
@@ -19,7 +54,6 @@
 		E61D6B4914E1660800CE9BEA /* PhysicsSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B3414E1660800CE9BEA /* PhysicsSystem.h */; };
 		E61D6B4A14E1660800CE9BEA /* WorldPhysics.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B3514E1660800CE9BEA /* WorldPhysics.h */; };
 		E61D6B4C14E1660800CE9BEA /* CCDraggableSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3814E1660800CE9BEA /* CCDraggableSprite.mm */; };
-		E61D6B4D14E1660800CE9BEA /* CCMenuAdvanced.m in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3914E1660800CE9BEA /* CCMenuAdvanced.m */; };
 		E61D6B4E14E1660800CE9BEA /* CCSpriteExtended.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3A14E1660800CE9BEA /* CCSpriteExtended.mm */; };
 		E61D6B4F14E1660800CE9BEA /* CCSpriteExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3B14E1660800CE9BEA /* CCSpriteExtension.m */; };
 		E61D6B5014E1660800CE9BEA /* TestLoaderScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61D6B3C14E1660800CE9BEA /* TestLoaderScene.mm */; };
@@ -75,6 +109,53 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E60DBBC215D2EDCD00441AFD /* CCBigImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBigImage.h; sourceTree = "<group>"; };
+		E60DBBC315D2EDCD00441AFD /* CCTextureCache+CCBigImageExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCTextureCache+CCBigImageExtensions.h"; sourceTree = "<group>"; };
+		E60DBBC415D2EDCD00441AFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E60DBBC615D2EDCD00441AFD /* CCLayerPanZoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLayerPanZoom.h; sourceTree = "<group>"; };
+		E60DBBC715D2EDCD00441AFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E60DBBC915D2EDCD00441AFD /* CCMenuAdvanced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMenuAdvanced.h; sourceTree = "<group>"; };
+		E60DBBCA15D2EDCD00441AFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E60DBBCC15D2EDCD00441AFD /* CCMenuItemSpriteIndependent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMenuItemSpriteIndependent.h; sourceTree = "<group>"; };
+		E60DBBCD15D2EDCD00441AFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E60DBBCF15D2EDCD00441AFD /* CCScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScrollLayer.h; sourceTree = "<group>"; };
+		E60DBBD015D2EDCD00441AFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E60DBBD215D2EDCD00441AFD /* CCSendMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSendMessages.h; sourceTree = "<group>"; };
+		E60DBBD315D2EDCD00441AFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E60DBBD515D2EDCD00441AFD /* CCSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSlider.h; sourceTree = "<group>"; };
+		E60DBBD615D2EDCD00441AFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E60DBBD815D2EDCD00441AFD /* CCVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCVideoPlayer.h; sourceTree = "<group>"; };
+		E60DBBDA15D2EDCD00441AFD /* CCVideoPlayerImpliOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCVideoPlayerImpliOS.h; sourceTree = "<group>"; };
+		E60DBBDB15D2EDCD00441AFD /* videoOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = videoOverlayView.h; sourceTree = "<group>"; };
+		E60DBBDD15D2EDCD00441AFD /* CCVideoPlayerImplMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCVideoPlayerImplMac.h; sourceTree = "<group>"; };
+		E60DBBDE15D2EDCD00441AFD /* MyMovieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMovieView.h; sourceTree = "<group>"; };
+		E60DBBDF15D2EDCD00441AFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E60DBBE115D2EDCD00441AFD /* FilesDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilesDownloader.h; sourceTree = "<group>"; };
+		E60DBBE215D2EDCD00441AFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E60DBBE315D2EDCD00441AFD /* SingleFileDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleFileDownloader.h; sourceTree = "<group>"; };
+		E60DBBE515D2EDCD00441AFD /* cencode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cencode.h; sourceTree = "<group>"; };
+		E60DBBE615D2EDCD00441AFD /* LFCGzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
+		E60DBBE715D2EDCD00441AFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E60DBBE815D2EDCD00441AFD /* TMXGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXGenerator.h; sourceTree = "<group>"; };
+		E60DBBFD15D2EDE300441AFD /* CCBigImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBigImage.m; sourceTree = "<group>"; };
+		E60DBBFE15D2EDE300441AFD /* CCTextureCache+CCBigImageExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCTextureCache+CCBigImageExtensions.m"; sourceTree = "<group>"; };
+		E60DBC0015D2EDE300441AFD /* CCLayerPanZoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLayerPanZoom.m; sourceTree = "<group>"; };
+		E60DBC0215D2EDE300441AFD /* CCMenuAdvanced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMenuAdvanced.m; sourceTree = "<group>"; };
+		E60DBC0415D2EDE300441AFD /* CCMenuItemSpriteIndependent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMenuItemSpriteIndependent.m; sourceTree = "<group>"; };
+		E60DBC0615D2EDE300441AFD /* CCScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCScrollLayer.m; sourceTree = "<group>"; };
+		E60DBC0815D2EDE300441AFD /* CCSendMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSendMessages.m; sourceTree = "<group>"; };
+		E60DBC0A15D2EDE300441AFD /* CCSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSlider.m; sourceTree = "<group>"; };
+		E60DBC0C15D2EDE300441AFD /* CCVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCVideoPlayer.m; sourceTree = "<group>"; };
+		E60DBC0E15D2EDE300441AFD /* CCVideoPlayerImpliOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCVideoPlayerImpliOS.m; sourceTree = "<group>"; };
+		E60DBC0F15D2EDE300441AFD /* videoOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = videoOverlayView.m; sourceTree = "<group>"; };
+		E60DBC1115D2EDE300441AFD /* CCVideoPlayerImplMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCVideoPlayerImplMac.m; sourceTree = "<group>"; };
+		E60DBC1215D2EDE300441AFD /* CustomVideoView.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = CustomVideoView.nib; sourceTree = "<group>"; };
+		E60DBC1315D2EDE300441AFD /* MyMovieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMovieView.m; sourceTree = "<group>"; };
+		E60DBC1515D2EDE300441AFD /* FilesDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilesDownloader.m; sourceTree = "<group>"; };
+		E60DBC1615D2EDE300441AFD /* SingleFileDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleFileDownloader.m; sourceTree = "<group>"; };
+		E60DBC1815D2EDE300441AFD /* cencode.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = cencode.c; sourceTree = "<group>"; };
+		E60DBC1915D2EDE300441AFD /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
+		E60DBC1A15D2EDE300441AFD /* TMXGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXGenerator.m; sourceTree = "<group>"; };
 		E60E6A9514E144B6002902D2 /* libCocosTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocosTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60E6A9814E144B6002902D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E60E6AAC14E144F8002902D2 /* libCocosTools_script.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocosTools_script.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,7 +163,6 @@
 		E60E6AF114E15237002902D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E61D6B2A14E1660800CE9BEA /* CocosTools-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CocosTools-Prefix.pch"; sourceTree = "<group>"; };
 		E61D6B2D14E1660800CE9BEA /* CCDraggableSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDraggableSprite.h; sourceTree = "<group>"; };
-		E61D6B2E14E1660800CE9BEA /* CCMenuAdvanced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMenuAdvanced.h; sourceTree = "<group>"; };
 		E61D6B2F14E1660800CE9BEA /* CCSpriteExtended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpriteExtended.h; sourceTree = "<group>"; };
 		E61D6B3014E1660800CE9BEA /* CCSpriteExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpriteExtensions.h; sourceTree = "<group>"; };
 		E61D6B3214E1660800CE9BEA /* TestLoaderScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLoaderScene.h; sourceTree = "<group>"; };
@@ -90,7 +170,6 @@
 		E61D6B3414E1660800CE9BEA /* PhysicsSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsSystem.h; sourceTree = "<group>"; };
 		E61D6B3514E1660800CE9BEA /* WorldPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldPhysics.h; sourceTree = "<group>"; };
 		E61D6B3814E1660800CE9BEA /* CCDraggableSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCDraggableSprite.mm; sourceTree = "<group>"; };
-		E61D6B3914E1660800CE9BEA /* CCMenuAdvanced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMenuAdvanced.m; sourceTree = "<group>"; };
 		E61D6B3A14E1660800CE9BEA /* CCSpriteExtended.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCSpriteExtended.mm; sourceTree = "<group>"; };
 		E61D6B3B14E1660800CE9BEA /* CCSpriteExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteExtension.m; sourceTree = "<group>"; };
 		E61D6B3C14E1660800CE9BEA /* TestLoaderScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TestLoaderScene.mm; sourceTree = "<group>"; };
@@ -159,6 +238,259 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E60DBBC015D2EDCD00441AFD /* cocos2d-extensions-0.2.1 */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBC115D2EDCD00441AFD /* CCBigImage */,
+				E60DBBC515D2EDCD00441AFD /* CCLayerPanZoom */,
+				E60DBBC815D2EDCD00441AFD /* CCMenuAdvanced */,
+				E60DBBCB15D2EDCD00441AFD /* CCMenuItemSpriteIndependent */,
+				E60DBBCE15D2EDCD00441AFD /* CCScrollLayer */,
+				E60DBBD115D2EDCD00441AFD /* CCSendMessages */,
+				E60DBBD415D2EDCD00441AFD /* CCSlider */,
+				E60DBBD715D2EDCD00441AFD /* CCVideoPlayer */,
+				E60DBBE015D2EDCD00441AFD /* FilesDownloader */,
+				E60DBBE415D2EDCD00441AFD /* TMXGenerator */,
+			);
+			path = "cocos2d-extensions-0.2.1";
+			sourceTree = "<group>";
+		};
+		E60DBBC115D2EDCD00441AFD /* CCBigImage */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBC215D2EDCD00441AFD /* CCBigImage.h */,
+				E60DBBC315D2EDCD00441AFD /* CCTextureCache+CCBigImageExtensions.h */,
+				E60DBBC415D2EDCD00441AFD /* README.md */,
+			);
+			path = CCBigImage;
+			sourceTree = "<group>";
+		};
+		E60DBBC515D2EDCD00441AFD /* CCLayerPanZoom */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBC615D2EDCD00441AFD /* CCLayerPanZoom.h */,
+				E60DBBC715D2EDCD00441AFD /* README.md */,
+			);
+			path = CCLayerPanZoom;
+			sourceTree = "<group>";
+		};
+		E60DBBC815D2EDCD00441AFD /* CCMenuAdvanced */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBC915D2EDCD00441AFD /* CCMenuAdvanced.h */,
+				E60DBBCA15D2EDCD00441AFD /* README.md */,
+			);
+			path = CCMenuAdvanced;
+			sourceTree = "<group>";
+		};
+		E60DBBCB15D2EDCD00441AFD /* CCMenuItemSpriteIndependent */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBCC15D2EDCD00441AFD /* CCMenuItemSpriteIndependent.h */,
+				E60DBBCD15D2EDCD00441AFD /* README.md */,
+			);
+			path = CCMenuItemSpriteIndependent;
+			sourceTree = "<group>";
+		};
+		E60DBBCE15D2EDCD00441AFD /* CCScrollLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBCF15D2EDCD00441AFD /* CCScrollLayer.h */,
+				E60DBBD015D2EDCD00441AFD /* README.md */,
+			);
+			path = CCScrollLayer;
+			sourceTree = "<group>";
+		};
+		E60DBBD115D2EDCD00441AFD /* CCSendMessages */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBD215D2EDCD00441AFD /* CCSendMessages.h */,
+				E60DBBD315D2EDCD00441AFD /* README.md */,
+			);
+			path = CCSendMessages;
+			sourceTree = "<group>";
+		};
+		E60DBBD415D2EDCD00441AFD /* CCSlider */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBD515D2EDCD00441AFD /* CCSlider.h */,
+				E60DBBD615D2EDCD00441AFD /* README.md */,
+			);
+			path = CCSlider;
+			sourceTree = "<group>";
+		};
+		E60DBBD715D2EDCD00441AFD /* CCVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBD815D2EDCD00441AFD /* CCVideoPlayer.h */,
+				E60DBBD915D2EDCD00441AFD /* iOS */,
+				E60DBBDC15D2EDCD00441AFD /* Mac */,
+				E60DBBDF15D2EDCD00441AFD /* README.md */,
+			);
+			path = CCVideoPlayer;
+			sourceTree = "<group>";
+		};
+		E60DBBD915D2EDCD00441AFD /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBDA15D2EDCD00441AFD /* CCVideoPlayerImpliOS.h */,
+				E60DBBDB15D2EDCD00441AFD /* videoOverlayView.h */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		E60DBBDC15D2EDCD00441AFD /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBDD15D2EDCD00441AFD /* CCVideoPlayerImplMac.h */,
+				E60DBBDE15D2EDCD00441AFD /* MyMovieView.h */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		E60DBBE015D2EDCD00441AFD /* FilesDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBE115D2EDCD00441AFD /* FilesDownloader.h */,
+				E60DBBE215D2EDCD00441AFD /* README.md */,
+				E60DBBE315D2EDCD00441AFD /* SingleFileDownloader.h */,
+			);
+			path = FilesDownloader;
+			sourceTree = "<group>";
+		};
+		E60DBBE415D2EDCD00441AFD /* TMXGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBE515D2EDCD00441AFD /* cencode.h */,
+				E60DBBE615D2EDCD00441AFD /* LFCGzipUtility.h */,
+				E60DBBE715D2EDCD00441AFD /* README.md */,
+				E60DBBE815D2EDCD00441AFD /* TMXGenerator.h */,
+			);
+			path = TMXGenerator;
+			sourceTree = "<group>";
+		};
+		E60DBBFB15D2EDE300441AFD /* cocos2d-extensions-0.2.1 */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBFC15D2EDE300441AFD /* CCBigImage */,
+				E60DBBFF15D2EDE300441AFD /* CCLayerPanZoom */,
+				E60DBC0115D2EDE300441AFD /* CCMenuAdvanced */,
+				E60DBC0315D2EDE300441AFD /* CCMenuItemSpriteIndependent */,
+				E60DBC0515D2EDE300441AFD /* CCScrollLayer */,
+				E60DBC0715D2EDE300441AFD /* CCSendMessages */,
+				E60DBC0915D2EDE300441AFD /* CCSlider */,
+				E60DBC0B15D2EDE300441AFD /* CCVideoPlayer */,
+				E60DBC1415D2EDE300441AFD /* FilesDownloader */,
+				E60DBC1715D2EDE300441AFD /* TMXGenerator */,
+			);
+			path = "cocos2d-extensions-0.2.1";
+			sourceTree = "<group>";
+		};
+		E60DBBFC15D2EDE300441AFD /* CCBigImage */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBBFD15D2EDE300441AFD /* CCBigImage.m */,
+				E60DBBFE15D2EDE300441AFD /* CCTextureCache+CCBigImageExtensions.m */,
+			);
+			path = CCBigImage;
+			sourceTree = "<group>";
+		};
+		E60DBBFF15D2EDE300441AFD /* CCLayerPanZoom */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBC0015D2EDE300441AFD /* CCLayerPanZoom.m */,
+			);
+			path = CCLayerPanZoom;
+			sourceTree = "<group>";
+		};
+		E60DBC0115D2EDE300441AFD /* CCMenuAdvanced */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBC0215D2EDE300441AFD /* CCMenuAdvanced.m */,
+			);
+			path = CCMenuAdvanced;
+			sourceTree = "<group>";
+		};
+		E60DBC0315D2EDE300441AFD /* CCMenuItemSpriteIndependent */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBC0415D2EDE300441AFD /* CCMenuItemSpriteIndependent.m */,
+			);
+			path = CCMenuItemSpriteIndependent;
+			sourceTree = "<group>";
+		};
+		E60DBC0515D2EDE300441AFD /* CCScrollLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBC0615D2EDE300441AFD /* CCScrollLayer.m */,
+			);
+			path = CCScrollLayer;
+			sourceTree = "<group>";
+		};
+		E60DBC0715D2EDE300441AFD /* CCSendMessages */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBC0815D2EDE300441AFD /* CCSendMessages.m */,
+			);
+			path = CCSendMessages;
+			sourceTree = "<group>";
+		};
+		E60DBC0915D2EDE300441AFD /* CCSlider */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBC0A15D2EDE300441AFD /* CCSlider.m */,
+			);
+			path = CCSlider;
+			sourceTree = "<group>";
+		};
+		E60DBC0B15D2EDE300441AFD /* CCVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBC0C15D2EDE300441AFD /* CCVideoPlayer.m */,
+				E60DBC0D15D2EDE300441AFD /* iOS */,
+				E60DBC1015D2EDE300441AFD /* Mac */,
+			);
+			path = CCVideoPlayer;
+			sourceTree = "<group>";
+		};
+		E60DBC0D15D2EDE300441AFD /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBC0E15D2EDE300441AFD /* CCVideoPlayerImpliOS.m */,
+				E60DBC0F15D2EDE300441AFD /* videoOverlayView.m */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		E60DBC1015D2EDE300441AFD /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBC1115D2EDE300441AFD /* CCVideoPlayerImplMac.m */,
+				E60DBC1215D2EDE300441AFD /* CustomVideoView.nib */,
+				E60DBC1315D2EDE300441AFD /* MyMovieView.m */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		E60DBC1415D2EDE300441AFD /* FilesDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBC1515D2EDE300441AFD /* FilesDownloader.m */,
+				E60DBC1615D2EDE300441AFD /* SingleFileDownloader.m */,
+			);
+			path = FilesDownloader;
+			sourceTree = "<group>";
+		};
+		E60DBC1715D2EDE300441AFD /* TMXGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				E60DBC1815D2EDE300441AFD /* cencode.c */,
+				E60DBC1915D2EDE300441AFD /* LFCGzipUtility.m */,
+				E60DBC1A15D2EDE300441AFD /* TMXGenerator.m */,
+			);
+			path = TMXGenerator;
+			sourceTree = "<group>";
+		};
 		E60E6A8A14E144B6002902D2 = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +525,7 @@
 		E61D6B2B14E1660800CE9BEA /* include */ = {
 			isa = PBXGroup;
 			children = (
+				E60DBBC015D2EDCD00441AFD /* cocos2d-extensions-0.2.1 */,
 				E6A7C8E515CFC3D600ACC440 /* jpsarda extensions */,
 				E6A7C8A015CFBB5200ACC440 /* TextBox */,
 				E6A7C86115CFB59D00ACC440 /* CameraControl */,
@@ -208,6 +541,7 @@
 		E61D6B3614E1660800CE9BEA /* src */ = {
 			isa = PBXGroup;
 			children = (
+				E60DBBFB15D2EDE300441AFD /* cocos2d-extensions-0.2.1 */,
 				E6A7C8E415CFC3B700ACC440 /* jpsarda extensions */,
 				E6A7C8A115CFBB6500ACC440 /* TextBox */,
 				E6A7C86715CFB5E300ACC440 /* CameraControl */,
@@ -366,7 +700,6 @@
 				E63AC75A14FE261E0011B466 /* SneakyButton.m */,
 				E63AC75B14FE261E0011B466 /* SneakyButtonSkinnedBase.m */,
 				E61D6B3814E1660800CE9BEA /* CCDraggableSprite.mm */,
-				E61D6B3914E1660800CE9BEA /* CCMenuAdvanced.m */,
 				E61D6B3A14E1660800CE9BEA /* CCSpriteExtended.mm */,
 				E61D6B3B14E1660800CE9BEA /* CCSpriteExtension.m */,
 				E656ED7114E940E10022A75F /* CCBlade.mm */,
@@ -416,7 +749,6 @@
 				E63AC75114FE26010011B466 /* SneakyButton.h */,
 				E63AC75214FE26010011B466 /* SneakyButtonSkinnedBase.h */,
 				E61D6B2D14E1660800CE9BEA /* CCDraggableSprite.h */,
-				E61D6B2E14E1660800CE9BEA /* CCMenuAdvanced.h */,
 				E61D6B2F14E1660800CE9BEA /* CCSpriteExtended.h */,
 				E61D6B3014E1660800CE9BEA /* CCSpriteExtensions.h */,
 				E656ED6D14E9403F0022A75F /* CCBlade.h */,
@@ -434,7 +766,6 @@
 			files = (
 				E61D6B4014E1660800CE9BEA /* CocosTools-Prefix.pch in Headers */,
 				E61D6B4214E1660800CE9BEA /* CCDraggableSprite.h in Headers */,
-				E61D6B4314E1660800CE9BEA /* CCMenuAdvanced.h in Headers */,
 				E61D6B4414E1660800CE9BEA /* CCSpriteExtended.h in Headers */,
 				E61D6B4514E1660800CE9BEA /* CCSpriteExtensions.h in Headers */,
 				E61D6B4714E1660800CE9BEA /* TestLoaderScene.h in Headers */,
@@ -465,6 +796,24 @@
 				E6A7C8ED15CFC3EC00ACC440 /* CCSpriteHole.h in Headers */,
 				E6A7C8EE15CFC3EC00ACC440 /* CCSpriteScale9.h in Headers */,
 				E6A7C8EF15CFC3EC00ACC440 /* Handy.h in Headers */,
+				E60DBBE915D2EDCD00441AFD /* CCBigImage.h in Headers */,
+				E60DBBEA15D2EDCD00441AFD /* CCTextureCache+CCBigImageExtensions.h in Headers */,
+				E60DBBEB15D2EDCD00441AFD /* CCLayerPanZoom.h in Headers */,
+				E60DBBEC15D2EDCD00441AFD /* CCMenuAdvanced.h in Headers */,
+				E60DBBED15D2EDCD00441AFD /* CCMenuItemSpriteIndependent.h in Headers */,
+				E60DBBEE15D2EDCD00441AFD /* CCScrollLayer.h in Headers */,
+				E60DBBEF15D2EDCD00441AFD /* CCSendMessages.h in Headers */,
+				E60DBBF015D2EDCD00441AFD /* CCSlider.h in Headers */,
+				E60DBBF115D2EDCD00441AFD /* CCVideoPlayer.h in Headers */,
+				E60DBBF215D2EDCD00441AFD /* CCVideoPlayerImpliOS.h in Headers */,
+				E60DBBF315D2EDCD00441AFD /* videoOverlayView.h in Headers */,
+				E60DBBF415D2EDCD00441AFD /* CCVideoPlayerImplMac.h in Headers */,
+				E60DBBF515D2EDCD00441AFD /* MyMovieView.h in Headers */,
+				E60DBBF615D2EDCD00441AFD /* FilesDownloader.h in Headers */,
+				E60DBBF715D2EDCD00441AFD /* SingleFileDownloader.h in Headers */,
+				E60DBBF815D2EDCD00441AFD /* cencode.h in Headers */,
+				E60DBBF915D2EDCD00441AFD /* LFCGzipUtility.h in Headers */,
+				E60DBBFA15D2EDCD00441AFD /* TMXGenerator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,7 +901,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E61D6B4C14E1660800CE9BEA /* CCDraggableSprite.mm in Sources */,
-				E61D6B4D14E1660800CE9BEA /* CCMenuAdvanced.m in Sources */,
 				E61D6B4E14E1660800CE9BEA /* CCSpriteExtended.mm in Sources */,
 				E61D6B4F14E1660800CE9BEA /* CCSpriteExtension.m in Sources */,
 				E61D6B5014E1660800CE9BEA /* TestLoaderScene.mm in Sources */,
@@ -580,6 +928,24 @@
 				E6A7C8E315CFC2FB00ACC440 /* CameraLayer.m in Sources */,
 				E6A7C8F415CFC40E00ACC440 /* CCProgressBar.m in Sources */,
 				E6A7C8F515CFC40E00ACC440 /* CCSpriteHole.m in Sources */,
+				E60DBC1B15D2EDE300441AFD /* CCBigImage.m in Sources */,
+				E60DBC1C15D2EDE300441AFD /* CCTextureCache+CCBigImageExtensions.m in Sources */,
+				E60DBC1D15D2EDE300441AFD /* CCLayerPanZoom.m in Sources */,
+				E60DBC1E15D2EDE300441AFD /* CCMenuAdvanced.m in Sources */,
+				E60DBC1F15D2EDE300441AFD /* CCMenuItemSpriteIndependent.m in Sources */,
+				E60DBC2015D2EDE300441AFD /* CCScrollLayer.m in Sources */,
+				E60DBC2115D2EDE300441AFD /* CCSendMessages.m in Sources */,
+				E60DBC2215D2EDE300441AFD /* CCSlider.m in Sources */,
+				E60DBC2315D2EDE300441AFD /* CCVideoPlayer.m in Sources */,
+				E60DBC2415D2EDE300441AFD /* CCVideoPlayerImpliOS.m in Sources */,
+				E60DBC2515D2EDE300441AFD /* videoOverlayView.m in Sources */,
+				E60DBC2615D2EDE300441AFD /* CCVideoPlayerImplMac.m in Sources */,
+				E60DBC2715D2EDE300441AFD /* MyMovieView.m in Sources */,
+				E60DBC2815D2EDE300441AFD /* FilesDownloader.m in Sources */,
+				E60DBC2915D2EDE300441AFD /* SingleFileDownloader.m in Sources */,
+				E60DBC2A15D2EDE300441AFD /* cencode.c in Sources */,
+				E60DBC2B15D2EDE300441AFD /* LFCGzipUtility.m in Sources */,
+				E60DBC2C15D2EDE300441AFD /* TMXGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
