@@ -279,7 +279,7 @@
         NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile: plistFile ];    
         if ( !dict )
         {
-            CCLOGERROR( @"CCBigImage#prepareTilesWithFile:extension:z: can not load dictionary from file: %@ ", plistFile);
+            CMLog( @"CCBigImage#prepareTilesWithFile:extension:z: can not load dictionary from file: %@ ", plistFile);
             return;
         }
 	

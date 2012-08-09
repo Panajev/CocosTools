@@ -43,7 +43,7 @@
 		
 		if (!t)
 		{
-			CCLOGERROR(@"CCSendMessages#initWithTarget: target must not be nil!");
+			CMLog(@"CCSendMessages#initWithTarget: target must not be nil!");
 			
 			return nil;
 		}
