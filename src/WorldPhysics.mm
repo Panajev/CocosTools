@@ -28,9 +28,13 @@
 #import "LogDefines.h"
 
 @implementation WorldPhysics
+{
+    CGPoint convertRatio;
+    float LH_PTM_RATIO;
+}
 SINGLETON_GCD(WorldPhysics);
 
-@synthesize sharedWorld, sharedGround, sharedLH, sharedPhysics;
+@synthesize sharedWorld=_sharedWorld, sharedGround=_sharedGround, sharedLH, sharedPhysics=_sharedPhysics;
 
 - (b2World*) createWorld {
     // Define the gravity vector.
@@ -44,15 +48,15 @@ SINGLETON_GCD(WorldPhysics);
     
     b2Vec2 gravity(0.0f, -9.8f);
     // Construct a world object, which will hold and simulate the rigid bodies.
-    if (sharedWorld == NULL) { 
-        sharedWorld = new b2World(gravity); 
+    if (_sharedWorld == NULL) { 
+        _sharedWorld = new b2World(gravity); 
     }
-    sharedWorld->SetGravity(gravity);
+    _sharedWorld->SetGravity(gravity);
     
-    sharedPhysics = new PhysicsSystem();
-    sharedPhysics->setWorld(sharedWorld);
+    _sharedPhysics = new PhysicsSystem();
+    _sharedPhysics->setWorld(_sharedWorld);
 
-    return sharedWorld;
+    return _sharedWorld;
 }
 
 - (b2World*) createWorldFTS {
@@ -61,61 +65,61 @@ SINGLETON_GCD(WorldPhysics);
     [self updateConversionRatio];
     
     if (sharedLH != nil) {
-        //sharedWorld = ;
+        //_sharedWorld = ;
         return NULL;
     }
     
     b2Vec2 gravity(0.0f, -9.8f);
     // Construct a world object, which will hold and simulate the rigid bodies.
-    if (sharedWorld == NULL) { 
-        sharedWorld = new b2World(gravity); 
+    if (_sharedWorld == NULL) { 
+        _sharedWorld = new b2World(gravity); 
     }
-    sharedWorld->SetGravity(gravity);
-    sharedWorld->SetAutoClearForces(false);
+    _sharedWorld->SetGravity(gravity);
+    _sharedWorld->SetAutoClearForces(false);
     
-    sharedPhysics = new PhysicsSystem();
-    sharedPhysics->setWorld(sharedWorld);
+    _sharedPhysics = new PhysicsSystem();
+    _sharedPhysics->setWorld(_sharedWorld);
     
-    return sharedWorld;
+    return _sharedWorld;
 }
 
 - (void) destroyWorld {
-    //if(sharedWorld != NULL) {
-    //    delete sharedWorld;
+    //if(_sharedWorld != NULL) {
+    //    delete _sharedWorld;
     //}
-	//sharedWorld = NULL;
-    if (sharedWorld == NULL) {
+	//_sharedWorld = NULL;
+    if (_sharedWorld == NULL) {
         return;
     }
-    else if (sharedWorld->IsLocked()) {
+    else if (_sharedWorld->IsLocked()) {
         CMLog(@"locked world... %s", __PRETTY_FUNCTION__);
         return;
     }
 
-    sharedWorld->ClearForces();
+    _sharedWorld->ClearForces();
     
-    for (b2Body* b = sharedWorld->GetBodyList(); b; b = b->GetNext())
+    for (b2Body* b = _sharedWorld->GetBodyList(); b; b = b->GetNext())
 	{
         if(b != NULL) {
             b->SetUserData(NULL);
-            sharedWorld->DestroyBody(b);
+            _sharedWorld->DestroyBody(b);
         }
     }
     
-    for (b2Joint* j = sharedWorld->GetJointList(); j; j = j->GetNext())
+    for (b2Joint* j = _sharedWorld->GetJointList(); j; j = j->GetNext())
 	{
         if(j != NULL) {
-            sharedWorld->DestroyJoint(j);
+            _sharedWorld->DestroyJoint(j);
         }
     }
-    SAFE_DELETE(sharedWorld);
-    SAFE_DELETE(sharedPhysics);
+    SAFE_DELETE(_sharedWorld);
+    SAFE_DELETE(_sharedPhysics);
     [self createWorldFTS];
 }
 
 - (b2Body*) generateScreenBoundaries {
     if (sharedLH != nil) {
-        sharedGround = (__bridge b2Body*)[(id)sharedLH performSelector:@selector(createWorldBoundaries)];
+        _sharedGround = (__bridge b2Body*)[(id)sharedLH performSelector:@selector(createWorldBoundaries)];
         return NULL;
     }
     CGSize winSize = [[CCDirector sharedDirector] winSize];
@@ -123,7 +127,7 @@ SINGLETON_GCD(WorldPhysics);
     //creating the ground shape/body
     b2BodyDef _groundBodyDef;
     _groundBodyDef.position.Set(0, 0);
-    sharedGround = sharedWorld->CreateBody(&_groundBodyDef);
+    _sharedGround = _sharedWorld->CreateBody(&_groundBodyDef);
     
     b2ChainShape _groundShape;
     b2FixtureDef loopShapeDef_ground;
@@ -137,15 +141,15 @@ SINGLETON_GCD(WorldPhysics);
                                 groundVertex3, groundVertex4};
     _groundShape.CreateLoop(_groundVertices, 4);
     loopShapeDef_ground.shape = &_groundShape;
-    sharedGround->CreateFixture(&loopShapeDef_ground);
+    _sharedGround->CreateFixture(&loopShapeDef_ground);
     
-    return sharedGround;
+    return _sharedGround;
 }
 
 - (void) setGravityVec:(b2Vec2)gravityVec {
-    sharedWorld->SetGravity(gravityVec);
-    if (sharedPhysics != NULL) {
-        sharedPhysics->setWorld(sharedWorld);
+    _sharedWorld->SetGravity(gravityVec);
+    if (_sharedPhysics != NULL) {
+        _sharedPhysics->setWorld(_sharedWorld);
     }
 }
 
@@ -158,7 +162,6 @@ SINGLETON_GCD(WorldPhysics);
     
     convertRatio.x = winSize.width/1024.0f;
     convertRatio.y = winSize.height/768.0f;
-    LH_PTM_RATIO = 32.0f;
 }
 
 -(void) setMeterRatio:(float)ratio //default is 32.0f

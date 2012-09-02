@@ -25,23 +25,23 @@
 #import <Foundation/Foundation.h>
 //#import "SynthesizeSingleton.h"
 #import "SynthesizeSingletonGCD.h"
+#import "PhysicsSystem.h"
 
 #import "Box2D.h"
-
-#import "PhysicsSystem.h"
 
 @class LevelHelperLoader;
 
 @interface WorldPhysics : NSObject {
-    CGPoint convertRatio;
-    float LH_PTM_RATIO;
+    PhysicsSystem * _sharedPhysics;
+    b2World* _sharedWorld;
+    b2Body* _sharedGround;
 }
 SINGLETON_GCD_HEADERS(WorldPhysics);
 
-@property (assign) b2World* sharedWorld;
-@property (assign) b2Body* sharedGround;
-@property (weak) LevelHelperLoader* sharedLH;
-@property (assign) PhysicsSystem* sharedPhysics;
+@property (nonatomic,readonly) b2World* sharedWorld;
+@property (nonatomic,readonly) b2Body* sharedGround;
+@property (nonatomic,weak) LevelHelperLoader* sharedLH;
+@property (nonatomic,readonly) PhysicsSystem* sharedPhysics;
 
 - (b2World*) createWorld;
 - (b2World*) createWorldFTS;

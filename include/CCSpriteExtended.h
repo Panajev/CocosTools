@@ -24,17 +24,13 @@
 
 #import "cocos2d.h"
 #import "Box2D.h"
+#import "FixedTimeStepPhysicsSprites.h"
 
-@interface CCSpriteExtended : CCSprite {
+@interface CCSpriteExtended : CCSprite <FixedTimeStepPhysicsSprites> {
     float _previousAngle;
 	float _smoothedAngle;
 	b2Vec2 _previousPosition;
 	b2Vec2 _smoothedPosition;
 }
-
-@property (nonatomic) float32 previousAngle;
-@property (nonatomic) float32 smoothedAngle;
-@property (nonatomic) b2Vec2 previousPosition;
-@property (nonatomic) b2Vec2 smoothedPosition;
 
 @end

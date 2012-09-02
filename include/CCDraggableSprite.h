@@ -70,7 +70,6 @@ public:
 	b2Fixture* m_fixture;
 };
 
-
 @interface CCDraggableSprite : CCSpriteExtended <CCTargetedTouchDelegate> {
     SpriteState state;
 	CGPoint oldPos, newPos;

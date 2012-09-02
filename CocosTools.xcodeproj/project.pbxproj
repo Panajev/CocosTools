@@ -91,6 +91,7 @@
 		E648237214FB936700F5B719 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E648236914FB936700F5B719 /* Utils.m */; };
 		E656ED6F14E9403F0022A75F /* CCBlade.h in Headers */ = {isa = PBXBuildFile; fileRef = E656ED6D14E9403F0022A75F /* CCBlade.h */; };
 		E656ED7214E940E10022A75F /* CCBlade.mm in Sources */ = {isa = PBXBuildFile; fileRef = E656ED7114E940E10022A75F /* CCBlade.mm */; };
+		E675975C15F277DB0042BB44 /* FixedTimeStepPhysicsSprites.h in Headers */ = {isa = PBXBuildFile; fileRef = E675975B15F277DB0042BB44 /* FixedTimeStepPhysicsSprites.h */; };
 		E6A7C86B15CFB6AB00ACC440 /* CameraLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A7C86A15CFB6AB00ACC440 /* CameraLayer.h */; };
 		E6A7C8A315CFBB9200ACC440 /* CCSpriteScale9.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C8A215CFBB9200ACC440 /* CCSpriteScale9.m */; };
 		E6A7C8DA15CFC11F00ACC440 /* TextBoxLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C8D815CFC11F00ACC440 /* TextBoxLayer.m */; };
@@ -207,6 +208,7 @@
 		E648236914FB936700F5B719 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		E656ED6D14E9403F0022A75F /* CCBlade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBlade.h; sourceTree = "<group>"; };
 		E656ED7114E940E10022A75F /* CCBlade.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCBlade.mm; sourceTree = "<group>"; };
+		E675975B15F277DB0042BB44 /* FixedTimeStepPhysicsSprites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedTimeStepPhysicsSprites.h; sourceTree = "<group>"; };
 		E6A7C86A15CFB6AB00ACC440 /* CameraLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraLayer.h; sourceTree = "<group>"; };
 		E6A7C8A215CFBB9200ACC440 /* CCSpriteScale9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteScale9.m; sourceTree = "<group>"; };
 		E6A7C8D815CFC11F00ACC440 /* TextBoxLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextBoxLayer.m; sourceTree = "<group>"; };
@@ -753,6 +755,7 @@
 				E61D6B3014E1660800CE9BEA /* CCSpriteExtensions.h */,
 				E656ED6D14E9403F0022A75F /* CCBlade.h */,
 				E63D247D14ECFBBB0051E34E /* UISprite.h */,
+				E675975B15F277DB0042BB44 /* FixedTimeStepPhysicsSprites.h */,
 			);
 			name = "CCSprite extensions";
 			sourceTree = "<group>";
@@ -814,6 +817,7 @@
 				E60DBBF815D2EDCD00441AFD /* cencode.h in Headers */,
 				E60DBBF915D2EDCD00441AFD /* LFCGzipUtility.h in Headers */,
 				E60DBBFA15D2EDCD00441AFD /* TMXGenerator.h in Headers */,
+				E675975C15F277DB0042BB44 /* FixedTimeStepPhysicsSprites.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1004,9 +1008,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocosTools-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
 					"IPHONE_SDK_PROJECT=1",
+					"COCOS2D_DEBUG=1",
 				);
 				GCC_THUMB_SUPPORT = NO;
 				GCC_UNROLL_LOOPS = NO;
@@ -1015,11 +1019,11 @@
 					"../SharedLibs/Utilities-Debug/include/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_CFLAGS = (
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1046,8 +1050,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "";
 				"OTHER_CFLAGS[arch=armv7]" = (
-					"-ObjC",
-					"-all_load",
 					"-mthumb",
 					"-mfpu=neon",
 					"-ffast-math",
@@ -1058,7 +1060,10 @@
 					"-DRELEASE_VERSION",
 				);
 				"OTHER_CPLUSPLUSFLAGS[arch=armv7]" = "$(OTHER_CFLAGS)";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = YES;

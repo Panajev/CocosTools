@@ -1,26 +1,32 @@
 #import "PhysicsSystem.h"
+#import "CCDraggableSprite.h"
 
 PhysicsSystem::PhysicsSystem (): fixedTimestepAccumulator_ (0), fixedTimestepAccumulatorRatio_ (0),velocityIterations_(8), positionIterations_(1)
 {
 	// ...
+    CCLOG(@"Base class, %s", __PRETTY_FUNCTION__);
 }
 
 b2World* PhysicsSystem::getWorld(void) {
+    CCLOG(@"Base class, %s", __PRETTY_FUNCTION__);
 	return world_;
 }
 
 void PhysicsSystem::setWorld(b2World* world) {
+    CCLOG(@"Base class, %s", __PRETTY_FUNCTION__);
 	world_ = world;
     targetLayer = nil;
     selectorLayer = nil;
 }
 
 PhysicsSystem::~PhysicsSystem (void) {
+    CCLOG(@"Base class, %s", __PRETTY_FUNCTION__);
 	CCLOG(@"DESTRUCTING PHYSICS...");
 }
 
 void PhysicsSystem::update (float dt)
 {
+    CCLOG(@"Base class, %s", __PRETTY_FUNCTION__);
 	// Maximum number of steps, to avoid degrading to an halt.
 	const int MAX_STEPS = 5;
     
@@ -63,6 +69,7 @@ void PhysicsSystem::update (float dt)
 void PhysicsSystem::singleStep_ (float dt)
 {
 	// ...
+    CCLOG(@"Base class, %s", __PRETTY_FUNCTION__);
     
 	//updateControllers_ (dt);
     if ([targetLayer respondsToSelector:selectorLayer]) {
@@ -77,8 +84,9 @@ void PhysicsSystem::singleStep_ (float dt)
 	// ...
 }
 
-void PhysicsSystem::registerAnimationCallBack (id target, SEL selector) 
+void PhysicsSystem::registerAnimationCallBack (id target, SEL selector)
 {
+    CCLOG(@"Base class, %s", __PRETTY_FUNCTION__);
     if (targetLayer != target && selector && target) {
         targetLayer = target;
         selectorLayer = selector;
@@ -90,6 +98,8 @@ void PhysicsSystem::smoothStates_ ()
     if (world_ == NULL) {
         return;
     }
+    
+    CCLOG(@"Base class, %s", __PRETTY_FUNCTION__);
     
     world_->ClearForces ();
     
@@ -115,6 +125,7 @@ void PhysicsSystem::smoothStates_ ()
 
 void PhysicsSystem::resetSmoothStates_ ()
 {
+    CCLOG(@"Base class, %s", __PRETTY_FUNCTION__);
     if (world_ == NULL) {
         return;
     }
