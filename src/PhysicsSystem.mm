@@ -99,8 +99,6 @@ void PhysicsSystem::smoothStates_ ()
         return;
     }
     
-    CCLOG(@"Base class, %s", __PRETTY_FUNCTION__);
-    
     world_->ClearForces ();
     
 	b2Vec2 newSmoothedPosition;
@@ -116,6 +114,8 @@ void PhysicsSystem::smoothStates_ ()
         
         //Coarse grained safety check...
         if(c != nil && [c respondsToSelector:@selector(setSmoothedPosition:)]) {
+            CCLOG(@"Base class, smoothing OK, %s", __PRETTY_FUNCTION__);
+            
             newSmoothedPosition = fixedTimestepAccumulatorRatio_ * b->GetPosition () + oneMinusRatio * c.previousPosition;
             c.smoothedPosition = newSmoothedPosition;
             c.smoothedAngle = fixedTimestepAccumulatorRatio_ * b->GetAngle () + oneMinusRatio * c.previousAngle;
@@ -125,7 +125,6 @@ void PhysicsSystem::smoothStates_ ()
 
 void PhysicsSystem::resetSmoothStates_ ()
 {
-    CCLOG(@"Base class, %s", __PRETTY_FUNCTION__);
     if (world_ == NULL) {
         return;
     }
@@ -145,6 +144,8 @@ void PhysicsSystem::resetSmoothStates_ ()
         
         //Coarse grained safety check...
         if([c respondsToSelector:@selector(setSmoothedPosition:)]) {
+            CCLOG(@"Base class, smoothing OK, %s", __PRETTY_FUNCTION__);
+            
             c.smoothedPosition = newSmoothedPosition;
             c.previousPosition = newSmoothedPosition;
             c.smoothedAngle = b->GetAngle ();
