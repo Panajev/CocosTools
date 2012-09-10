@@ -19,11 +19,17 @@ Notable Subprojects
 This is a W.I.P. list of notable OSS and BSD-style licensed projects this collection of tools relies on:
 
 CCBlade: https://github.com/Panajev/CCBlade/tree/gles2-ARCified (fork, gles2-ARCified branch)
+
 VRope: https://github.com/Panajev/VRope/tree/ARCified (fork, ARCified branch)
+
 TextBox: https://github.com/Panajev/TextBoxLayerSample/tree/gles20 (fork, the library files have been integrated into CocosTools directly)
+
 Cocos2D extensions official repo: https://github.com/cocos2d/cocos2d-iphone-extensions
+
 Cocos2D extensions from jpsarda: https://github.com/jpsarda/cocos2d-iphone (develop branch)
+
 PRKit: https://github.com/Panajev/cocos2d-PRKit/tree/master-v2 (fork, master-v2 branch)
+
 SneakyInput: https://github.com/Panajev/SneakyInput/tree/ARCified (fork, ARCified)
 
 
