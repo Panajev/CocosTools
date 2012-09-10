@@ -4,11 +4,11 @@
 //
 //  Created by Nick Pannuto.
 //  2/15/09 verion 0.1
-//  
+//
 //  WIKI: http://wiki.github.com/sneakyness/SneakyJoystick/
 //  HTTP SRC: http://github.com/sneakyness/SneakyJoystick.git
 //  GIT: git://github.com/sneakyness/SneakyJoystick.git
-//  Email: SneakyJoystick@Sneakyness.com 
+//  Email: SneakyJoystick@Sneakyness.com
 //  IRC: #cocos2d-iphone irc.freenode.net
 
 #import "SneakyJoystick.h"
@@ -56,7 +56,7 @@ deadRadius;
 		
 		//Cocos node stuff
 		position_ = rect.origin;
-}
+    }
 	return self;
 }
 
@@ -89,7 +89,7 @@ deadRadius;
 		stickPosition = point;
 		return;
 	}
-
+    
 	float angle = atan2f(dy, dx); // in radians
 	if(angle < 0){
 		angle		+= SJ_PI_X_2;
@@ -177,7 +177,7 @@ deadRadius;
 {
 	CGPoint location = CGPointZero;
 	if(!autoCenter){
-		CGPoint location = [[CCDirector sharedDirector] convertToGL:[touch locationInView:[touch view]]];
+		location = [[CCDirector sharedDirector] convertToGL:[touch locationInView:[touch view]]];
 		location = [self convertToNodeSpace:location];
 	}
 	[self updateVelocity:location];
