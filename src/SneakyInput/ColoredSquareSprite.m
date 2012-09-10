@@ -10,7 +10,7 @@
 @implementation ColoredSquareSprite
 
 @synthesize size=size_;
-	// Opacity and RGB color protocol
+// Opacity and RGB color protocol
 @synthesize opacity=opacity_, color=color_;
 @synthesize blendFunc=blendFunc_;
 
@@ -42,7 +42,7 @@
 	if((self = [super init])){
 		size_				= CGSizeMake(10.0f, 10.0f);
 		
-			// default blend function
+        // default blend function
 		blendFunc_ = (ccBlendFunc) { CC_BLEND_SRC, CC_BLEND_DST };
 		
 		color_.r =
@@ -85,12 +85,12 @@
 }
 
 - (void)draw
-{		
+{
     ccDrawSolidPoly(squareVertices_, 4, ccc4f(color_.r/255.0f, color_.g/255.0f, color_.b/255.0f, opacity_/255.0f));
 }
 
 #pragma mark Protocols
-	// Color Protocol
+// Color Protocol
 
 -(void) setColor:(ccColor3B)color
 {
@@ -112,7 +112,7 @@
 
 - (NSString*) description
 {
-	return [NSString stringWithFormat:@"<%@ = %08X | Tag = %i | Color = %02X%02X%02X%02X | Size = %f,%f>", [self class], self, tag_, color_.r, color_.g, color_.b, opacity_, size_.width, size_.height];
+	return [NSString stringWithFormat:@"<%@ = %8@ | Tag = %i | Color = %02X%02X%02X%02X | Size = %f,%f>", [self class], self, tag_, color_.r, color_.g, color_.b, opacity_, size_.width, size_.height];
 }
 
 @end

@@ -3,7 +3,7 @@
 //  Classroom Demo
 //
 //  Created by Nick Pannuto on 2/10/10.
-//  Copyright (c) 2012 Sneakyness, llc.. All rights reserved.
+//  Copyright 2010 Sneakyness, llc.. All rights reserved.
 //
 
 #import "SneakyButton.h"

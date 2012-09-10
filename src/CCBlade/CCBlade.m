@@ -1,5 +1,5 @@
 /*
- * cocos2d+ext for iPhone
+ * CCBlade for iPhone
  *
  * Copyright (c) 2011 - Ngo Duc Hiep
  *
@@ -25,46 +25,45 @@
 
 #import "CCBlade.h"
 
-
 inline float fangle(CGPoint vect){
-    if (vect.x == 0.0 && vect.y == 0.0) {
-        return 0;
-    }
+	if (vect.x == 0.0 && vect.y == 0.0) {
+		return 0;
+	}
+	
+	if (vect.x == 0.0) {
+		return vect.y > 0 ? M_PI/2 : -M_PI/2;
+	}
+	
+	if (vect.y == 0.0 && vect.x < 0) {
+		return -M_PI;
+	}
+	
+	float angle = atan(vect.y / vect.x);
     
-    if (vect.x == 0.0) {
-        return vect.y > 0 ? M_PI/2 : -M_PI/2;
-    }
-    
-    if (vect.y == 0.0 && vect.x < 0) {
-        return -M_PI;
-    }
-    
-    float angle = atan(vect.y / vect.x);
-    
-    return vect.x < 0 ? angle + M_PI : angle;
+	return vect.x < 0 ? angle + M_PI : angle;
 }
 
 inline void f1(CGPoint p1, CGPoint p2, float d, CGPoint *o1, CGPoint *o2){
-    float l = ccpDistance(p1, p2);
-    float angle = fangle(ccpSub(p2, p1));
-    *o1 = ccpRotateByAngle(ccp(p1.x + l,p1.y + d), p1, angle);
-    *o2 = ccpRotateByAngle(ccp(p1.x + l,p1.y - d), p1, angle);
+	float l = ccpDistance(p1, p2);
+	float angle = fangle(ccpSub(p2, p1));
+	*o1 = ccpRotateByAngle(ccp(p1.x + l,p1.y + d), p1, angle);
+	*o2 = ccpRotateByAngle(ccp(p1.x + l,p1.y - d), p1, angle);
 }
 
 inline float lagrange1(CGPoint p1, CGPoint p2, float x){
-    return (x-p1.x)/(p2.x - p1.x)*p2.y + (x-p2.x)/(p1.x - p2.x)*p1.y ;
+	return (x-p1.x)/(p2.x - p1.x)*p2.y + (x-p2.x)/(p1.x - p2.x)*p1.y ;
 }
 
 inline void CGPointSet(CGPoint *v, float x, float y){
-    v->x = x;
-    v->y = y;
+	v->x = x;
+	v->y = y;
 }
-
 
 @implementation CCBlade
 @synthesize texture = _texture;
 @synthesize pointLimit;
-@synthesize width, dimSpeed;
+@synthesize width;
+@synthesize autoDim;
 
 + (id) bladeWithMaximumPoint:(int) limit{
     return [[self alloc] initWithMaximumPoint:limit];    
@@ -73,17 +72,17 @@ inline void CGPointSet(CGPoint *v, float x, float y){
 - (id) initWithMaximumPoint:(int) limit{
     self = [super init];
     
-    dimSpeed = 1;
+    // shader program
     self.shaderProgram = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_PositionTexture];
     
     pointLimit = limit;
-	self.width = [SysTools iPadUI]?5.0f:2.5f;
+	self.width = 5;
 	
     vertices = (CGPoint *)calloc(2*limit+5, sizeof(vertices[0]));
     coordinates = (CGPoint *)calloc(2*limit+5, sizeof(coordinates[0]));
     
     CGPointSet(coordinates+0, 0.00, 0.5);
-    reset = NO;
+    finish = NO;
     
     path = [[NSMutableArray alloc] init];
     
@@ -93,7 +92,7 @@ inline void CGPointSet(CGPoint *v, float x, float y){
 - (void) dealloc{
     free(vertices);
     free(coordinates);
-    	
+    
 }
 
 - (void) populateVertices{
@@ -130,14 +129,17 @@ inline void CGPointSet(CGPoint *v, float x, float y){
 }
 
 - (void) setWidth:(float)width_{
-    width = width_;
+    width = width_ ;//* CC_CONTENT_SCALE_FACTOR();
 }
 
 #define DISTANCE_TO_INTERPOLATE 10
 
-- (void) push:(CGPoint) v{
-    if (reset) {
-        return;
+- (void) push:(CGPoint) v{    
+	if (finish) {
+		return;
+	}
+    if (CC_CONTENT_SCALE_FACTOR() != 1.0f) {
+        //v = ccpMult(v, CC_CONTENT_SCALE_FACTOR());
     }
     
 #if USE_LAGRANGE
@@ -147,6 +149,7 @@ inline void CGPointSet(CGPoint *v, float x, float y){
         return;
     }
     
+    willPop = NO;
     CGPoint first = [[path objectAtIndex:0] CGPointValue];
     if (ccpDistance(v, first) < DISTANCE_TO_INTERPOLATE) {
         [path insertObject:[NSValue valueWithCGPoint:v] atIndex:0];
@@ -156,22 +159,22 @@ inline void CGPointSet(CGPoint *v, float x, float y){
     }else{
         int num = ccpDistance(v, first) / DISTANCE_TO_INTERPOLATE;
         CGPoint iv = ccpMult(ccpSub(v, first), (float)1./(num + 1));
-        for (int i = 1; i <= num + 1; i++) {
+		for (int i = 1; i <= num + 1; i++) {
             [path insertObject:[NSValue valueWithCGPoint:ccpAdd(first, ccpMult(iv, i))] atIndex:0];
-        }
-        while ([path count] > pointLimit) {
-            [path removeLastObject];
-        }
+		}
+		while ([path count] > pointLimit) {
+			[path removeLastObject];
+		}
     }
 #else // !USE_LAGRANGE
-    path.push_front(v);
-    if (path.size() > pointLimit) {
-        path.pop_back();
-    }
+	path.push_front(v);
+	if (path.size() > pointLimit) {
+		path.pop_back();
+	}
 #endif // !USE_LAGRANGE
     
-    
-    [self populateVertices];
+	
+	[self populateVertices];
 }
 
 - (void) pop:(int) n{
@@ -187,39 +190,41 @@ inline void CGPointSet(CGPoint *v, float x, float y){
 
 - (void) clear{
     [path removeAllObjects];
-	reset = NO;
+    
 } 
 
-- (void) reset{
-	reset = TRUE;
-}
-
-- (void) dim:(BOOL) dim{
-	reset = dim;
-}
-
 - (void) draw{
-    CC_NODE_DRAW_SETUP();
-    ccGLBlendFunc( GL_DST_COLOR, GL_ONE );
-	ccGLEnableVertexAttribs( kCCVertexAttribFlag_Position | kCCVertexAttribFlag_TexCoords );
-    
-    if (reset && [path count] > 0) {
-        [self pop:dimSpeed];
-        if ([path count] < 3) {
-            [self clear];
-        }
+    if (finish || (self.autoDim && willPop)) {
+        [self pop:1];
     }
+    
     if ([path count] < 3) {
+        if (finish) {
+            [self removeFromParentAndCleanup:NO];
+        }
+        
         return;
     }
-	
-    NSAssert(_texture, @"NO TEXTURE SET");
-    ccGLBindTexture2D(_texture.name);
     
-    // vertex
-	glVertexAttribPointer(kCCVertexAttrib_Position, 2, GL_FLOAT, GL_FALSE, 0, (void*) vertices);
-	// texCoods
-	glVertexAttribPointer(kCCVertexAttrib_TexCoords, 2, GL_FLOAT, GL_FALSE, 0, (void*) coordinates);
+    willPop = YES;
+    CC_NODE_DRAW_SETUP();
+	ccGLEnableVertexAttribs(kCCVertexAttribFlag_Position |  kCCVertexAttribFlag_TexCoords);
+    
+    ccGLBindTexture2D( [_texture name] );
+    ccGLBlendFunc(CC_BLEND_SRC, CC_BLEND_DST);
+    
+    glVertexAttribPointer(kCCVertexAttrib_Position, 2, GL_FLOAT, GL_FALSE, 0, vertices);
+    glVertexAttribPointer(kCCVertexAttrib_TexCoords, 2, GL_FLOAT, GL_FALSE, 0, coordinates);
+    
+    
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 2*[path count]-2);
+	
+    CC_INCREMENT_GL_DRAWS(1);
 }
+
+- (void) finish
+{
+    finish = YES;
+}
+
 @end

@@ -1,8 +1,14 @@
 /*
- * cocos2d+ext for iPhone
- *
- * Copyright (c) 2011 - Ngo Duc Hiep
- *
+ PRTriangulator.h
+ 
+ PRKit:  Precognitive Research additions to Cocos2D.  http://cocos2d-iphone.org
+ Contact us if you like it:  http://precognitiveresearch.com
+ 
+ Created by Andy Sinesio on 6/25/10.
+ Copyright 2011 Precognitive Research, LLC. All rights reserved.
+ 
+ This class fills a polygon as described by an array of NSValue-encapsulated points with a texture.
+ 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -23,37 +29,12 @@
  *
  */
 
+
 #import <Foundation/Foundation.h>
-#import "cocos2d.h"
 
-#define USE_LAGRANGE    1
-#define USE_STL_LIST    0
 
-CG_EXTERN inline float fangle(CGPoint vect);
-CG_EXTERN inline float lagrange1(CGPoint p1, CGPoint p2, float x);
-CG_EXTERN inline void CGPointSet(CGPoint *v, float x, float y);
-CG_EXTERN inline void f1(CGPoint p1, CGPoint p2, float d, CGPoint *o1, CGPoint *o2);
+@protocol PRTriangulator <NSObject>
 
-@interface CCBlade : CCNode {
-    NSMutableArray *path;
-	unsigned int pointLimit;
-	int count;
-	CGPoint *vertices;
-	CGPoint *coordinates;
-	BOOL reset;
-	CCTexture2D *_texture;	
-	float width;
-}
-@property (readonly)unsigned int pointLimit;
-@property(strong) CCTexture2D *texture;
-@property(nonatomic) float width;
-@property(nonatomic) int dimSpeed;
+- (NSArray *) triangulateVertices: (NSArray *) vertices;
 
-+ (id) bladeWithMaximumPoint:(int) limit;
-- (id) initWithMaximumPoint:(int) limit;
-- (void) push:(CGPoint) v;
-- (void) pop:(int) n;
-- (void) clear;
-- (void) reset;
-- (void) dim:(BOOL) dim;
 @end

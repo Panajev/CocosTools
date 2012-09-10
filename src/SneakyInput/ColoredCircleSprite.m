@@ -129,7 +129,7 @@
 
 - (NSString*) description
 {
-	return [NSString stringWithFormat:@"<%@ = %08X | Tag = %i | Color = %02X%02X%02X%02X | Radius = %1.2f>", [self class], self, tag_, color_.r, color_.g, color_.b, opacity_, radius_];
+	return [NSString stringWithFormat:@"<%@ = %8@ | Tag = %i | Color = %02X%02X%02X%02X | Radius = %1.2f>", [self class], self, tag_, color_.r, color_.g, color_.b, opacity_, radius_];
 }
 
 @end
