@@ -1,7 +1,7 @@
 #import "PhysicsSystem.h"
 #import "CCDraggableSprite.h"
 
-PhysicsSystem::PhysicsSystem (): fixedTimestepAccumulator_ (0), fixedTimestepAccumulatorRatio_ (0),velocityIterations_(8), positionIterations_(1)
+PhysicsSystem::PhysicsSystem (): fixedTimestepAccumulator_ (0), fixedTimestepAccumulatorRatio_ (0),velocityIterations_(8), positionIterations_(8)
 {
 	// ...
     CCLOG(@"Base class, %s", __PRETTY_FUNCTION__);
@@ -28,7 +28,7 @@ void PhysicsSystem::update (float dt)
 {
     CCLOG(@"Base class, %s", __PRETTY_FUNCTION__);
 	// Maximum number of steps, to avoid degrading to an halt.
-	const int MAX_STEPS = 5;
+	const int MAX_STEPS = 12;
     
 	fixedTimestepAccumulator_ += dt;
 	const int nSteps = static_cast<int> (
@@ -54,6 +54,12 @@ void PhysicsSystem::update (float dt)
 	const int nStepsClamped = std::min (nSteps, MAX_STEPS);
 	for (int i = 0; i < nStepsClamped; ++ i)
 	{
+        /*
+        if(i == nStepsClamped-1) {
+            
+        }
+        */
+        
 		// In singleStep_() the CollisionManager could fire custom
 		// callbacks that uses the smoothed states. So we must be sure
 		// to reset them correctly before firing the callbacks.
@@ -152,4 +158,16 @@ void PhysicsSystem::resetSmoothStates_ ()
             c.previousAngle = b->GetAngle();
         }
 	}
+}
+
+float PhysicsSystem::getFixedTimestep() {
+    return FIXED_TIMESTEP;
+}
+
+float PhysicsSystem::getFixedTimestepAccumulator() {
+    return this->fixedTimestepAccumulator_;
+}
+
+float PhysicsSystem::getFixedTimestepAccumulatorRatio() {
+    return this->fixedTimestepAccumulatorRatio_;
 }

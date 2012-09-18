@@ -50,6 +50,7 @@ SINGLETON_GCD_HEADERS(WorldPhysics);
 - (void) destroyWorld;
 - (b2Body*) generateScreenBoundaries;
 - (void) setGravityVec:(b2Vec2)gVec;
+- (void) syncPhysicsSprites;
 
 
 @end

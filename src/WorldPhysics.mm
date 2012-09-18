@@ -154,4 +154,8 @@ SINGLETON_GCD(WorldPhysics);
     return b2Vec2(p.x / self.LH_PTM_RATIO, p.y / self.LH_PTM_RATIO);
 }
 
+- (void) syncPhysicsSprites {
+    
+}
+
 @end

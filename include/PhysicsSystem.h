@@ -28,5 +28,7 @@ public:
 	virtual void smoothStates_ ();
 	virtual void resetSmoothStates_ ();
     virtual void registerAnimationCallBack (id target, SEL selector);
-    
+    virtual float getFixedTimestep();
+    virtual float getFixedTimestepAccumulator();
+    virtual float getFixedTimestepAccumulatorRatio();
 };
