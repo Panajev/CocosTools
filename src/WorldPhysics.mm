@@ -27,26 +27,24 @@
 #import "OSDefines.h"
 #import "LogDefines.h"
 
-@implementation WorldPhysics
-{
-    CGPoint convertRatio;
-    float LH_PTM_RATIO;
-}
-SINGLETON_GCD(WorldPhysics);
+@interface WorldPhysics ()
+- (b2Vec2) pointsToMeters:(CGPoint)p;
 
-@synthesize sharedWorld=_sharedWorld, sharedGround=_sharedGround, sharedLH, sharedPhysics=_sharedPhysics;
+@end
+
+@implementation WorldPhysics
+SINGLETON_GCD(WorldPhysics);
 
 - (b2World*) createWorld {
     // Define the gravity vector.
-    LH_PTM_RATIO = 32.0f;
-    [self updateConversionRatio];
-    
-    if (sharedLH != nil) {
+    b2Vec2 gravity(0.0f, -9.8f);
+    _PTM_RATIO = 32;
+
+    if (_sharedLH != nil) {
         //sharedWorld = ;
         return NULL;
     }
     
-    b2Vec2 gravity(0.0f, -9.8f);
     // Construct a world object, which will hold and simulate the rigid bodies.
     if (_sharedWorld == NULL) { 
         _sharedWorld = new b2World(gravity); 
@@ -61,15 +59,14 @@ SINGLETON_GCD(WorldPhysics);
 
 - (b2World*) createWorldFTS {
     // Define the gravity vector.
-    LH_PTM_RATIO = 32.0f;
-    [self updateConversionRatio];
+    b2Vec2 gravity(0.0f, -9.8f);
+    _PTM_RATIO = 32;
     
-    if (sharedLH != nil) {
+    if (_sharedLH != nil) {
         //_sharedWorld = ;
         return NULL;
     }
     
-    b2Vec2 gravity(0.0f, -9.8f);
     // Construct a world object, which will hold and simulate the rigid bodies.
     if (_sharedWorld == NULL) { 
         _sharedWorld = new b2World(gravity); 
@@ -118,8 +115,8 @@ SINGLETON_GCD(WorldPhysics);
 }
 
 - (b2Body*) generateScreenBoundaries {
-    if (sharedLH != nil) {
-        _sharedGround = (__bridge b2Body*)[(id)sharedLH performSelector:@selector(createWorldBoundaries)];
+    if (_sharedLH != nil) {
+        _sharedGround = (__bridge b2Body*)[(id)_sharedLH performSelector:@selector(createWorldBoundaries)];
         return NULL;
     }
     CGSize winSize = [[CCDirector sharedDirector] winSize];
@@ -153,55 +150,8 @@ SINGLETON_GCD(WorldPhysics);
     }
 }
 
--(void) updateConversionRatio
-{
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
-    //float safeFrameDiagonal = sqrtf(1024.0f* 1024.0f + 768.0f*768.0f);
-    //float winDiagonal = sqrtf(winSize.width* winSize.width + winSize.height*winSize.height);
-    //float PTM_conversion = winDiagonal/safeFrameDiagonal;
-    
-    convertRatio.x = winSize.width/1024.0f;
-    convertRatio.y = winSize.height/768.0f;
-}
-
--(void) setMeterRatio:(float)ratio //default is 32.0f
-{
-    LH_PTM_RATIO = ratio;
-    [[WorldPhysics sharedInstance] updateConversionRatio];
-}
--(float) meterRatio
-{
-    return LH_PTM_RATIO;
-}
-
--(float) pixelsToMeterRatio
-{
-    return LH_PTM_RATIO*convertRatio.x;
-}
-
--(float) pointsToMeterRatio
-{
-    return LH_PTM_RATIO;
-}
-
--(b2Vec2) pixelToMeters:(CGPoint)point
-{
-    return b2Vec2(point.x / [self pixelsToMeterRatio], point.y / [self pixelsToMeterRatio]);
-}
-
--(b2Vec2) pointsToMeters:(CGPoint)point
-{
-    return b2Vec2(point.x / LH_PTM_RATIO, point.y / LH_PTM_RATIO);
-}
-
--(CGPoint) metersToPoints:(b2Vec2)vec
-{
-    return CGPointMake(vec.x*LH_PTM_RATIO, vec.y*LH_PTM_RATIO);
-}
-
--(CGPoint) metersToPixels:(b2Vec2)vec
-{
-    return ccpMult(CGPointMake(vec.x, vec.y), [self pixelsToMeterRatio]);
+- (b2Vec2) pointsToMeters:(CGPoint)p {
+    return b2Vec2(p.x / self.PTM_RATIO, p.y / self.PTM_RATIO);
 }
 
 @end

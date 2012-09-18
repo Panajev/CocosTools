@@ -42,6 +42,7 @@ SINGLETON_GCD_HEADERS(WorldPhysics);
 @property (nonatomic,readonly) b2Body* sharedGround;
 @property (nonatomic,weak) LevelHelperLoader* sharedLH;
 @property (nonatomic,readonly) PhysicsSystem* sharedPhysics;
+@property (nonatomic, assign) CGFloat PTM_RATIO;
 
 - (b2World*) createWorld;
 - (b2World*) createWorldFTS;
@@ -50,14 +51,5 @@ SINGLETON_GCD_HEADERS(WorldPhysics);
 - (b2Body*) generateScreenBoundaries;
 - (void) setGravityVec:(b2Vec2)gVec;
 
-- (void) updateConversionRatio;
-- (void) setMeterRatio:(float)ratio;
-- (float) meterRatio;
-- (float) pixelsToMeterRatio;
-- (float) pointsToMeterRatio;
-- (b2Vec2) pixelToMeters:(CGPoint)point;
-- (b2Vec2) pointsToMeters:(CGPoint)point;
-- (CGPoint) metersToPoints:(b2Vec2)vec;
-- (CGPoint) metersToPixels:(b2Vec2)vec;
 
 @end
