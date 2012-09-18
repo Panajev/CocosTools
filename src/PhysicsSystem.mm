@@ -67,9 +67,8 @@ void PhysicsSystem::update (float dt)
 		singleStep_ (FIXED_TIMESTEP);
 	}
     
-	// We reset the world's forces and "smooth" positions and orientations using
-	// fixedTimestepAccumulatorRatio_ (alpha).
-	smoothStates_ ();
+    //smoothStates_ is not necessary anymore, smooth states calculation and sprite position update
+    //are both performed at the same time with the syncPhysicsSprites method of WorldPhysics.
 }
 
 void PhysicsSystem::singleStep_ (float dt)
@@ -97,36 +96,6 @@ void PhysicsSystem::registerAnimationCallBack (id target, SEL selector)
         targetLayer = target;
         selectorLayer = selector;
     }
-}
-
-void PhysicsSystem::smoothStates_ ()
-{
-    if (world_ == NULL) {
-        return;
-    }
-    
-    world_->ClearForces ();
-    
-	b2Vec2 newSmoothedPosition;
-	const float oneMinusRatio = 1.f - fixedTimestepAccumulatorRatio_;
-    
-	for (b2Body * b = world_->GetBodyList (); b != NULL; b = b->GetNext ())
-	{
-		if (b->GetType () == b2_staticBody)
-		{
-			continue;
-		}
-		CCDraggableSprite *c   = (__bridge CCDraggableSprite*) b->GetUserData();
-        
-        //Coarse grained safety check...
-        if(c != nil && [c respondsToSelector:@selector(setSmoothedPosition:)]) {
-            CCLOG(@"Base class, smoothing OK, %s", __PRETTY_FUNCTION__);
-            
-            newSmoothedPosition = fixedTimestepAccumulatorRatio_ * b->GetPosition () + oneMinusRatio * c.previousPosition;
-            c.smoothedPosition = newSmoothedPosition;
-            c.smoothedAngle = fixedTimestepAccumulatorRatio_ * b->GetAngle () + oneMinusRatio * c.previousAngle;
-        }
-	}
 }
 
 void PhysicsSystem::resetSmoothStates_ ()

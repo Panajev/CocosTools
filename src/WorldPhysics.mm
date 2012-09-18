@@ -26,6 +26,7 @@
 #import "GeneralDefines.h"
 #import "OSDefines.h"
 #import "LogDefines.h"
+#import "CCDraggableSprite.h"
 
 @interface WorldPhysics ()
 - (b2Vec2) pointsToMeters:(CGPoint)p;
@@ -154,8 +155,36 @@ SINGLETON_GCD(WorldPhysics);
     return b2Vec2(p.x / self.LH_PTM_RATIO, p.y / self.LH_PTM_RATIO);
 }
 
+/**
+ We reset the world's forces and "smooth" positions and orientations using 
+ fixedTimestepAccumulatorRatio_ (alpha).
+*/
 - (void) syncPhysicsSprites {
+    if(_sharedWorld == NULL) {
+        return;
+    }
     
+	const float oneMinusRatio = 1.f - _sharedPhysics->getFixedTimestepAccumulatorRatio();
+    
+	//Iterate over the bodies in the physics world
+	for (b2Body* b = _sharedWorld->GetBodyList(); b; b = b->GetNext())
+	{
+        if (b->GetType () == b2_staticBody)
+		{
+			continue;
+		}
+        
+		if (b->GetUserData() != NULL) {
+			//Synchronize the AtlasSprites position and rotation with the corresponding body
+			CCDraggableSprite *myActor = (__bridge CCDraggableSprite*)b->GetUserData();
+            
+			// smooth and update sprite
+			myActor.position = CGPointMake( (b->GetPosition().x * _sharedPhysics->getFixedTimestepAccumulatorRatio() + oneMinusRatio * myActor.previousPosition.x) * self.LH_PTM_RATIO,
+                                           (b->GetPosition().y * _sharedPhysics->getFixedTimestepAccumulatorRatio() + oneMinusRatio * myActor.previousPosition.y) * self.LH_PTM_RATIO);
+            
+			myActor.rotation = -1 * CC_RADIANS_TO_DEGREES(_sharedPhysics->getFixedTimestepAccumulatorRatio() * b->GetAngle() + oneMinusRatio * myActor.previousAngle);
+		}
+	}
 }
 
 @end

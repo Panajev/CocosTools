@@ -25,7 +25,6 @@ public:
     virtual void setWorld(b2World* world);
 	virtual void update (float dt);
 	virtual void singleStep_ (float dt);
-	virtual void smoothStates_ ();
 	virtual void resetSmoothStates_ ();
     virtual void registerAnimationCallBack (id target, SEL selector);
     virtual float getFixedTimestep();
