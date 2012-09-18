@@ -42,7 +42,7 @@ SINGLETON_GCD_HEADERS(WorldPhysics);
 @property (nonatomic,readonly) b2Body* sharedGround;
 @property (nonatomic,weak) LevelHelperLoader* sharedLH;
 @property (nonatomic,readonly) PhysicsSystem* sharedPhysics;
-@property (nonatomic, assign) float PTM_RATIO;
+@property (nonatomic, assign) float LH_PTM_RATIO;
 
 - (b2World*) createWorld;
 - (b2World*) createWorldFTS;

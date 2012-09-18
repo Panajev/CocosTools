@@ -38,7 +38,7 @@ SINGLETON_GCD(WorldPhysics);
 - (b2World*) createWorld {
     // Define the gravity vector.
     b2Vec2 gravity(0.0f, -9.8f);
-    _PTM_RATIO = 32;
+    _LH_PTM_RATIO = 32;
 
     if (_sharedLH != nil) {
         //sharedWorld = ;
@@ -60,7 +60,7 @@ SINGLETON_GCD(WorldPhysics);
 - (b2World*) createWorldFTS {
     // Define the gravity vector.
     b2Vec2 gravity(0.0f, -9.8f);
-    _PTM_RATIO = 32;
+    _LH_PTM_RATIO = 32;
     
     if (_sharedLH != nil) {
         //_sharedWorld = ;
@@ -151,7 +151,7 @@ SINGLETON_GCD(WorldPhysics);
 }
 
 - (b2Vec2) pointsToMeters:(CGPoint)p {
-    return b2Vec2(p.x / self.PTM_RATIO, p.y / self.PTM_RATIO);
+    return b2Vec2(p.x / self.LH_PTM_RATIO, p.y / self.LH_PTM_RATIO);
 }
 
 @end
