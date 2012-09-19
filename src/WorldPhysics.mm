@@ -174,9 +174,10 @@ SINGLETON_GCD(WorldPhysics);
 			continue;
 		}
         
-		if (b->GetUserData() != NULL) {
-			//Synchronize the AtlasSprites position and rotation with the corresponding body
-			CCDraggableSprite *myActor = (__bridge CCDraggableSprite*)b->GetUserData();
+        //Synchronize the AtlasSprites position and rotation with the corresponding body
+        id obj = (__bridge id)b->GetUserData();
+		if (obj != NULL && [obj respondsToSelector:@selector(previousPosition)]) {
+            CCDraggableSprite * myActor = (CCDraggableSprite*)obj;
             
 			// smooth and update sprite
 			myActor.position = CGPointMake( (b->GetPosition().x * _sharedPhysics->getFixedTimestepAccumulatorRatio() + oneMinusRatio * myActor.previousPosition.x) * self.LH_PTM_RATIO,
@@ -184,6 +185,11 @@ SINGLETON_GCD(WorldPhysics);
             
 			myActor.rotation = -1 * CC_RADIANS_TO_DEGREES(_sharedPhysics->getFixedTimestepAccumulatorRatio() * b->GetAngle() + oneMinusRatio * myActor.previousAngle);
 		}
+        else {
+            CCSprite * myActor = (CCSprite*)obj;
+            [myActor setPosition: CGPointMake( b->GetPosition().x * self.LH_PTM_RATIO, b->GetPosition().y * self.LH_PTM_RATIO)];
+            [myActor setRotation: -1 * CC_RADIANS_TO_DEGREES(b->GetAngle())];
+        }
 	}
 }
 
