@@ -41,3 +41,7 @@ Instructions on how to obtain the complete library package (CocosLib + CocosTool
 
 https://github.com/Panajev/CocosLib#howto-install
 
+TODO
+--------------
+
+Work on converting this project to make use of Git submodules as much as possible.
