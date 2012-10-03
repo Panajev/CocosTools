@@ -28,8 +28,6 @@ Cocos2D extensions official repo: https://github.com/cocos2d/cocos2d-iphone-exte
 
 Cocos2D extensions from jpsarda: https://github.com/jpsarda/cocos2d-iphone (develop branch)
 
-PRKit: https://github.com/Panajev/cocos2d-PRKit/tree/master-v2 (fork, master-v2 branch)
-
 SneakyInput: https://github.com/Panajev/SneakyInput/tree/ARCified (fork, ARCified)
 
 
