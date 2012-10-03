@@ -71,10 +71,6 @@
 		E66F10E415FE380D00FB8F3F /* VStick.m in Sources */ = {isa = PBXBuildFile; fileRef = E66F10E115FE380D00FB8F3F /* VStick.m */; };
 		E66F112D15FE4BE600FB8F3F /* CCBlade.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F112C15FE4BE600FB8F3F /* CCBlade.h */; };
 		E66F113015FE4CB600FB8F3F /* CCBlade.m in Sources */ = {isa = PBXBuildFile; fileRef = E66F112F15FE4CB600FB8F3F /* CCBlade.m */; };
-		E66F113715FE542400FB8F3F /* PRFilledPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F113315FE542400FB8F3F /* PRFilledPolygon.h */; };
-		E66F113815FE542400FB8F3F /* PRRatcliffTriangulator.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F113415FE542400FB8F3F /* PRRatcliffTriangulator.h */; };
-		E66F113915FE542400FB8F3F /* PRTriangulator.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F113515FE542400FB8F3F /* PRTriangulator.h */; };
-		E66F113A15FE542400FB8F3F /* triangulate.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F113615FE542400FB8F3F /* triangulate.h */; };
 		E66F116415FE543700FB8F3F /* CCBigImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F113D15FE543700FB8F3F /* CCBigImage.h */; };
 		E66F116515FE543700FB8F3F /* CCTextureCache+CCBigImageExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F113E15FE543700FB8F3F /* CCTextureCache+CCBigImageExtensions.h */; };
 		E66F116615FE543700FB8F3F /* CCLayerPanZoom.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F114115FE543700FB8F3F /* CCLayerPanZoom.h */; };
@@ -93,9 +89,6 @@
 		E66F117315FE543700FB8F3F /* cencode.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F116015FE543700FB8F3F /* cencode.h */; };
 		E66F117415FE543700FB8F3F /* LFCGzipUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F116115FE543700FB8F3F /* LFCGzipUtility.h */; };
 		E66F117515FE543700FB8F3F /* TMXGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F116315FE543700FB8F3F /* TMXGenerator.h */; };
-		E66F117A15FE544F00FB8F3F /* PRFilledPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = E66F117715FE544F00FB8F3F /* PRFilledPolygon.m */; };
-		E66F117B15FE544F00FB8F3F /* PRRatcliffTriangulator.mm in Sources */ = {isa = PBXBuildFile; fileRef = E66F117815FE544F00FB8F3F /* PRRatcliffTriangulator.mm */; };
-		E66F117C15FE544F00FB8F3F /* triangulate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E66F117915FE544F00FB8F3F /* triangulate.cpp */; };
 		E66F118415FE59AA00FB8F3F /* ColoredCircleSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F117E15FE59AA00FB8F3F /* ColoredCircleSprite.h */; };
 		E66F118515FE59AA00FB8F3F /* ColoredSquareSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F117F15FE59AA00FB8F3F /* ColoredSquareSprite.h */; };
 		E66F118615FE59AA00FB8F3F /* SneakyButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F118015FE59AA00FB8F3F /* SneakyButton.h */; };
@@ -197,10 +190,6 @@
 		E66F112C15FE4BE600FB8F3F /* CCBlade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBlade.h; sourceTree = "<group>"; };
 		E66F112F15FE4CB600FB8F3F /* CCBlade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBlade.m; sourceTree = "<group>"; };
 		E66F113115FE4D3B00FB8F3F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		E66F113315FE542400FB8F3F /* PRFilledPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFilledPolygon.h; sourceTree = "<group>"; };
-		E66F113415FE542400FB8F3F /* PRRatcliffTriangulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRRatcliffTriangulator.h; sourceTree = "<group>"; };
-		E66F113515FE542400FB8F3F /* PRTriangulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRTriangulator.h; sourceTree = "<group>"; };
-		E66F113615FE542400FB8F3F /* triangulate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = triangulate.h; sourceTree = "<group>"; };
 		E66F113D15FE543700FB8F3F /* CCBigImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBigImage.h; sourceTree = "<group>"; };
 		E66F113E15FE543700FB8F3F /* CCTextureCache+CCBigImageExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCTextureCache+CCBigImageExtensions.h"; sourceTree = "<group>"; };
 		E66F113F15FE543700FB8F3F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -229,9 +218,6 @@
 		E66F116115FE543700FB8F3F /* LFCGzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
 		E66F116215FE543700FB8F3F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E66F116315FE543700FB8F3F /* TMXGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXGenerator.h; sourceTree = "<group>"; };
-		E66F117715FE544F00FB8F3F /* PRFilledPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRFilledPolygon.m; sourceTree = "<group>"; };
-		E66F117815FE544F00FB8F3F /* PRRatcliffTriangulator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PRRatcliffTriangulator.mm; sourceTree = "<group>"; };
-		E66F117915FE544F00FB8F3F /* triangulate.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = triangulate.cpp; sourceTree = "<group>"; };
 		E66F117E15FE59AA00FB8F3F /* ColoredCircleSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredCircleSprite.h; sourceTree = "<group>"; };
 		E66F117F15FE59AA00FB8F3F /* ColoredSquareSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredSquareSprite.h; sourceTree = "<group>"; };
 		E66F118015FE59AA00FB8F3F /* SneakyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyButton.h; sourceTree = "<group>"; };
@@ -437,7 +423,6 @@
 			isa = PBXGroup;
 			children = (
 				E66F117D15FE59A900FB8F3F /* SneakyInput */,
-				E66F113215FE542400FB8F3F /* PRKit */,
 				E66F113B15FE543700FB8F3F /* cocos2d-extensions-0.2.1 */,
 				E6A7C8E515CFC3D600ACC440 /* jpsarda extensions */,
 				E6A7C8A015CFBB5200ACC440 /* TextBox */,
@@ -457,7 +442,6 @@
 			isa = PBXGroup;
 			children = (
 				E66F11AD15FE611E00FB8F3F /* SneakyInput */,
-				E66F117615FE544F00FB8F3F /* PRKit */,
 				E60DBBFB15D2EDE300441AFD /* cocos2d-extensions-0.2.1 */,
 				E6A7C8E415CFC3B700ACC440 /* jpsarda extensions */,
 				E6A7C8A115CFBB6500ACC440 /* TextBox */,
@@ -594,17 +578,6 @@
 			path = CCBlade;
 			sourceTree = "<group>";
 		};
-		E66F113215FE542400FB8F3F /* PRKit */ = {
-			isa = PBXGroup;
-			children = (
-				E66F113315FE542400FB8F3F /* PRFilledPolygon.h */,
-				E66F113415FE542400FB8F3F /* PRRatcliffTriangulator.h */,
-				E66F113515FE542400FB8F3F /* PRTriangulator.h */,
-				E66F113615FE542400FB8F3F /* triangulate.h */,
-			);
-			path = PRKit;
-			sourceTree = "<group>";
-		};
 		E66F113B15FE543700FB8F3F /* cocos2d-extensions-0.2.1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -734,16 +707,6 @@
 				E66F116315FE543700FB8F3F /* TMXGenerator.h */,
 			);
 			path = TMXGenerator;
-			sourceTree = "<group>";
-		};
-		E66F117615FE544F00FB8F3F /* PRKit */ = {
-			isa = PBXGroup;
-			children = (
-				E66F117715FE544F00FB8F3F /* PRFilledPolygon.m */,
-				E66F117815FE544F00FB8F3F /* PRRatcliffTriangulator.mm */,
-				E66F117915FE544F00FB8F3F /* triangulate.cpp */,
-			);
-			path = PRKit;
 			sourceTree = "<group>";
 		};
 		E66F117D15FE59A900FB8F3F /* SneakyInput */ = {
@@ -936,10 +899,6 @@
 				E66F10DC15FE37DC00FB8F3F /* VRope.h in Headers */,
 				E66F10DD15FE37DC00FB8F3F /* VStick.h in Headers */,
 				E66F112D15FE4BE600FB8F3F /* CCBlade.h in Headers */,
-				E66F113715FE542400FB8F3F /* PRFilledPolygon.h in Headers */,
-				E66F113815FE542400FB8F3F /* PRRatcliffTriangulator.h in Headers */,
-				E66F113915FE542400FB8F3F /* PRTriangulator.h in Headers */,
-				E66F113A15FE542400FB8F3F /* triangulate.h in Headers */,
 				E66F116415FE543700FB8F3F /* CCBigImage.h in Headers */,
 				E66F116515FE543700FB8F3F /* CCTextureCache+CCBigImageExtensions.h in Headers */,
 				E66F116615FE543700FB8F3F /* CCLayerPanZoom.h in Headers */,
@@ -1095,9 +1054,6 @@
 				E66F10E315FE380D00FB8F3F /* VRope.mm in Sources */,
 				E66F10E415FE380D00FB8F3F /* VStick.m in Sources */,
 				E66F113015FE4CB600FB8F3F /* CCBlade.m in Sources */,
-				E66F117A15FE544F00FB8F3F /* PRFilledPolygon.m in Sources */,
-				E66F117B15FE544F00FB8F3F /* PRRatcliffTriangulator.mm in Sources */,
-				E66F117C15FE544F00FB8F3F /* triangulate.cpp in Sources */,
 				E66F11B415FE611E00FB8F3F /* ColoredCircleSprite.m in Sources */,
 				E66F11B515FE611E00FB8F3F /* ColoredSquareSprite.m in Sources */,
 				E66F11B615FE611E00FB8F3F /* SneakyButton.m in Sources */,
