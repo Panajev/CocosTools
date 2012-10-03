@@ -89,19 +89,7 @@
 		E66F117315FE543700FB8F3F /* cencode.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F116015FE543700FB8F3F /* cencode.h */; };
 		E66F117415FE543700FB8F3F /* LFCGzipUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F116115FE543700FB8F3F /* LFCGzipUtility.h */; };
 		E66F117515FE543700FB8F3F /* TMXGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F116315FE543700FB8F3F /* TMXGenerator.h */; };
-		E66F118415FE59AA00FB8F3F /* ColoredCircleSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F117E15FE59AA00FB8F3F /* ColoredCircleSprite.h */; };
-		E66F118515FE59AA00FB8F3F /* ColoredSquareSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F117F15FE59AA00FB8F3F /* ColoredSquareSprite.h */; };
-		E66F118615FE59AA00FB8F3F /* SneakyButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F118015FE59AA00FB8F3F /* SneakyButton.h */; };
-		E66F118715FE59AA00FB8F3F /* SneakyButtonSkinnedBase.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F118115FE59AA00FB8F3F /* SneakyButtonSkinnedBase.h */; };
-		E66F118815FE59AA00FB8F3F /* SneakyJoystick.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F118215FE59AA00FB8F3F /* SneakyJoystick.h */; };
-		E66F118915FE59AA00FB8F3F /* SneakyJoystickSkinnedBase.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F118315FE59AA00FB8F3F /* SneakyJoystickSkinnedBase.h */; };
 		E66F11AC15FE60CB00FB8F3F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66F11AB15FE60CA00FB8F3F /* CoreFoundation.framework */; };
-		E66F11B415FE611E00FB8F3F /* ColoredCircleSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = E66F11AE15FE611E00FB8F3F /* ColoredCircleSprite.m */; };
-		E66F11B515FE611E00FB8F3F /* ColoredSquareSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = E66F11AF15FE611E00FB8F3F /* ColoredSquareSprite.m */; };
-		E66F11B615FE611E00FB8F3F /* SneakyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E66F11B015FE611E00FB8F3F /* SneakyButton.m */; };
-		E66F11B715FE611E00FB8F3F /* SneakyButtonSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E66F11B115FE611E00FB8F3F /* SneakyButtonSkinnedBase.m */; };
-		E66F11B815FE611E00FB8F3F /* SneakyJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = E66F11B215FE611E00FB8F3F /* SneakyJoystick.m */; };
-		E66F11B915FE611E00FB8F3F /* SneakyJoystickSkinnedBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E66F11B315FE611E00FB8F3F /* SneakyJoystickSkinnedBase.m */; };
 		E675975C15F277DB0042BB44 /* FixedTimeStepPhysicsSprites.h in Headers */ = {isa = PBXBuildFile; fileRef = E675975B15F277DB0042BB44 /* FixedTimeStepPhysicsSprites.h */; };
 		E6A7C86B15CFB6AB00ACC440 /* CameraLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A7C86A15CFB6AB00ACC440 /* CameraLayer.h */; };
 		E6A7C8A315CFBB9200ACC440 /* CCSpriteScale9.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C8A215CFBB9200ACC440 /* CCSpriteScale9.m */; };
@@ -218,19 +206,7 @@
 		E66F116115FE543700FB8F3F /* LFCGzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
 		E66F116215FE543700FB8F3F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E66F116315FE543700FB8F3F /* TMXGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXGenerator.h; sourceTree = "<group>"; };
-		E66F117E15FE59AA00FB8F3F /* ColoredCircleSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredCircleSprite.h; sourceTree = "<group>"; };
-		E66F117F15FE59AA00FB8F3F /* ColoredSquareSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredSquareSprite.h; sourceTree = "<group>"; };
-		E66F118015FE59AA00FB8F3F /* SneakyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyButton.h; sourceTree = "<group>"; };
-		E66F118115FE59AA00FB8F3F /* SneakyButtonSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyButtonSkinnedBase.h; sourceTree = "<group>"; };
-		E66F118215FE59AA00FB8F3F /* SneakyJoystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyJoystick.h; sourceTree = "<group>"; };
-		E66F118315FE59AA00FB8F3F /* SneakyJoystickSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyJoystickSkinnedBase.h; sourceTree = "<group>"; };
 		E66F11AB15FE60CA00FB8F3F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		E66F11AE15FE611E00FB8F3F /* ColoredCircleSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoredCircleSprite.m; sourceTree = "<group>"; };
-		E66F11AF15FE611E00FB8F3F /* ColoredSquareSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoredSquareSprite.m; sourceTree = "<group>"; };
-		E66F11B015FE611E00FB8F3F /* SneakyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyButton.m; sourceTree = "<group>"; };
-		E66F11B115FE611E00FB8F3F /* SneakyButtonSkinnedBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyButtonSkinnedBase.m; sourceTree = "<group>"; };
-		E66F11B215FE611E00FB8F3F /* SneakyJoystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyJoystick.m; sourceTree = "<group>"; };
-		E66F11B315FE611E00FB8F3F /* SneakyJoystickSkinnedBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SneakyJoystickSkinnedBase.m; sourceTree = "<group>"; };
 		E675975B15F277DB0042BB44 /* FixedTimeStepPhysicsSprites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedTimeStepPhysicsSprites.h; sourceTree = "<group>"; };
 		E6A7C86A15CFB6AB00ACC440 /* CameraLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraLayer.h; sourceTree = "<group>"; };
 		E6A7C8A215CFBB9200ACC440 /* CCSpriteScale9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteScale9.m; sourceTree = "<group>"; };
@@ -422,7 +398,6 @@
 		E61D6B2B14E1660800CE9BEA /* include */ = {
 			isa = PBXGroup;
 			children = (
-				E66F117D15FE59A900FB8F3F /* SneakyInput */,
 				E66F113B15FE543700FB8F3F /* cocos2d-extensions-0.2.1 */,
 				E6A7C8E515CFC3D600ACC440 /* jpsarda extensions */,
 				E6A7C8A015CFBB5200ACC440 /* TextBox */,
@@ -441,7 +416,6 @@
 		E61D6B3614E1660800CE9BEA /* src */ = {
 			isa = PBXGroup;
 			children = (
-				E66F11AD15FE611E00FB8F3F /* SneakyInput */,
 				E60DBBFB15D2EDE300441AFD /* cocos2d-extensions-0.2.1 */,
 				E6A7C8E415CFC3B700ACC440 /* jpsarda extensions */,
 				E6A7C8A115CFBB6500ACC440 /* TextBox */,
@@ -709,32 +683,6 @@
 			path = TMXGenerator;
 			sourceTree = "<group>";
 		};
-		E66F117D15FE59A900FB8F3F /* SneakyInput */ = {
-			isa = PBXGroup;
-			children = (
-				E66F117E15FE59AA00FB8F3F /* ColoredCircleSprite.h */,
-				E66F117F15FE59AA00FB8F3F /* ColoredSquareSprite.h */,
-				E66F118015FE59AA00FB8F3F /* SneakyButton.h */,
-				E66F118115FE59AA00FB8F3F /* SneakyButtonSkinnedBase.h */,
-				E66F118215FE59AA00FB8F3F /* SneakyJoystick.h */,
-				E66F118315FE59AA00FB8F3F /* SneakyJoystickSkinnedBase.h */,
-			);
-			path = SneakyInput;
-			sourceTree = "<group>";
-		};
-		E66F11AD15FE611E00FB8F3F /* SneakyInput */ = {
-			isa = PBXGroup;
-			children = (
-				E66F11AE15FE611E00FB8F3F /* ColoredCircleSprite.m */,
-				E66F11AF15FE611E00FB8F3F /* ColoredSquareSprite.m */,
-				E66F11B015FE611E00FB8F3F /* SneakyButton.m */,
-				E66F11B115FE611E00FB8F3F /* SneakyButtonSkinnedBase.m */,
-				E66F11B215FE611E00FB8F3F /* SneakyJoystick.m */,
-				E66F11B315FE611E00FB8F3F /* SneakyJoystickSkinnedBase.m */,
-			);
-			path = SneakyInput;
-			sourceTree = "<group>";
-		};
 		E6A7C86115CFB59D00ACC440 /* CameraControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -917,12 +865,6 @@
 				E66F117315FE543700FB8F3F /* cencode.h in Headers */,
 				E66F117415FE543700FB8F3F /* LFCGzipUtility.h in Headers */,
 				E66F117515FE543700FB8F3F /* TMXGenerator.h in Headers */,
-				E66F118415FE59AA00FB8F3F /* ColoredCircleSprite.h in Headers */,
-				E66F118515FE59AA00FB8F3F /* ColoredSquareSprite.h in Headers */,
-				E66F118615FE59AA00FB8F3F /* SneakyButton.h in Headers */,
-				E66F118715FE59AA00FB8F3F /* SneakyButtonSkinnedBase.h in Headers */,
-				E66F118815FE59AA00FB8F3F /* SneakyJoystick.h in Headers */,
-				E66F118915FE59AA00FB8F3F /* SneakyJoystickSkinnedBase.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1054,12 +996,6 @@
 				E66F10E315FE380D00FB8F3F /* VRope.mm in Sources */,
 				E66F10E415FE380D00FB8F3F /* VStick.m in Sources */,
 				E66F113015FE4CB600FB8F3F /* CCBlade.m in Sources */,
-				E66F11B415FE611E00FB8F3F /* ColoredCircleSprite.m in Sources */,
-				E66F11B515FE611E00FB8F3F /* ColoredSquareSprite.m in Sources */,
-				E66F11B615FE611E00FB8F3F /* SneakyButton.m in Sources */,
-				E66F11B715FE611E00FB8F3F /* SneakyButtonSkinnedBase.m in Sources */,
-				E66F11B815FE611E00FB8F3F /* SneakyJoystick.m in Sources */,
-				E66F11B915FE611E00FB8F3F /* SneakyJoystickSkinnedBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,14 +28,12 @@ Cocos2D extensions official repo: https://github.com/cocos2d/cocos2d-iphone-exte
 
 Cocos2D extensions from jpsarda: https://github.com/jpsarda/cocos2d-iphone (develop branch)
 
-SneakyInput: https://github.com/Panajev/SneakyInput/tree/ARCified (fork, ARCified)
-
 
 
 HOWTO Install
 -------------
 
-Instructions on how to obtain the complete library package (CocosLib + CocosTools + Utilities), build it, and install it can be found here:
+Instructions on how to obtain the complete library package (CocosLib + CocosTools + Utilities + more...), build it, and install it can be found here:
 
 https://github.com/Panajev/CocosLib#howto-install
 
