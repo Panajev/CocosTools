@@ -138,9 +138,6 @@ inline void CGPointSet(CGPoint *v, float x, float y){
 	if (finish) {
 		return;
 	}
-    if (CC_CONTENT_SCALE_FACTOR() != 1.0f) {
-        //v = ccpMult(v, CC_CONTENT_SCALE_FACTOR());
-    }
     
 #if USE_LAGRANGE
     
