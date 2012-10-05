@@ -1355,7 +1355,6 @@
 				GCC_PREFIX_HEADER = "CocosTools-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					"IPHONE_SDK_PROJECT=1",
 					"COCOS2D_DEBUG=1",
 				);
 				GCC_THUMB_SUPPORT = YES;
@@ -1385,7 +1384,7 @@
 				DSTROOT = /tmp/CocosTools.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocosTools-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "IPHONE_SDK_PROJECT=1";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_THUMB_SUPPORT = YES;
 				GCC_UNROLL_LOOPS = YES;
 				HEADER_SEARCH_PATHS = (
@@ -1590,6 +1589,7 @@
 				E69295B8161EE4D000DB1EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E69295C7161EE4DE00DB1EAA /* Build configuration list for PBXNativeTarget "CocosToolsMac_script" */ = {
 			isa = XCConfigurationList;
@@ -1598,6 +1598,7 @@
 				E69295C9161EE4DE00DB1EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
