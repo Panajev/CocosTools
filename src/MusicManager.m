@@ -30,7 +30,7 @@
 #import "SysTools.h"
 
 @implementation MusicManager
-SYNTHESIZE_SINGLETON_FOR_CLASS(MusicManager);
+SINGLETON_GCD(MusicManager);
 
 @synthesize isBackgroundMusicPlaying=isBackgroundMusicPlaying_, mute=mute_;
 

@@ -70,8 +70,12 @@
     
     
 	if( (self=[super init])) {
-		self.isTouchEnabled = YES;
-		self.isAccelerometerEnabled = NO;
+#ifdef __CC_PLATFORM_IOS
+        self.isTouchEnabled = YES;
+        self.isAccelerometerEnabled = NO;
+#else
+        self.isMouseEnabled = YES;
+#endif
         
         //CGSize winSize = [CCDirector sharedDirector].winSize;
         

@@ -27,6 +27,8 @@
 #define TEXT_SPEED 60
 #define TEXT_FONT_FILE @"arial16.fnt"
 
+#ifdef __CC_PLATFORM_IOS
+
 @protocol TextBox <NSObject>
 
 - (id) initWithColor:(UIColor *)color 
@@ -49,3 +51,5 @@
 - (void)textBox:(id<TextBox>)tbox didMoveToPage:(int)p;
 - (void)textBox:(id<TextBox>)tbox didFinishAllTextOnPage:(int)p;
 @end
+
+#endif

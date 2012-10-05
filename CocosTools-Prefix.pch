@@ -8,3 +8,5 @@
 
 #import "SysTools.h"
 #define DEVICE_CONTENT_SCALE_FACTOR() ([SysTools scalingFactor])
+
+#import "ccMacros.h"

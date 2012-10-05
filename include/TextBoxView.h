@@ -21,6 +21,8 @@
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
+#ifdef __CC_PLATFORM_IOS
+
 #import <UIKit/UIKit.h>
 #import "TextBox.h"
 
@@ -44,3 +46,5 @@
 @property (readwrite,weak) id<TextBoxDelegate> delegate;
 
 @end
+
+#endif

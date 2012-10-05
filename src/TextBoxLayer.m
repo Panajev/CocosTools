@@ -23,6 +23,8 @@
 
 #import "TextBoxLayer.h"
 
+#ifdef __CC_PLATFORM_IOS
+
 // ** external stuff I haven't cleaned up yet!
 
 #define kMasterFontName			@"Helvetica"
@@ -287,3 +289,5 @@ inline void PlaySound(NSString* inSoundName) { /* play a character sound here if
 }
 
 @end
+
+#endif

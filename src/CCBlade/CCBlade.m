@@ -96,6 +96,7 @@ inline void CGPointSet(CGPoint *v, float x, float y){
 }
 
 - (void) populateVertices{
+#ifdef __CC_PLATFORM_IOS
     vertices[0] = [[path objectAtIndex:0] CGPointValue];
     CGPoint pre = vertices[0];
     
@@ -112,6 +113,25 @@ inline void CGPointSet(CGPoint *v, float x, float y){
 		
 		it = [[path objectAtIndex:i+1] CGPointValue];
 	}
+#else
+    vertices[0] = [[path objectAtIndex:0] pointValue];
+    CGPoint pre = vertices[0];
+    
+    unsigned int i = 0;
+    CGPoint it = [[path objectAtIndex:1] pointValue];
+	float dd = width / [path count];
+	while (i < [path count] - 2){
+		f1(pre, it, width - i * dd , vertices+2*i+1, vertices+2*i+2);
+		CGPointSet(coordinates+2*i+1, .5, 1.0);
+		CGPointSet(coordinates+2*i+2, .5, 0.0);
+		
+		i++;
+		pre = it;
+		
+		it = [[path objectAtIndex:i+1] pointValue];
+	}
+    
+#endif
     
     CGPointSet(coordinates+1, 0.25, 1.0); 
 	CGPointSet(coordinates+2, 0.25, 0.0);
@@ -141,19 +161,30 @@ inline void CGPointSet(CGPoint *v, float x, float y){
     
 #if USE_LAGRANGE
     
+#ifdef __CC_PLATFORM_IOS
     if ([path count] == 0) {
         [path insertObject:[NSValue valueWithCGPoint:v] atIndex:0];
         return;
     }
     
+#else
+    if ([path count] == 0) {
+        [path insertObject:[NSValue valueWithPoint:NSPointFromCGPoint(v)] atIndex:0];
+        return;
+    }
+#endif
+    
     willPop = NO;
+    
+#ifdef __CC_PLATFORM_IOS
     CGPoint first = [[path objectAtIndex:0] CGPointValue];
     if (ccpDistance(v, first) < DISTANCE_TO_INTERPOLATE) {
         [path insertObject:[NSValue valueWithCGPoint:v] atIndex:0];
         if ([path count] > pointLimit) {
             [path removeLastObject];
         }
-    }else{
+    }
+    else{
         int num = ccpDistance(v, first) / DISTANCE_TO_INTERPOLATE;
         CGPoint iv = ccpMult(ccpSub(v, first), (float)1./(num + 1));
 		for (int i = 1; i <= num + 1; i++) {
@@ -163,6 +194,29 @@ inline void CGPointSet(CGPoint *v, float x, float y){
 			[path removeLastObject];
 		}
     }
+#else
+    CGPoint first = [[path objectAtIndex:0] pointValue];
+    NSValue * value = [path objectAtIndex:0];
+    NSPoint vPoint = [value pointValue];
+    
+    if (ccpDistance(v, first) < DISTANCE_TO_INTERPOLATE) {
+        [path insertObject:[NSValue valueWithPoint:vPoint] atIndex:0];
+        if ([path count] > pointLimit) {
+            [path removeLastObject];
+        }
+    }
+    else{
+        int num = ccpDistance(v, first) / DISTANCE_TO_INTERPOLATE;
+        CGPoint iv = ccpMult(ccpSub(v, first), (float)1./(num + 1));
+		for (int i = 1; i <= num + 1; i++) {
+            [path insertObject:[NSValue valueWithPoint:NSPointFromCGPoint(ccpAdd(first, ccpMult(iv, i)))] atIndex:0];
+		}
+		while ([path count] > pointLimit) {
+			[path removeLastObject];
+		}
+    }
+#endif
+    
 #else // !USE_LAGRANGE
 	path.push_front(v);
 	if (path.size() > pointLimit) {

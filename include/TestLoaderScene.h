@@ -24,8 +24,6 @@
 
 #import "cocos2d/cocos2d.h"
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import "CoreGraphicsExt.h"
 
 
 @interface TestLoaderScene : CCLayer

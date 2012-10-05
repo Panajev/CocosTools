@@ -25,6 +25,8 @@
 #import "cocos2d.h"
 #import "TextBox.h"
 
+#ifdef __CC_PLATFORM_IOS
+
 @interface TextBoxLayer : CCLayerColor <TextBox> {
 	
 	CCLabelBMFont *textLabel;
@@ -56,3 +58,5 @@
 - (int)calculateStringSize:(NSString *)txt;
 
 @end
+
+#endif

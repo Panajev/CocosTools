@@ -45,6 +45,7 @@
     }
 }
 
+#ifdef __CC_PLATFORM_IOS
 -(BOOL)isTouchInsideSprite:( UITouch* )touch {
     CGPoint pos;
     pos = [ touch locationInView: [ touch view ] ];
@@ -58,6 +59,18 @@
 {
     return [self isTouchInsideSprite:touch];
 }
+#else
+-(BOOL)isTouchInsideSprite:( NSEvent* )touch {
+    CGPoint location = [(CCDirectorMac*)[CCDirector sharedDirector] convertEventToGL:touch];
+    location = [self convertToNodeSpace:location];
+    
+    return [self isPointInsideSprite:location];
+}
+
+-(BOOL)containsTouchLocation:(NSEvent *)touch {
+    return [self isTouchInsideSprite:touch];
+}
+#endif
 
 
 +(id) spriteWithSpriteFrameNameOrFile:(NSString*)filename {
@@ -94,9 +107,14 @@
 
 -(void) onEnterTransitionDidFinish
 {
-	CCDirectorIOS *director =  (CCDirectorIOS*)[CCDirector sharedDirector];
+#ifdef __CC_PLATFORM_IOS
+    CCDirector *director =  (CCDirector*)[CCDirector sharedDirector];
     [[director touchDispatcher] removeDelegate:self];
 	[[director touchDispatcher] addTargetedDelegate:self priority:0  swallowsTouches:YES];
+#else
+    [[[CCDirector sharedDirector] eventDispatcher] removeMouseDelegate:self];
+    [[[CCDirector sharedDirector] eventDispatcher] addMouseDelegate:self priority:-1];
+#endif
     
     //CMLog(@"...%s...", __PRETTY_FUNCTION__);
 	[super onEnterTransitionDidFinish];
@@ -104,21 +122,24 @@
 
 - (void)onExit
 {
-	CCDirectorIOS *director =  (CCDirectorIOS*)[CCDirector sharedDirector];
+#ifdef __CC_PLATFORM_IOS
+    CCDirector *director =  (CCDirector*)[CCDirector sharedDirector];
 	[[director touchDispatcher] removeDelegate:self];
+#else
+    [[[CCDirector sharedDirector] eventDispatcher] removeMouseDelegate:self];
+#endif
 	[super onExit];
 }	
 
+#ifdef __CC_PLATFORM_IOS
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     if([self containsTouchLocation:touch] && disableTouches != NO) {
-        
         state = kSpriteStateGrabbed;
         return YES;
     }
     return NO;
 }
-
 
 - (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
@@ -127,5 +148,25 @@
         state = kSpriteStateUngrabbed;
     }
 }
+#else
+-(BOOL) ccMouseDown:(NSEvent*)event {
+    if([self containsTouchLocation:event] && disableTouches != NO) {
+        state = kSpriteStateGrabbed;
+        return YES;
+    }
+    return NO;
+}
+
+-(BOOL) ccMouseUp:(NSEvent*)event {
+    //NSAssert(state == kBoxStateGrabbed, @"Paddle - Unexpected state!");
+    if (disableTouches != NO) {
+        state = kSpriteStateUngrabbed;
+        return YES;
+    }
+    
+    return NO;
+}
+#endif
 
 @end
+

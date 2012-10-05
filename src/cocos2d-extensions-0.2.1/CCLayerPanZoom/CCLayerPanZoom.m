@@ -30,6 +30,7 @@
 
 #import "CCLayerPanZoom.h"
 
+#ifdef __CC_PLATFORM_IOS
 
 #ifdef DEBUG
 
@@ -167,7 +168,7 @@ typedef enum
     // Avoid turning rubber effect On in frame mode.
     if (self.mode == kCCLayerPanZoomModeFrame)
     {
-        CMLog(@"CCLayerPanZoom#setRubberEffectRatio: rubber effect is not supported in frame mode.");
+        CCLOG(@"CCLayerPanZoom#setRubberEffectRatio: rubber effect is not supported in frame mode.");
         _rubberEffectRatio = 0.0f;
     }
         
@@ -185,6 +186,11 @@ typedef enum
 {
 	if ((self = [super init])) 
 	{
+#ifndef __CC_PLATFORM_IOS
+        NSLog(@"This class has not been ported to MacOS X yet... %s", __PRETTY_FUNCTION__);
+        NSAssert(0, @"This class has not been ported to MacOS X yet... %s", __PRETTY_FUNCTION__);
+#endif
+        
 #if COCOS2D_VERSION >= 0x00020000
         self.ignoreAnchorPointForPosition = NO;
 #else
@@ -216,7 +222,7 @@ typedef enum
 }
 
 #pragma mark CCStandardTouchDelegate Touch events
-
+#ifdef __CC_PLATFORM_IOS
 - (void) ccTouchesBegan: (NSSet *) touches 
 			  withEvent: (UIEvent *) event
 {	
@@ -359,6 +365,8 @@ typedef enum
 		self.touchDistance = 0.0f;
 	}
 }
+
+#endif
 
 #pragma mark Update
 
@@ -805,3 +813,5 @@ typedef enum
 }
 
 @end
+
+#endif

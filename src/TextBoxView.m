@@ -21,6 +21,9 @@
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
+
+#ifdef __CC_PLATFORM_IOS
+
 #import "TextBoxView.h"
 
 
@@ -117,3 +120,5 @@
 }
 
 @end
+
+#endif

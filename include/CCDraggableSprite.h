@@ -70,12 +70,21 @@ public:
 	b2Fixture* m_fixture;
 };
 
+#ifdef __CC_PLATFORM_IOS
 @interface CCDraggableSprite : CCSpriteExtended <CCTargetedTouchDelegate> {
     SpriteState state;
 	CGPoint oldPos, newPos;
     float originalY;
     BOOL collisionDetected;
 }
+#else
+@interface CCDraggableSprite : CCSpriteExtended <CCMouseEventDelegate> {
+    SpriteState state;
+	CGPoint oldPos, newPos;
+    float originalY;
+    BOOL collisionDetected;
+}
+#endif
 
 @property (nonatomic, assign) b2Body* box2dBody;
 @property (nonatomic, assign) CGPoint oldPos;
@@ -86,6 +95,11 @@ public:
 
 +(id) spriteWithTexture:(CCTexture2D*)texture rect:(CGRect)rectangle;
 
+#ifdef __CC_PLATFORM_IOS
 -(BOOL)containsTouchLocation:(UITouch *)touch;
+#else
+-(BOOL)containsTouchLocation:(NSEvent *)touch;
+#endif
+
 
 @end

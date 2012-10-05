@@ -23,7 +23,6 @@
 //
 
 #import "CCSpriteExtensions.h"
-#import "LogDefines.h"
 
 @implementation CCSprite (Xtensions)
 +(id) spriteWithSpriteFrameNameOrFile:(NSString*)nameOrFile
@@ -39,7 +38,7 @@
     }
     
     if(loadedSprite == nil) {
-        CMLog(@"error... sprite \"%@\" == nil", nameOrFile);
+        CCLOG(@"error... sprite \"%@\" == nil", nameOrFile);
         NSString * errStr = nil;
         errStr = [NSString stringWithFormat:@"error... sprite \"%@\" == nil", nameOrFile];
         NSAssert(loadedSprite != nil, errStr);

@@ -24,7 +24,7 @@
 
 #import <Foundation/Foundation.h>
 #include <CoreGraphics/CoreGraphics.h>
-#import "SynthesizeSingleton.h"
+#import "SynthesizeSingletonGCD.h"
 
 @class SimpleAudioEngine, CDAudioManager, CDSoundSource, CCLayer;
 
@@ -56,7 +56,7 @@ typedef enum {
     CCLayer* cocosLayer;
 }
 
-SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(MusicManager);
+SINGLETON_GCD_HEADERS(MusicManager);
 
 @property (assign) BOOL isBackgroundMusicPlaying;
 @property (assign) BOOL mute;
