@@ -27,10 +27,6 @@
 #import "FixedTimeStepPhysicsSprites.h"
 
 @interface CCSpriteExtended : CCSprite <FixedTimeStepPhysicsSprites> {
-    float _previousAngle;
-	float _smoothedAngle;
-	b2Vec2 _previousPosition;
-	b2Vec2 _smoothedPosition;
 }
 
 @end

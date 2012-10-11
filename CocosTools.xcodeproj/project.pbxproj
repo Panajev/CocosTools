@@ -25,8 +25,6 @@
 		E60DBC2A15D2EDE300441AFD /* cencode.c in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC1815D2EDE300441AFD /* cencode.c */; };
 		E60DBC2B15D2EDE300441AFD /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC1915D2EDE300441AFD /* LFCGzipUtility.m */; };
 		E60DBC2C15D2EDE300441AFD /* TMXGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC1A15D2EDE300441AFD /* TMXGenerator.m */; };
-		E60E6A9914E144B6002902D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E6A9814E144B6002902D2 /* Foundation.framework */; };
-		E60E6AF014E151E7002902D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E6AEF14E151E7002902D2 /* CoreGraphics.framework */; };
 		E61D6B4014E1660800CE9BEA /* CocosTools-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2A14E1660800CE9BEA /* CocosTools-Prefix.pch */; };
 		E61D6B4214E1660800CE9BEA /* CCDraggableSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2D14E1660800CE9BEA /* CCDraggableSprite.h */; };
 		E61D6B4414E1660800CE9BEA /* CCSpriteExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = E61D6B2F14E1660800CE9BEA /* CCSpriteExtended.h */; };
@@ -87,15 +85,7 @@
 		E66F117315FE543700FB8F3F /* cencode.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F116015FE543700FB8F3F /* cencode.h */; };
 		E66F117415FE543700FB8F3F /* LFCGzipUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F116115FE543700FB8F3F /* LFCGzipUtility.h */; };
 		E66F117515FE543700FB8F3F /* TMXGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F116315FE543700FB8F3F /* TMXGenerator.h */; };
-		E66F11AC15FE60CB00FB8F3F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66F11AB15FE60CA00FB8F3F /* CoreFoundation.framework */; };
 		E675975C15F277DB0042BB44 /* FixedTimeStepPhysicsSprites.h in Headers */ = {isa = PBXBuildFile; fileRef = E675975B15F277DB0042BB44 /* FixedTimeStepPhysicsSprites.h */; };
-		E69295D2161EE54900DB1EAA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69295CB161EE54900DB1EAA /* Cocoa.framework */; };
-		E69295D3161EE54900DB1EAA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69295CC161EE54900DB1EAA /* CoreFoundation.framework */; };
-		E69295D4161EE54900DB1EAA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69295CD161EE54900DB1EAA /* CoreGraphics.framework */; };
-		E69295D5161EE54900DB1EAA /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69295CE161EE54900DB1EAA /* OpenAL.framework */; };
-		E69295D6161EE54900DB1EAA /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69295CF161EE54900DB1EAA /* OpenGL.framework */; };
-		E69295D7161EE54900DB1EAA /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69295D0161EE54900DB1EAA /* Quartz.framework */; };
-		E69295D8161EE54900DB1EAA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69295D1161EE54900DB1EAA /* QuartzCore.framework */; };
 		E69295D9161EE5A400DB1EAA /* CCBigImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBBFD15D2EDE300441AFD /* CCBigImage.m */; };
 		E69295DA161EE5A400DB1EAA /* CCTextureCache+CCBigImageExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBBFE15D2EDE300441AFD /* CCTextureCache+CCBigImageExtensions.m */; };
 		E69295DB161EE5A400DB1EAA /* CCLayerPanZoom.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DBC0015D2EDE300441AFD /* CCLayerPanZoom.m */; };
@@ -188,7 +178,6 @@
 		E6929636161EE60F00DB1EAA /* VPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F10D815FE37DC00FB8F3F /* VPoint.h */; };
 		E6929637161EE60F00DB1EAA /* VRope.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F10D915FE37DC00FB8F3F /* VRope.h */; };
 		E6929638161EE60F00DB1EAA /* VStick.h in Headers */ = {isa = PBXBuildFile; fileRef = E66F10DA15FE37DC00FB8F3F /* VStick.h */; };
-		E692963A161EE97E00DB1EAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6929639161EE97E00DB1EAA /* Foundation.framework */; };
 		E6929771161F03D700DB1EAA /* CocosToolsMac-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E6929770161F03D700DB1EAA /* CocosToolsMac-Prefix.pch */; };
 		E6A7C86B15CFB6AB00ACC440 /* CameraLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A7C86A15CFB6AB00ACC440 /* CameraLayer.h */; };
 		E6A7C8A315CFBB9200ACC440 /* CCSpriteScale9.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C8A215CFBB9200ACC440 /* CCSpriteScale9.m */; };
@@ -204,7 +193,6 @@
 		E6A7C8EF15CFC3EC00ACC440 /* Handy.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A7C8EA15CFC3EC00ACC440 /* Handy.h */; };
 		E6A7C8F415CFC40E00ACC440 /* CCProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C8F115CFC40E00ACC440 /* CCProgressBar.m */; };
 		E6A7C8F515CFC40E00ACC440 /* CCSpriteHole.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A7C8F215CFC40E00ACC440 /* CCSpriteHole.m */; };
-		E6A7C8F715CFC53200ACC440 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A7C8F615CFC53200ACC440 /* OpenGLES.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -336,35 +324,6 @@
 		E6A7C8F215CFC40E00ACC440 /* CCSpriteHole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteHole.m; sourceTree = "<group>"; };
 		E6A7C8F615CFC53200ACC440 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		E60E6A9214E144B6002902D2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E66F11AC15FE60CB00FB8F3F /* CoreFoundation.framework in Frameworks */,
-				E60E6AF014E151E7002902D2 /* CoreGraphics.framework in Frameworks */,
-				E6A7C8F715CFC53200ACC440 /* OpenGLES.framework in Frameworks */,
-				E60E6A9914E144B6002902D2 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E69295A7161EE4D000DB1EAA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E692963A161EE97E00DB1EAA /* Foundation.framework in Frameworks */,
-				E69295D2161EE54900DB1EAA /* Cocoa.framework in Frameworks */,
-				E69295D3161EE54900DB1EAA /* CoreFoundation.framework in Frameworks */,
-				E69295D4161EE54900DB1EAA /* CoreGraphics.framework in Frameworks */,
-				E69295D5161EE54900DB1EAA /* OpenAL.framework in Frameworks */,
-				E69295D6161EE54900DB1EAA /* OpenGL.framework in Frameworks */,
-				E69295D7161EE54900DB1EAA /* Quartz.framework in Frameworks */,
-				E69295D8161EE54900DB1EAA /* QuartzCore.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		E60DBBFB15D2EDE300441AFD /* cocos2d-extensions-0.2.1 */ = {
@@ -1080,7 +1039,6 @@
 			buildPhases = (
 				E60E6A9314E144B6002902D2 /* Headers */,
 				E60E6A9114E144B6002902D2 /* Sources */,
-				E60E6A9214E144B6002902D2 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1112,7 +1070,6 @@
 			buildPhases = (
 				E69295A8161EE4D000DB1EAA /* Headers */,
 				E69295A6161EE4D000DB1EAA /* Sources */,
-				E69295A7161EE4D000DB1EAA /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1473,7 +1430,6 @@
 					"~/Programming/SharedLibsMac/UtilitiesMac-Debug/include/**",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				VALID_ARCHS = x86_64;
